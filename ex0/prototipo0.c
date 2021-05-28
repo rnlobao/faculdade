@@ -24,11 +24,11 @@ int main()
     float media;
     if (O == 'M'){
         soma = soma/30;
-        printf("A media encontrada foi: %.1lf", soma);
+        printf("%.1lf", soma);
     }
 
     else if (O == 'S') {
-        printf("A soma encontrada foi: %.1lf", soma);
+        printf("%.1lf", soma);
     }
 
     return 0;
