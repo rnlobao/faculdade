@@ -5,6 +5,7 @@
 //endereço de memória armazenada pela variável do ponteiro
 
 //Usando o *p voce pega o conteúdo de p, que no caso é o valor que voce atribuiu. 
+//ponteiro armazena o endereço de memória de uma variável
 
 
 #include <stdio.h>
