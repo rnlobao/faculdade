@@ -27,7 +27,6 @@ int main() {
     return 0;
 }
 
-
 float* reverso(int n, float* v) {
     float *contrario ;
     contrario = (float*) malloc(n*sizeof(float));
