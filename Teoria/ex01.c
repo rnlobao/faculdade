@@ -4,33 +4,39 @@
 float* reverso(int n, float* v);
 
 int main() {
-    int tamanhodovetor = 6;
+    int tamanhodovetor;
+    printf("Digite o tamanho do vetor: ");
+    scanf("%d", &tamanhodovetor);
     float *valoresdovetor;
-    for (int i = 0; i < tamanhodovetor; i++) {
-        valoresdovetor[i] = i;
+    valoresdovetor = (float*) malloc(tamanhodovetor * sizeof(float));
+    if (valoresdovetor == NULL) {
+        printf("Sem memoria");
+        return NULL;
     }
+    float *vetoraocontrario;
     for (int i = 0; i < tamanhodovetor; i++) {
-        printf("%f", valoresdovetor[i]);
+        printf("Digite um valor: ");
+        scanf("%f", &valoresdovetor[i]);
     }
-    float vetoraocontrario = *reverso(tamanhodovetor, valoresdovetor);
-    printf("E DEPOISSS: \n");
-    for (int i = 0; i < tamanhodovetor; i++) {
-        printf("%f", valoresdovetor[i]);
+    vetoraocontrario = reverso(tamanhodovetor, valoresdovetor);
+    for (int j = 0; j < tamanhodovetor; j++) {
+        printf("%.1f\n", vetoraocontrario[j]);
     }
+    free(valoresdovetor);
+    free(vetoraocontrario);
     return 0;
 }
 
 
 float* reverso(int n, float* v) {
-    float *contrario = (float*) malloc(n*sizeof(float));
+    float *contrario ;
+    contrario = (float*) malloc(n*sizeof(float));
     if (contrario == NULL) {
         printf("Sem memoria");
         return NULL;
     }
-    int k = 0;
-    for (int i = n; i >= 0; i--) {
-        contrario[k] = v[i];
-        k++; 
+    for (int k = 0; k < n; k++) {
+        contrario[k] = v[(n-1)-k];
     }
     return contrario;
 }
