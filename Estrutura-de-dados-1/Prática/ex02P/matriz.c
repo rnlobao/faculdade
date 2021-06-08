@@ -34,7 +34,7 @@ double **desalocaMatriz(double **M, int ordem){
 
 //manter como especificado
 void lerOperacao(char *operacao){
-    scanf("%c", operacao);
+    scanf(" %c", operacao);
 }
 
 void lerMatriz(double **M, int ordem){
@@ -47,16 +47,24 @@ void lerMatriz(double **M, int ordem){
 
 double somaMatriz(double **M, int ordem){
     double soma = 0;
+    int ajuda = 0;
     for (int k = 0; k < ordem; k++) {
-        for (int l = 0; l < ordem; l++) {
+        for (int l = k+1; l < (ordem-1) - ajuda; l++) {
             soma += M[k][l]; 
         }
+        ajuda++;
     }
     return soma;
 }
 
 double media(double resultado, int ordem){
-    return resultado/30;
+    int base = ordem;
+    int quantidade = 0;
+    while (base != 2) {
+        base -= 2;
+        quantidade += base;
+    }
+    return resultado/quantidade;
 }
 
 void printResultado(double resultado){
