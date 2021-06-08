@@ -1,0 +1,2 @@
+void lerOrdem(int *ordem);
+
