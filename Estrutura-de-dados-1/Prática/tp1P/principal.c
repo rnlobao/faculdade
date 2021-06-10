@@ -10,7 +10,7 @@ typedef struct {
 
 int main()
 {
-    int ordem;
+    int alteracaoordem;
     lerOrdem(&ordem);
     lerStruct()
 
