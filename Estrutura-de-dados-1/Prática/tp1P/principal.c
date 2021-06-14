@@ -12,7 +12,7 @@ int main()
 {
     int ordem;
     lerOrdem(&ordem);
-    lerStruct()
+    lerStruct();
 
     
     return 0;//nao remova
