@@ -2,9 +2,9 @@
 # define duende_h
 
 //COMPLETAR O NOME DA ESTRUTURA
-typedef struct ??? TADduende;
+typedef struct duende TADduende; //aqui está criando um novo struct do tipo duende e dando o nome de TADduende
 //COMPLETAR O NOME DA ESTRUTURA
-typedef struct ??? TADtime;
+typedef struct time TADtime;
 //Manter como especificado
 void lerQuantidade(int *qtd);
 //Manter como especificado
