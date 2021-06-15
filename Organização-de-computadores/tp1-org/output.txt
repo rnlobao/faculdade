@@ -1,0 +1,36 @@
+Bem vindo ao Tabajara's Calculator.
+
+Pressione (0)  - Realizar uma soma.
+Pressione (1)  - Realizar uma subtracao.
+Pressione (2)  - Realizar uma multiplicacao.
+Pressione (3)  - Realizar uma divisao.
+Pressione (4)  - Realizar uma potenciacao.
+Pressione (5)  - Realizar uma PA.
+Pressione (6)  - Realizar uma PG.
+Pressione (7)  - Volume de paralelepipedo.
+Pressione (8)  - Realizar a soma de numeros elevados ao quadrado.
+Pressione (9)  - Realizar a soma de numeros elevados ao cubo.
+Pressione (-1) - Para sair.
+
+O resultado da soma = 25
+
+O resultado da subtracao = 10
+
+O resultado da multiplicacao = 20
+
+O resultado da divisao = 2
+
+O resultado da potenciacao = 100
+
+PA = 5  12  19  26  33  40  47  54  61  68  
+
+PG = 2  6  18  54  
+
+O volume do paralelepipedo = 750
+
+A soma dos quadrados dos numeros = 13
+
+A soma dos cubos dos numeros = 54
+
+
+Fim de programa.
