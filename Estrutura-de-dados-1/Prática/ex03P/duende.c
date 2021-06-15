@@ -27,7 +27,6 @@ void lerQuantidade(int *qtd){
 TADduende *alocaDuendes(TADduende *D, int qtd){
   D = (TADduende*) malloc (qtd * sizeof(TADduende)); //o sizeof vai ser sempre o ultimo do .h typedef
   if (D == NULL){
-
     printf ("Memoria insuficiente");
     exit(1);
   }
@@ -38,7 +37,6 @@ TADduende *alocaDuendes(TADduende *D, int qtd){
 TADtime *alocaTimes(TADtime *T, int qtd){
   T = (TADtime*) malloc (qtd * sizeof(TADtime));
   if (T == NULL){
-
     printf ("Memoria insuficiente");
     exit(1);
   }
@@ -61,9 +59,9 @@ TADtime *desalocaTimes(TADtime *T){
 void lerDuendes(TADduende *D, int qtd){
   int i;
   for (i = 0; i < qtd; i++) {
-    fgets(D[i].nome, 20, stdin);
-    int tam = strlen(D[i].nome) - 1;
-    D[i].nome[tam] = '\0';
+    scanf("%s", &D[i].nome);
+    //int tam = strlen(D[i].nome) - 1;
+    //D[i].nome[tam] = '\0';
     scanf("%d", &D[i].idade);
     D[i].escalado = 0;
   }
@@ -82,9 +80,10 @@ void escalarTimes(TADduende *D, TADtime *T, int qtd){
     //marcar o duende do indice como escalado
     D[indice].escalado = 1;
     //a linha abaixo copia o nome do duende para a estrutura do time
-    T[i].nomedolider = D[indice].nome;
+    strcpy(D[i].nome, T[i].nomedolider);
     //copiar a idade
-    T[i].idadedolider = D[indice].idade;
+    //strcpy(D[i].idade, T[i].idadedolider);
+    T[i].idadedolider = D[i].idade;
   }
 
   //repetir o laco acima, mas para o entregador
@@ -94,21 +93,23 @@ void escalarTimes(TADduende *D, TADtime *T, int qtd){
     //marcar o duende do indice como escalado
     D[indice].escalado = 1;
     //a linha abaixo copia o nome do duende para a estrutura do time
-    T[i].nomedoentregador = D[indice].nome;
+    strcpy(D[i].nome, T[i].nomedoentregador);
     //copiar a idade
-    T[i].idadedoentregador = D[indice].idade;
+    //strcpy(D[i].idade, T[i].idadedoentregador);
+    T[i].idadedoentregador = D[i].idade;
   }
 
-  //repetir o laco acima, mara para o piloto
+  //repetir o laco acima, mas para o piloto
   for (i=0; i < numerodetimes; i++)
   {
     indice = proximoMaisVelho(D, qtd);
     //marcar o duende do indice como escalado
     D[indice].escalado = 1;
     //a linha abaixo copia o nome do duende para a estrutura do time
-    T[i].nomedopiloto = D[indice].nome;
+    strcpy(D[i].nome, T[i].nomedopiloto);
     //copiar a idade
-    T[i].idadedopiloto = D[indice].idade;
+    //strcpy(D[i].idade, T[i].idadedopiloto);
+    T[i].idadedopiloto = D[i].idade;
   }
 }
 
@@ -127,8 +128,9 @@ int proximoMaisVelho(TADduende *D, int qtd){
 
 //Manter como especificado
 void printTimes(TADtime *T, int qtd){
+  printf("%d", qtd/3);
   for (int i = 0; i < qtd/3; i++) {
-    printf("Time %d", i+1);
+    printf("Time %d\n", i+1);
     printf("%s %d\n", T[i].nomedolider, T[i].idadedolider);
     printf("%s %d\n", T[i].nomedoentregador, T[i].idadedoentregador);
     printf("%s %d\n", T[i].nomedopiloto, T[i].idadedopiloto);
