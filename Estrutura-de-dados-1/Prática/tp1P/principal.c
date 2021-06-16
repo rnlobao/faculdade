@@ -1,18 +1,17 @@
 #include "corretor.h"
 #include<stdio.h>
 
-typedef struct {
-    char letra;
-    int tempo;
-    char situacao[9];
-} Alunos;
-
-
 int main()
 {
+    TADalunos *A;
     int ordem;
+
     lerOrdem(&ordem);
-    lerStruct();
+    A = alocaAlunos(A, ordem);
+    lerAlunos(A, ordem);
+
+    A = desalocaAlunos(A);
+    
 
     
     return 0;//nao remova
