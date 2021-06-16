@@ -59,14 +59,9 @@ TADtime *desalocaTimes(TADtime *T){
 void lerDuendes(TADduende *D, int qtd){
   int i;
   for (i = 0; i < qtd; i++) {
-    scanf("%s", &D[i].nome);
-    //int tam = strlen(D[i].nome) - 1;
-    //D[i].nome[tam] = '\0';
-    scanf("%d", &D[i].idade);
+    scanf("%s %d", D[i].nome, &D[i].idade);
     D[i].escalado = 0;
   }
-  //ler nome e idade de cada duente
-  //aproveitar para colocar o valor 0 no campo escalado
 }
 
 //Manter como especificado
@@ -80,10 +75,9 @@ void escalarTimes(TADduende *D, TADtime *T, int qtd){
     //marcar o duende do indice como escalado
     D[indice].escalado = 1;
     //a linha abaixo copia o nome do duende para a estrutura do time
-    strcpy(D[i].nome, T[i].nomedolider);
+    strcpy(T[i].nomedolider, D[indice].nome);
     //copiar a idade
-    //strcpy(D[i].idade, T[i].idadedolider);
-    T[i].idadedolider = D[i].idade;
+    T[i].idadedolider = D[indice].idade;
   }
 
   //repetir o laco acima, mas para o entregador
@@ -93,10 +87,9 @@ void escalarTimes(TADduende *D, TADtime *T, int qtd){
     //marcar o duende do indice como escalado
     D[indice].escalado = 1;
     //a linha abaixo copia o nome do duende para a estrutura do time
-    strcpy(D[i].nome, T[i].nomedoentregador);
+    strcpy(T[i].nomedoentregador, D[indice].nome);
     //copiar a idade
-    //strcpy(D[i].idade, T[i].idadedoentregador);
-    T[i].idadedoentregador = D[i].idade;
+    T[i].idadedoentregador = D[indice].idade;
   }
 
   //repetir o laco acima, mas para o piloto
@@ -106,10 +99,9 @@ void escalarTimes(TADduende *D, TADtime *T, int qtd){
     //marcar o duende do indice como escalado
     D[indice].escalado = 1;
     //a linha abaixo copia o nome do duende para a estrutura do time
-    strcpy(D[i].nome, T[i].nomedopiloto);
+    strcpy(T[i].nomedopiloto, D[indice].nome);
     //copiar a idade
-    //strcpy(D[i].idade, T[i].idadedopiloto);
-    T[i].idadedopiloto = D[i].idade;
+    T[i].idadedopiloto = D[indice].idade;
   }
 }
 
@@ -119,6 +111,7 @@ int proximoMaisVelho(TADduende *D, int qtd){
   //determinar o indice do duende mais velho nao escalado ainda
   for (int i = 0; i < qtd; i++) {
     if (D[i].idade > maior && D[i].escalado == 0) {
+      maior = D[i].idade;
       indice = i;
     }
   }
@@ -128,12 +121,12 @@ int proximoMaisVelho(TADduende *D, int qtd){
 
 //Manter como especificado
 void printTimes(TADtime *T, int qtd){
-  printf("%d", qtd/3);
-  for (int i = 0; i < qtd/3; i++) {
+  for (int i = 0; i < qtd; i++) {
     printf("Time %d\n", i+1);
     printf("%s %d\n", T[i].nomedolider, T[i].idadedolider);
     printf("%s %d\n", T[i].nomedoentregador, T[i].idadedoentregador);
     printf("%s %d\n", T[i].nomedopiloto, T[i].idadedopiloto);
+    printf("\n");
   }
   
 }
