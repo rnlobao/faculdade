@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 
+//Struct dos alunos
 struct alunos {
     char letra;
     int tempo;
@@ -53,11 +54,16 @@ int tempototal(TADalunos *A, int ordem) {
         if (strcmp(A[i].situacao, "correto") == 0) {
             temponofinal += A[i].tempo;
         }
-        else if (strcmp(A[i].situacao, "incompleto") == 0 && i == ordem-1) {
-
-        }
-        else if (strcmp(A[i].situacao, "incompleto") == 0 && i != ordem-1) {
-            quantidadedeincompleto++;
+        else if (strcmp(A[i].situacao, "incompleto") == 0) {
+            //se nunca teve um correto vai seguir essas instruções:
+            char letrabase = A[i].letra;
+            for (int j = i; j < ordem; j++) {
+                if (A[j].letra == letrabase && strcmp(A[j].situacao, "correto") == 0) {
+                    quantidadedeincompleto++;
+                }
+            }
+            
+            
         }
     }
     int valordebitado = quantidadedeincompleto * 20;

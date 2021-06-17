@@ -14,10 +14,7 @@ int main()
     s = contandocorretos(A, ordem);
     p = tempototal(A, ordem);
     printsaida(s, p);
-    
     A = desalocaAlunos(A);
-    
-
     
     return 0;//nao remova
 }
