@@ -8,17 +8,17 @@ void menu(Memoria* ram){
   int valor1, valor2, valor3;
 
   printf("Calculadora.\n\n");
-  printf("Pressione (0)  - soma.\n");
-  printf("Pressione (1)  - subtracao.\n");
-  printf("Pressione (2)  - multiplicacao.\n");
-  printf("Pressione (3)  - divisao.\n");
-  printf("Pressione (4)  - potenciacao.\n");
-  printf("Pressione (5)  - PA.\n");
-  printf("Pressione (6)  - PG.\n");
-  printf("Pressione (7)  - Volume de paralelepipedo.\n");
-  printf("Pressione (8)  - Realizar a soma de numeros elevados ao quadrado.\n");
-  printf("Pressione (9)  - Realizar a soma de numeros elevados ao cubo.\n");
-  printf("Pressione (-1) - Para sair.\n\n");
+  printf("Use (0)  - soma.\n");
+  printf("Use (1)  - subtracao.\n");
+  printf("Use (2)  - multiplicacao.\n");
+  printf("Use (3)  - divisao.\n");
+  printf("Use (4)  - potenciacao.\n");
+  printf("Use (5)  - PA (num, razao, contador).\n");
+  printf("Use (6)  - PG (num, razao, contador).\n");
+  printf("Use (7)  - Volume de paralelepipedo.\n");
+  printf("Use (8)  - Soma dois numeros ao quadrado.\n");
+  printf("Use (9)  - Soma dois numeros ao cubo.\n");
+  printf("Use (-1) - SAIR.\n\n");
 
   do {
 
@@ -113,6 +113,6 @@ void menu(Memoria* ram){
   } while(op!=-1);
 
   if(op==-1){
-    printf("\nFim de programa.");
+    printf("\n---------ENCERRAMENTO---------\n\n");
   }
 }
