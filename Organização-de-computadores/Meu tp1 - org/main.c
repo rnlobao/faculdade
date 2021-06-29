@@ -5,6 +5,7 @@
 #include"Menu.h"
 #include"Instructions.h"
 
+//basicamente chama as funçoes na main
 int main() {
 	Memoria *ram;
 	ram=montarMemoriaDados();

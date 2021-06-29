@@ -16,10 +16,10 @@ Memoria* montarMemoriaDados(void){
     return ram;
 }
 
-//Aqui o programa é montado de forma aleatoria caso o usuario opte por essa opção
+//Aqui o programa é montado de forma aleatoria (elucidativa)
 void montarPrograma(Memoria *ram){
 
-    //01:22:13:45 => isto é uma instrução na lingua CAVE LANGUAGE
+    //01:22:13:45 => isto é uma instrução 
     //0 => opcode => somar
     //1 => opcode => subtrair
     //-1 => halt
@@ -37,7 +37,8 @@ void montarPrograma(Memoria *ram){
     ram->memoriaInstrucoes[999][3]= -1;
 }
 
-//Se o usuario desejar realizar uma soma simples essa funcao e chamada e as instrucoes são encaminhadas para a maquina
+//Se o usuario desejar realizar uma soma simples essa funcao e chamada e as instrucoes são encaminhadas
+// para a maquina
 void programaSoma(Memoria* ram, int parcela1, int parcela2){
     ram->memoriaInstrucoes[0][0] = 2;   //Leva pra RAM
     ram->memoriaInstrucoes[0][1]= parcela1;
@@ -258,7 +259,7 @@ void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento
 
 }
 
-//Programa Fatorial
+//Programa Fatorial, não utilizado
 void programaFatorial(Memoria* ram, int start){
 
     //Criação de variáveis auxiliares
