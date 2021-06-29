@@ -15,7 +15,7 @@ void menu(Memoria* ram){
   printf("Use (4)  - potenciacao.\n");
   printf("Use (5)  - PA (num, razao, contador).\n");
   printf("Use (6)  - PG (num, razao, contador).\n");
-  printf("Use (7)  - Volume de paralelepipedo.\n");
+  printf("Use (7)  - Volume de solido geometrico(altura, largura, profundidade).\n");
   printf("Use (8)  - Soma dois numeros ao quadrado.\n");
   printf("Use (9)  - Soma dois numeros ao cubo.\n");
   printf("Use (-1) - SAIR.\n\n");
@@ -90,7 +90,7 @@ void menu(Memoria* ram){
       scanf("%d", &valor3);
       volumeParalelepipedo(ram, valor1, valor2, valor3);
       memory = retornaRAM(ram);
-      printf("\n\nO volume do paralelepipedo = %d\n\n", memory[1]);
+      printf("\n\nO volume do solido = %d\n\n", memory[1]);
     break;
 
     case 8:
