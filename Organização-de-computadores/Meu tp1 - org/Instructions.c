@@ -197,7 +197,17 @@ void programaPotenciacao(Memoria* ram, int num, int pot){
     //Multiplicacao dos items n-vezes, result insere o valor do produto para ser multiplicado novamente
     for (int i = 0; i < pot -1; i++){
         programaMultiplicacao(ram,result,num);
-        result = ram->RAM[1];
+        ram->memoriaInstrucoes[0][0] = 2;
+        ram->memoriaInstrucoes[0][1] = num;  
+        ram->memoriaInstrucoes[0][2] = -1; //guardar o conteúdo da ram
+        ram->memoriaInstrucoes[0][3] = -1;
+
+        ram->memoriaInstrucoes[1][0] = -1; //halt
+        ram->memoriaInstrucoes[1][1] = -1; 
+        ram->memoriaInstrucoes[1][2] = -1;
+        ram->memoriaInstrucoes[1][3] = -1;
+        maquina(ram);
+        result = ram->memoriaInstrucoes[0][2];
     }
 }
 

@@ -32,7 +32,7 @@ void menu(Memoria* ram){
       scanf("%d", &valor1);
       scanf("%d", &valor2);
       programaSoma(ram,valor1,valor2);
-      memory = retornaRAM(ram);
+      memory = retornaRAM(ram); //na memory colocamos a retornaRam com o intuito de dentro da TAD ram só retornar
       printf("O resultado da soma = %d\n\n", memory[1]);
     break;
 
