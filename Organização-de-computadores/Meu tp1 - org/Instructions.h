@@ -26,11 +26,11 @@ void programaSubtracao(Memoria* ram, int minuendo, int subtraendo);
 void programaMultiplicacao(Memoria *ram, int multiplicando, int multiplicador);
 void programaDivisao(Memoria *ram, int dividendo, int divisor);
 void programaPotenciacao(Memoria* ram, int num, int pot);
-void somadosquadrados(Memoria *ram, int num1, int num2);
-void somadoscubos(Memoria *ram, int num1, int num2);
 void programaPA(Memoria* ram, int numero, int razao, int count);
 void programaPG(Memoria* ram,int numero,int razao,int count);
 void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento);
-void programaFatorial(Memoria* ram, int start);
+void bhaskara(Memoria *ram, int num1, int num2, int num3);
+void raizquadrada(Memoria *ram, int num1);
+
 
 #endif

@@ -16,26 +16,6 @@ Memoria* montarMemoriaDados(void){
     return ram;
 }
 
-//Aqui o programa é montado de forma aleatoria (elucidativa)
-void montarPrograma(Memoria *ram){
-
-    //01:22:13:45 => isto é uma instrução 
-    //0 => opcode => somar
-    //1 => opcode => subtrair
-    //-1 => halt
-
-    for(int i=0; i<999; i++){
-        ram->memoriaInstrucoes[i][0] = rand()%2;
-        ram->memoriaInstrucoes[i][1] = rand()%100;
-        ram->memoriaInstrucoes[i][2] = rand()%100;
-        ram->memoriaInstrucoes[i][3]= rand()%100;
-    }
-
-    ram->memoriaInstrucoes[999][0] = -1;
-    ram->memoriaInstrucoes[999][1] = -1;
-    ram->memoriaInstrucoes[999][2] = -1;
-    ram->memoriaInstrucoes[999][3]= -1;
-}
 
 //Se o usuario desejar realizar uma soma simples essa funcao e chamada e as instrucoes são encaminhadas
 // para a maquina
@@ -122,36 +102,14 @@ void programaMultiplicacao(Memoria *ram, int multiplicando, int multiplicador){
 }
 
 //Realiza a soma de dois números elevados ao quadrados
-void somadosquadrados(Memoria *ram, int num1, int num2){
+void bhaskara(Memoria *ram, int num1, int num2, int num3){
 
-  //Variaveis auxiliares para alocar o quadrado de cada um dos números
-  int result1, result2;
-
-  //Chamando a função de potenciação para elevar ambos os valores ao quadrado
-  programaPotenciacao(ram, num1, 2);
-  result1=ram->RAM[1];
-
-  programaPotenciacao(ram, num2, 2);
-  result2=ram->RAM[1];
-
-  // Chamando a função soma para somar os valores a serem somados
-  programaSoma(ram, result1, result2);
+  
 }
 
-void somadoscubos(Memoria *ram, int num1, int num2){
+void raizquadrada(Memoria *ram, int num1){
 
-  //Variaveis auxiliares para alocar o quadrado de cada um dos números
-  int result1, result2;
-
-  //Chamando a função de potenciação para elevar ambos os valores ao quadrado
-  programaPotenciacao(ram, num1, 3);
-  result1=ram->RAM[1];
-
-  programaPotenciacao(ram, num2, 3);
-  result2=ram->RAM[1];
-
-  // Chamando a função soma para somar os valores a serem somados
-  programaSoma(ram, result1, result2);
+  
 }
 
 //Realiza progressao aritmetica
@@ -187,6 +145,7 @@ void programaPG(Memoria* ram,int numero,int razao,int count){
       //Impressao dos diversos termos da pg
       printf("%d  ",ram->RAM[1]);
   }
+  printf("\n\n");
 }
 
 //ProgramaPotencia
@@ -269,30 +228,6 @@ void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento
 
 }
 
-//Programa Fatorial, não utilizado
-void programaFatorial(Memoria* ram, int start){
-
-    //Criação de variáveis auxiliares
-    int aux,aux2;
-    int cont=1;
-
-    //Iniciando aux2 com o valor do número que será feito o fatorial
-    aux2 = start;
-
-    while(cont < start){
-
-        //Subtraindo cont no número inicial
-        programaSubtracao(ram, start, cont);
-        //Guardando o resultado no aux1
-        aux =  ram->RAM[1];
-        //Multiplicando o valor obtido anteriormente com o seu sucessor
-        programaMultiplicacao(ram, aux, aux2);
-        //Guardando o resultado no aux2 para atualizar o termo aux2
-        aux2 = ram->RAM[1];
-
-        cont++;
-    }
-}
 
 //Codigos de retorno de memoria
 int* retornaRAM(Memoria* ram){

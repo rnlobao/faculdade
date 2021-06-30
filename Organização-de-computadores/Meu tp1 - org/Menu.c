@@ -16,8 +16,8 @@ void menu(Memoria* ram){
   printf("Use (5)  - PA (num, razao, contador).\n");
   printf("Use (6)  - PG (num, razao, contador).\n");
   printf("Use (7)  - Volume de solido geometrico(altura, largura, profundidade).\n");
-  printf("Use (8)  - Soma dois numeros ao quadrado.\n");
-  printf("Use (9)  - Soma dois numeros ao cubo.\n");
+  printf("Use (8)  - Bhaskara.\n");
+  printf("Use (9)  - Raiz quadrada.\n");
   printf("Use (-1) - SAIR.\n\n");
 
   do {
@@ -96,17 +96,17 @@ void menu(Memoria* ram){
     case 8:
       scanf("%d", &valor1);
       scanf("%d", &valor2);
-      somadosquadrados(ram, valor1, valor2);
+      scanf("%d", &valor3);
+      bhaskara(ram, valor1, valor2, valor3);
       memory = retornaRAM(ram);
-      printf("A soma dos quadrados dos numeros = %d\n\n", memory[1]);
+      printf("Bhaskara dos valores e = %d\n\n", memory[1]);
     break;
 
     case 9:
       scanf("%d", &valor1);
-      scanf("%d", &valor2);
-      somadoscubos(ram, valor1, valor2);
+      raizquadrada(ram, valor1);
       memory = retornaRAM(ram);
-      printf("A soma dos cubos dos numeros = %d\n\n", memory[1]);
+      printf("A raiz quadrada e = %d\n\n", memory[1]);
     break;
   }
 
