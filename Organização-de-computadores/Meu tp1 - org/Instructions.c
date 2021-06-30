@@ -103,13 +103,9 @@ void programaMultiplicacao(Memoria *ram, int multiplicando, int multiplicador){
 
 //Realiza a soma de dois números elevados ao quadrados
 void bhaskara(Memoria *ram, int num1, int num2, int num3){
-
-  
 }
 
 void raizquadrada(Memoria *ram, int num1){
-
-  
 }
 
 //Realiza progressao aritmetica
