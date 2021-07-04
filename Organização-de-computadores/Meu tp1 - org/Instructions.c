@@ -154,7 +154,7 @@ void programaPotenciacao(Memoria* ram, int num, int pot){
         programaMultiplicacao(ram,result,num);
         ram->memoriaInstrucoes[0][0] = 2;
         ram->memoriaInstrucoes[0][1] = num;  
-        ram->memoriaInstrucoes[0][2] = -1; //guardar o conteúdo da ram
+        ram->memoriaInstrucoes[0][2] = 0; //guardar o conteúdo da ram
         ram->memoriaInstrucoes[0][3] = -1;
 
         ram->memoriaInstrucoes[1][0] = -1; //halt
