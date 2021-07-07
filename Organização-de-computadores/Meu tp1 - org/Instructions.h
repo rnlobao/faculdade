@@ -29,7 +29,6 @@ void programaPotenciacao(Memoria* ram, int num, int pot);
 void programaPA(Memoria* ram, int numero, int razao, int count);
 void programaPG(Memoria* ram,int numero,int razao,int count);
 void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento);
-void bhaskara(Memoria *ram, int num1, int num2, int num3);
 void raizquadrada(Memoria *ram, int num1);
 
 

@@ -2,15 +2,16 @@
 # define lista_h
 
 typedef struct {
-    //preencher
+    char nome[20];
 } TItem;
 
 typedef struct celula {
-    //preencher
+    struct celula *pProx;
+    TItem item;
 } TCelula;
 
 typedef struct {
-    //preencher
+    TCelula *pPrimeiro, *pUltimo;
 } TLista;
 
 //Inicializa a lista
