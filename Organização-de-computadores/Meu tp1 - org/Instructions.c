@@ -103,6 +103,20 @@ void programaMultiplicacao(Memoria *ram, int multiplicando, int multiplicador){
 
 
 void raizquadrada(Memoria *ram, int num1){
+    int count = 0;
+    for (int i = 0; num1 >= (i*i); i++ ) {
+        ram->memoriaInstrucoes[0][0] = 2;   //Leva pra RAM
+        ram->memoriaInstrucoes[0][1]= count;
+        ram->memoriaInstrucoes[0][2] = 1;
+        ram->memoriaInstrucoes[0][3] = -1;
+
+        ram->memoriaInstrucoes[1][0] = -1;    //Halt
+        ram->memoriaInstrucoes[1][1] = -1;
+        ram->memoriaInstrucoes[1][2] = -1;
+        ram->memoriaInstrucoes[1][3] = -1;
+        maquina(ram);
+        count++;
+    }
 }
 
 //Realiza progressao aritmetica
@@ -142,25 +156,43 @@ void programaPG(Memoria* ram,int numero,int razao,int count){
 }
 
 //ProgramaPotencia
-void programaPotenciacao(Memoria* ram, int num, int pot){
+void programaPotenciacao(Memoria* ram, int base, int expoente){
+    
+    int result = base;
 
-    int result = num;
-
-    //Multiplicacao dos items n-vezes, result insere o valor do produto para ser multiplicado novamente
-    for (int i = 0; i < pot -1; i++){
-        programaMultiplicacao(ram,result,num);
-        ram->memoriaInstrucoes[0][0] = 2;
-        ram->memoriaInstrucoes[0][1] = num;  
-        ram->memoriaInstrucoes[0][2] = 0; //guardar o conteúdo da ram
+    //so conferindo se o exp nao é 0, se for ja joga como sendo valor 1.
+    if (expoente == 0) {
+        ram->memoriaInstrucoes[0][0] = 2;   //Leva pra RAM
+        ram->memoriaInstrucoes[0][1]= 1;
+        ram->memoriaInstrucoes[0][2] = 1;
         ram->memoriaInstrucoes[0][3] = -1;
 
-        ram->memoriaInstrucoes[1][0] = -1; //halt
-        ram->memoriaInstrucoes[1][1] = -1; 
+        ram->memoriaInstrucoes[1][0] = -1;    //Halt
+        ram->memoriaInstrucoes[1][1] = -1;
         ram->memoriaInstrucoes[1][2] = -1;
         ram->memoriaInstrucoes[1][3] = -1;
         maquina(ram);
-        result = ram->memoriaInstrucoes[0][2];
     }
+
+    //adaptação do codigo feito com o prof
+    //Multiplicacao dos items n-vezes, result insere o valor do produto para ser multiplicado novamente
+    else {
+        for (int i = 0; i < expoente -1; i++){
+            programaMultiplicacao(ram,result,base);
+            result = ram->RAM[1];
+            ram->memoriaInstrucoes[0][0] = 2;
+            ram->memoriaInstrucoes[0][1] = base;  
+            ram->memoriaInstrucoes[0][2] = -1; //guardar o conteúdo da ram
+            ram->memoriaInstrucoes[0][3] = -1;
+
+            ram->memoriaInstrucoes[1][0] = -1; //halt
+            ram->memoriaInstrucoes[1][1] = -1; 
+            ram->memoriaInstrucoes[1][2] = -1;
+            ram->memoriaInstrucoes[1][3] = -1;
+            maquina(ram);
+        }
+    }
+    
 }
 
 //Programa divisao
@@ -219,6 +251,111 @@ void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento
     //Multiplicacao subsequente das tres dimensoes
     programaMultiplicacao(ram, aux, largura);
 
+}
+
+void bhaskara (Memoria* ram, int a, int b, int c) {
+    //a * c
+    int valordea = a;
+    programaMultiplicacao(ram, valordea, c);
+    int avezesc = ram->RAM[1];
+    ram->memoriaInstrucoes[0][0] = 2;  
+    ram->memoriaInstrucoes[0][1] = avezesc;
+    ram->memoriaInstrucoes[0][2] = -1;
+    ram->memoriaInstrucoes[0][3] = -1;
+
+    //4 * a * c
+    programaMultiplicacao(ram, avezesc, 4);
+    int quatroac = ram->RAM[1];
+    ram->memoriaInstrucoes[1][0] = 2;  
+    ram->memoriaInstrucoes[1][1] = quatroac;
+    ram->memoriaInstrucoes[1][2] = -1;
+    ram->memoriaInstrucoes[1][3] = -1;
+
+    //b elevado a 2
+    programaPotenciacao(ram, b, 2);
+    int baoquadrado = ram->RAM[1];
+    ram->memoriaInstrucoes[2][0] = 2;  
+    ram->memoriaInstrucoes[2][1] = baoquadrado;
+    ram->memoriaInstrucoes[2][2] = -1;
+    ram->memoriaInstrucoes[2][3] = -1;
+
+    //b^2 - 4ac
+    programaSubtracao(ram, baoquadrado, quatroac);
+    int subtracao = ram->RAM[1];
+    ram->memoriaInstrucoes[3][0] = 1;  
+    ram->memoriaInstrucoes[3][1] = subtracao;
+    ram->memoriaInstrucoes[3][2] = 1;
+    ram->memoriaInstrucoes[3][3] = 1;
+
+    int delta, deltanegativo;
+    int doisa;
+    int menosb1, menosb2;
+    int divisao1, divisao2;
+
+    if (subtracao < 0) {
+        printf("Erro");
+        return;
+    }
+    
+    else {
+        //2a
+        programaMultiplicacao(ram, 2, a);
+        doisa = ram->RAM[1];
+        ram->memoriaInstrucoes[4][0] = 1;  
+        ram->memoriaInstrucoes[4][1] = doisa;
+        ram->memoriaInstrucoes[4][2] = 1;
+        ram->memoriaInstrucoes[4][3] = 1;
+
+
+        //raiz de b^2 - 4ac, positivo e negativo
+        raizquadrada(ram, subtracao);
+        delta = ram->RAM[1];
+        ram->memoriaInstrucoes[5][0] = 1;  
+        ram->memoriaInstrucoes[5][1] = delta;
+        ram->memoriaInstrucoes[5][2] = 1;
+        ram->memoriaInstrucoes[5][3] = 1;
+
+        deltanegativo = -ram->RAM[1];
+        ram->memoriaInstrucoes[6][0] = 1;  
+        ram->memoriaInstrucoes[6][1] = deltanegativo;
+        ram->memoriaInstrucoes[6][2] = 1;
+        ram->memoriaInstrucoes[6][3] = 1;
+
+        programaSubtracao(ram, -b, delta);
+        menosb1 = ram->RAM[1];
+        ram->memoriaInstrucoes[7][0] = 1;  
+        ram->memoriaInstrucoes[7][1] = menosb1;
+        ram->memoriaInstrucoes[7][2] = 1;
+        ram->memoriaInstrucoes[7][3] = 1;
+
+        programaSubtracao(ram, -b, deltanegativo);
+        menosb2 = ram->RAM[1];
+        ram->memoriaInstrucoes[8][0] = 1;  
+        ram->memoriaInstrucoes[8][1] = menosb2;
+        ram->memoriaInstrucoes[8][2] = 1;
+        ram->memoriaInstrucoes[8][3] = 1;
+
+        programaDivisao(ram, menosb1, doisa);
+        divisao1 = ram->RAM[1];
+        ram->memoriaInstrucoes[9][0] = 1;  
+        ram->memoriaInstrucoes[9][1] = divisao1;
+        ram->memoriaInstrucoes[9][2] = 1;
+        ram->memoriaInstrucoes[9][3] = 1;
+
+        programaDivisao(ram, menosb2, doisa);
+        divisao2 = ram->RAM[1];
+        ram->memoriaInstrucoes[10][0] = 1;  
+        ram->memoriaInstrucoes[10][1] = divisao2;
+        ram->memoriaInstrucoes[10][2] = 1;
+        ram->memoriaInstrucoes[10][3] = 1;  
+    }
+    
+    ram->memoriaInstrucoes[11][0] = -1; //halt
+    ram->memoriaInstrucoes[11][1] = -1; 
+    ram->memoriaInstrucoes[11][2] = -1;
+    ram->memoriaInstrucoes[11][3] = -1;
+    maquina(ram);
+    printf("Valor1: %d e valor2: %d\n", divisao1, divisao2);
 }
 
 

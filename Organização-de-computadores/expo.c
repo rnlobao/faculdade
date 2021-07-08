@@ -1,93 +1,82 @@
-void expoInstru (int guarda_memoria[][4], int base, int expoente, int *memoriadedados) {
+void baskara (int **guarda_memoria, int a, int b, int c, int *memoriadedados) {
 
-    //2 ^ 3 = 2 * 2 * 2 = (2 + 2 + 2 + 2)
+    int umaInstrucao[4];
 
-    //4 ^ 2 = 4 * 4 = ( 4 + 4 + 4 + 4)
+    int instrumMemoryBaskara[100][4];
 
-    //int exp = expoente + 3;
+    int multiac;
 
-    //int instrumMemoryexpo[exp][4];
+    int quadradodeb;
 
-    int umaInstrucao[4]; 
+    int delta;
 
-    int i, j;
+    //resolvendo o delta primeiro
+    multiplicaInstru(instrumMemoryBaskara, a, c, memoriadedados); // a * c
 
-    //leva para memoriadedados[0] o valor da base
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 1;
+    umaInstrucao[3] = -1;
+    
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    multiac = umaInstrucao[1];
+
+    multiplicaInstru(instrumMemoryBaskara, 4, multiac, memoriadedados); // ac * 4
+
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 1;
+    umaInstrucao[3] = -1;
+    
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    multiac = umaInstrucao[1];
+
+    expoInstru(instrumMemoryBaskara, b, 2, memoriadedados);// b * b
+
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 1;
+    umaInstrucao[3] = -1;
+    
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    quadradodeb = umaInstrucao[1];
+
+    //levo para memoriadedados[0] o valor de multiac
     umaInstrucao[0] = 2;
-    umaInstrucao[1] = base;
+    umaInstrucao[1] = multiac;
     umaInstrucao[2] = 0;
     umaInstrucao[3] = -1;
 
-
     maquinaOPERACOES(umaInstrucao, memoriadedados);
 
-    //leva para memoriadedados[1] o valor 0 para realizar a primeira soma com a base
+    //levo para memoriadedados[1] o valor do quadrado de b
     umaInstrucao[0] = 2;
-    umaInstrucao[1] = 0;
+    umaInstrucao[1] = quadradodeb;
     umaInstrucao[2] = 1;
     umaInstrucao[3] = -1;
 
     maquinaOPERACOES(umaInstrucao, memoriadedados);
 
-    // 2 ^ 3 : 2 * 2 * 2 -> (2 + 2) = 4 * 2 -> (4 + 4) = 8
-    // 3 ^ 3 : 3 * 3 * 3 -> (3 + 3 + 3) = 9 * 3 -> (9 + 9 + 9) = 27
+
+    //Subtraçao entre quadradodeb e multiac (memoriadados[1] - memoriadados[0])
+    umaInstrucao[0] = 1;
+    umaInstrucao[1] = 1;
+    umaInstrucao[2] = 0;
+    umaInstrucao[3] = 1;
+
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
 
 
-    //Vai fazer n somas para de acordo com as soma que ja ocorreram 
-
-    for (i = 0; i < expoente - 1; i++) { /*Sao n expoentes e não n - 1 expoentes, pois passara uma vez 
-                                        dentro do primeiro for para realizar uma primeira soma e depois 
-                                        colocar valor novo para base*/
-
-        if (i != 0){
-            //trazer da memoria o valor da "nova base" criada com as somas 
-
-            umaInstrucao[0] = 3;
-            umaInstrucao[1] = -1;
-            umaInstrucao[2] = 1;
-            umaInstrucao[3] = -1;
-
-            maquinaOPERACOES(umaInstrucao, memoriadedados);
-            int novabase = umaInstrucao[1];
-
-
-            //coloca um novo valor na memoriadados[0] para realizar somas com um "novo valor de base"
-            umaInstrucao[0] = 2;
-            umaInstrucao[1] = novabase;
-            umaInstrucao[2] = 0;
-            umaInstrucao[3] = -1;
-
-            maquinaOPERACOES(umaInstrucao, memoriadedados);
-        } 
-
-        else {
-            umaInstrucao[0] = 0;
-            umaInstrucao[1] = 0;
-            umaInstrucao[2] = 1;
-            umaInstrucao[3] = 1;
-
-            maquinaOPERACOES(umaInstrucao, memoriadedados);
-        }
-
-        for (j = 0; j < base - 1; j ++){ /*Serao realizar n base - 1 somas ja que para cada
-                                            valor novo de base, sempre há n base - 1 somas*/
-            umaInstrucao[0] = 0;
-            umaInstrucao[1] = 0;
-            umaInstrucao[2] = 1;
-            umaInstrucao[3] = 1;
-
-            maquinaOPERACOES(umaInstrucao, memoriadedados);
-
-        }
-    }
-
-    //halt 
-    umaInstrucao[0] = -1;
+    //trago da memoria o valor da subtraçao anterior
+    umaInstrucao[0] = 3;
     umaInstrucao[1] = -1;
-    umaInstrucao[2] = -1;
+    umaInstrucao[2] = 1;
     umaInstrucao[3] = -1;
 
     maquinaOPERACOES(umaInstrucao, memoriadedados);
+    delta = umaInstrucao[1];
+
+    raizquadradaInstru(instrumMemoryBaskara, delta, memoriadedados); //Raiz quadrada de delta
 
     umaInstrucao[0] = 3;
     umaInstrucao[1] = -1;
@@ -95,9 +84,97 @@ void expoInstru (int guarda_memoria[][4], int base, int expoente, int *memoriade
     umaInstrucao[3] = -1;
 
     maquinaOPERACOES(umaInstrucao, memoriadedados);
-    int resultadoEXPO = umaInstrucao[1];
+    int raiz = umaInstrucao[1];
 
-    printf("\nO valor da expoenciaçao é igual a %d\n\n", resultadoEXPO);
+    //Agora vou dividir em dois resultaod: um onde a raiz de delta é positiva e outro onde a raiz de delta é negativa
+
+    //levo para memoriadedados[0] o valor da raiz positiva
+    umaInstrucao[0] = 2;
+    umaInstrucao[1] = raiz;
+    umaInstrucao[2] = 0;
+    umaInstrucao[3] = -1;
+
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+
+    //levo para memoriadedados[1] o valor da raiz negativa
+    umaInstrucao[0] = 2;
+    umaInstrucao[1] = -raiz;
+    umaInstrucao[2] = 1;
+    umaInstrucao[3] = -1;
+
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+
+    //levo para memoriadedados[2] o valor de b
+    umaInstrucao[0] = 2;
+    umaInstrucao[1] = -b;
+    umaInstrucao[2] = 2;
+    umaInstrucao[3] = -1;
+
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+
+    //soma1 
+    umaInstrucao[0] = 0;
+    umaInstrucao[1] = 0;
+    umaInstrucao[2] = 2;
+    umaInstrucao[3] = 3;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+
+    //trago da memoria o valor da primeira soma
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 3;
+    umaInstrucao[3] = -1;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    int soma1 = umaInstrucao[1]; 
+
+    //soma2
+    umaInstrucao[0] = 0;
+    umaInstrucao[1] = 1;
+    umaInstrucao[2] = 2;
+    umaInstrucao[3] = 4;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+
+    //trago da memoria o valor da segunda soma
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 4;
+    umaInstrucao[3] = -1;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    int soma2 = umaInstrucao[1]; 
 
 
+    //faço a multiplicaçao de 2 * a 
+    multiplicaInstru(instrumMemoryBaskara, a, 2, memoriadedados);
+
+    //trago da memoria o valor da multiplicaçao entre 2 e a
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 1;
+    umaInstrucao[3] = -1;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    int multia = umaInstrucao[1]; 
+
+    //Primeira raiz 
+    divideInstru(instrumMemoryBaskara, -soma1, multia, memoriadedados);
+
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 3;
+    umaInstrucao[3] = -1;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    int result1 = -umaInstrucao[1];
+
+    printf("\n1ª raiz = %d\n\n", result1);
+
+    //Segunda raiz 
+    divideInstru(instrumMemoryBaskara, -soma2, multia, memoriadedados);
+
+    umaInstrucao[0] = 3;
+    umaInstrucao[1] = -1;
+    umaInstrucao[2] = 3;
+    umaInstrucao[3] = -1;
+    maquinaOPERACOES(umaInstrucao, memoriadedados);
+    int result2 = -umaInstrucao[1];
+
+    printf("\n2ª raiz = %d\n", result2);
 }

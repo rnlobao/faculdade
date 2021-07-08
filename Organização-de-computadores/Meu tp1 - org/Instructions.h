@@ -25,11 +25,10 @@ void programaSubtracao(Memoria* ram, int minuendo, int subtraendo);
 //Demais equacoes
 void programaMultiplicacao(Memoria *ram, int multiplicando, int multiplicador);
 void programaDivisao(Memoria *ram, int dividendo, int divisor);
-void programaPotenciacao(Memoria* ram, int num, int pot);
+void programaPotenciacao(Memoria* ram, int base, int expoente);
 void programaPA(Memoria* ram, int numero, int razao, int count);
 void programaPG(Memoria* ram,int numero,int razao,int count);
 void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento);
 void raizquadrada(Memoria *ram, int num1);
-
-
+void bhaskara (Memoria* ram, int a, int b, int c);
 #endif
