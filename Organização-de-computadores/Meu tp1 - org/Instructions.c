@@ -253,10 +253,6 @@ void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento
 
 }
 
-void bhaskara (Memoria* ram, int a, int b, int c) {
-    
-}
-
 
 //Codigos de retorno de memoria
 int* retornaRAM(Memoria* ram){

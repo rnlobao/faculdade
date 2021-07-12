@@ -30,5 +30,5 @@ void programaPA(Memoria* ram, int numero, int razao, int count);
 void programaPG(Memoria* ram,int numero,int razao,int count);
 void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento);
 void raizquadrada(Memoria *ram, int num1);
-void bhaskara (Memoria* ram, int a, int b, int c);
+
 #endif
