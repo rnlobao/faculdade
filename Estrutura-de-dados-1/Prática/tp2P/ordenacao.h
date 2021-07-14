@@ -17,13 +17,7 @@ TADpaises *pontuar(TADpaises *p, int tam);
 TADpaises *organizascore(TADpaises *p, int tam);
 //Conferir por ordem alfabética
 TADpaises *confererepetido(TADpaises *p, int tam);
-
-
-
 //Printar a tad
 void printatad(TADpaises *p, int tam);
-
-
-
 
 # endif

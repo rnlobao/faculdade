@@ -57,9 +57,9 @@ TADpaises *organizascore(TADpaises *p, int tam) {
 TADpaises *pontuar(TADpaises *p, int tam) {
     int valor1, valor2, valor3, valor4 = 0;
     for (int i = 0; i < tam; i++) {
-        valor1 = p[i].ouro * 10000;
-        valor2 = p[i].prata * 100;
-        valor3 = p[i].bronze * 1;
+        valor1 = p[i].ouro * 10000000;
+        valor2 = p[i].prata * 10000;
+        valor3 = p[i].bronze * 10;
         valor4 = valor1 + valor2 + valor3;
         p[i].score = valor4;
     }
@@ -74,10 +74,10 @@ TADpaises *confererepetido(TADpaises *p, int tam) {
                 valordaprimeiraletra1 = p[i].pais[0];
                 valordaprimeiraletra2 = p[i+1].pais[0];
                 if (valordaprimeiraletra1 > valordaprimeiraletra2) {
-                    p[i+1].score++;
+                    p[i+1].score = p[i+1].score + 1;
                 }
                 else {
-                    p[i].score++;
+                    p[i].score = p[i].score + 1;
                 }
             }
         }
@@ -87,34 +87,34 @@ TADpaises *confererepetido(TADpaises *p, int tam) {
                 valordaprimeiraletra1 = p[i].pais[0];
                 valordaprimeiraletra2 = p[i-1].pais[0];
                 if (valordaprimeiraletra1 > valordaprimeiraletra2) {
-                    p[i-1].score++;
+                    p[i-1].score = p[i-1].score + 1;
                 }
                 else {
-                    p[i].score++;
+                    p[i].score = p[i].score + 1;
                 }
             }
         }
-        if (i > 0 && i < tam-1) {
+        else {
             if (p[i].score == p[i+1].score || p[i].score == p[i-1].score) {
                 if (p[i].score == p[i+1].score) {
                     valordaprimeiraletra1 = p[i].pais[0];
                     valordaprimeiraletra2 = p[i+1].pais[0];
                     if (valordaprimeiraletra1 > valordaprimeiraletra2) {
-                        p[i+1].score++;
+                        p[i+1].score = p[i+1].score + 1;
                     }
                     else {
-                        p[i].score++;
+                        p[i].score = p[i].score + 1;
                     }
-            }
-            else if (p[i].score == p[i-1].score) {
+                if (p[i].score == p[i-1].score) {
                 valordaprimeiraletra1 = p[i].pais[0];
                 valordaprimeiraletra2 = p[i-1].pais[0];
                 if (valordaprimeiraletra1 > valordaprimeiraletra2) {
-                    p[i-1].score++;
+                    p[i-1].score = p[i-1].score + 1;
                 }
                 else {
-                    p[i].score++;
+                    p[i].score = p[i].score + 1;
                 }
+            }
             }
         }
         }
