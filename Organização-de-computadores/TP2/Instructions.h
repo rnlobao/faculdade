@@ -11,7 +11,6 @@ typedef struct memoria Memoria;
 
 //Montagem da maquina
 Memoria* montarMemoriaDados(void);
-void montarPrograma(Memoria *ram);
 void maquina(Memoria *ram);
 
 //Funcoes de retorno de memoria

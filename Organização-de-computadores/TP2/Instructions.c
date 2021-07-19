@@ -1,9 +1,13 @@
 //Robson Novato Lobao 20.1.4018
 #include"Instructions.h"
 
+
 struct memoria{
     int RAM[T];
     int memoriaInstrucoes[1000][4];
+    bool atualizado;
+    int custo;
+    int chachehit;
 };
 
 //Aqui a variavel ram é alocada e o campo dessa struct é preenchida com numero aleatorios
