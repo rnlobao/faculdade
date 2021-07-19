@@ -13,17 +13,14 @@ void menu(Memoria* ram){
   printf("Use (2)  - multiplicacao.\n");
   printf("Use (3)  - divisao.\n");
   printf("Use (4)  - potenciacao.\n");
-  printf("Use (5)  - PA (num, razao, contador).\n");
-  printf("Use (6)  - PG (num, razao, contador).\n");
-  printf("Use (7)  - Volume de solido geometrico(altura, largura, profundidade).\n");
-  printf("Use (8)  - Raiz quadrada.\n");
+  printf("Use (5)  - Raiz quadrada.\n");
   printf("Use (-1) - SAIR.\n\n");
 
   do {
 
   do {
     scanf("%d", &op);
-  } while(op>8 || op<-1);
+  } while(op>5 || op<-1);
 
   switch (op) {
 
@@ -68,31 +65,6 @@ void menu(Memoria* ram){
     break;
 
     case 5:
-      scanf("%d", &valor1);
-      scanf("%d", &valor2);
-      scanf("%d", &valor3);;
-      printf("PA = ");
-      programaPA(ram, valor1, valor2, valor3);
-    break;
-
-    case 6:
-      scanf("%d", &valor1);
-      scanf("%d", &valor2);
-      scanf("%d", &valor3);
-      printf("PG = ");
-      programaPG(ram, valor1, valor2, valor3);
-    break;
-
-    case 7:
-      scanf("%d", &valor1);
-      scanf("%d", &valor2);
-      scanf("%d", &valor3);
-      volumeParalelepipedo(ram, valor1, valor2, valor3);
-      memory = retornaRAM(ram);
-      printf("\n\nO volume do solido = %d\n\n", memory[1]);
-    break;
-
-    case 8:
       scanf("%d", &valor1);
       raizquadrada(ram, valor1);
       memory = retornaRAM(ram);

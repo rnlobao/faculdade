@@ -102,41 +102,6 @@ void programaMultiplicacao(Memoria *ram, int multiplicando, int multiplicador){
 }
 
 
-//Realiza progressao aritmetica
-void programaPA(Memoria* ram, int numero, int razao, int count){
-
-    int aux;
-
-    printf("%d  ", numero);
-
-    ram->RAM[1]=numero;
-
-    for(int i=0; i<count-1; i++){
-      programaSoma(ram, razao, ram->RAM[1]);
-      printf("%d  ", ram->RAM[1]);
-    }
-
-    printf("\n\n");
-
-}
-
-//Programa PG
-void programaPG(Memoria* ram,int numero,int razao,int count){
-
-  int aux = numero;
-
-  //Imprime o primeiro numero da PG
-  printf("%d  ",numero);
-
-  //Multiplicacoes sucessivas para gerar a pg, o aux recupera o produto da multiplicacao e o adiciona na multiplicacao
-  for(int i = 0; i<count-1; i++){
-      programaMultiplicacao(ram, aux, razao);
-      aux = ram->RAM[1];
-      //Impressao dos diversos termos da pg
-      printf("%d  ",ram->RAM[1]);
-  }
-  printf("\n\n");
-}
 
 //ProgramaPotencia
 void programaPotenciacao(Memoria* ram, int base, int expoente){
@@ -240,18 +205,6 @@ void programaDivisao(Memoria *ram, int dividendo, int divisor){
     ram->RAM[0]=cont;
 }
 
-//Programa Paralelepido
-void volumeParalelepipedo(Memoria* ram, int altura, int largura, int comprimento){
-
-    int aux;
-    //Multiplicacao de duas dimensoe do paralelepipedo
-    programaMultiplicacao(ram, altura, comprimento);
-    //Aux coleta o resultado da multiplicacao
-    aux = ram->RAM[1];
-    //Multiplicacao subsequente das tres dimensoes
-    programaMultiplicacao(ram, aux, largura);
-
-}
 
 
 //Codigos de retorno de memoria
