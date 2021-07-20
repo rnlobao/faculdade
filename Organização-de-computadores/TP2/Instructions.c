@@ -5,7 +5,7 @@
 struct memoria{
     int RAM[T];
     int memoriaInstrucoes[1000][4];
-    bool atualizado;
+    int atualizado;
     int custo;
     int chachehit;
 };
