@@ -120,7 +120,7 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
     }
     for (int j = 0; j < tamcache2; j++) {
         if (cache2[j].endereco == endereco && cache2[j].refresh == 1) {
-            cache1[]
+            cache1[] //precisamos trazer o valor da cache2 pra cache1 e apagar na cache 2 de acordo com as hierarquias definidas la
         }
     }
 }
