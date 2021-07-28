@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define tamanhoram 1000 //aqui fica o lol todo
+#define tamanhoram 1000 
 #define tamcache1 16
 #define tamcache2 32
 #define tamcache3 64
@@ -10,8 +10,8 @@
 
 typedef struct {
     int opcode;
-    int end1; //operando 1 = 5
-    int end2; //operando 2 = 3
+    int end1; 
+    int end2; 
     int end3; 
 } instrucao;
 
@@ -172,6 +172,27 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
     cache3[n] = ram[endereco];  //transferindo o conteudo da cache3 pra posicao menos relevante da cache2
     retornarovalorbuscado (cache1, cache2, cache3, endereco, ram);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Essa funcao vai varrer as caches e descobrir qual endereco dela pode ser substituido, retornando a posicao que e
