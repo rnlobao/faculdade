@@ -6,12 +6,12 @@
 #define tamcache1 16
 #define tamcache2 32
 #define tamcache3 64
-#define tamdasinstrucoes 5000
+#define tamdasinstrucoes 10
 
 typedef struct {
     int opcode;
-    int end1; //operacao
-    int end2; //operacao
+    int end1; //operando 1
+    int end2; //operando 2
     int end3; //resultado
 } instrucao;
 
@@ -56,13 +56,15 @@ int main() {
 
     inicialerinstrucoes(lerinstrucoes);
 
+    maquinainterpretada (cache1, cache2, cache3, lerinstrucoes, ram);
+
 
     for (int i = 0; i < tamdasinstrucoes; i++) {
-        if (lerinstrucoes[i].opcode == 1) {
-            printf("Soma: %d + %d = %d\n", lerinstrucoes[i].end1, lerinstrucoes[i].end2, lerinstrucoes[i].end3);
+        if (lerinstrucoes[i].opcode == 0) {
+            printf("Soma: %d + %d = %d\n", lerinstrucoes[i].end1, lerinstrucoes[i].end2, ram[lerinstrucoes[i].end3].conteudo);
         }
         else {
-            printf("Subtracao: %d - %d = %d\n", lerinstrucoes[i].end1, lerinstrucoes[i].end2, lerinstrucoes[i].end3);
+            printf("Subtracao: %d - %d = %d\n", lerinstrucoes[i].end1, lerinstrucoes[i].end2, ram[lerinstrucoes[i].end3].conteudo);
         }
     }
 
@@ -115,7 +117,7 @@ void iniciacache3 (blocodememoria *cache3) {
 void inicialerinstrucoes (instrucao *instrucao) {
     srand(time(NULL));
     for (int i = 0; i < tamdasinstrucoes; i++) {
-        instrucao[i].opcode = rand() % 3; //estamos gerando instrucoes aleatorias pro opcode processar 
+        instrucao[i].opcode = rand() % 2; //estamos gerando instrucoes aleatorias pro opcode processar 
         instrucao[i].end1 = rand() % tamanhoram; //os enderecoes das intrucoes foram passados de acordo com valores aleatorios que foram sorteados no inicia ram
         instrucao[i].end2 = rand() % tamanhoram;
         instrucao[i].end3 = rand() % tamanhoram;
@@ -125,16 +127,20 @@ void inicialerinstrucoes (instrucao *instrucao) {
 
 void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, instrucao *instrucao, blocodememoria *ram) {
     for (int i = 0; i < tamdasinstrucoes; i++) {
-        if (instrucao[i].opcode == 1) { //soma
+        printf("OPCODE = %d\n", instrucao[i].opcode);
+        if (instrucao[i].opcode == 0) { //soma
             //Como buscar os valores:
             int n = retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end1);
             int k = retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end2);
             ram[instrucao[i].end3].conteudo = n + k;
+            printf("RESULTADO %d: %d\n", i, ram[instrucao[i].end3].conteudo);
+
         }
-        if (instrucao[i].opcode == 2) { //subtracao
+        if (instrucao[i].opcode == 1) { //subtracao
             int n = retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end1);
             int k = retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end2);
             ram[instrucao[i].end3].conteudo = n - k;
+            printf("RESULTADO %d: %d\n", i, ram[instrucao[i].end3].conteudo);
         }
     }
 }
