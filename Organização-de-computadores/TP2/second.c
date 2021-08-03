@@ -6,10 +6,15 @@
 #define tamcache1 16
 #define tamcache2 32
 #define tamcache3 64
-#define tamdasinstrucoes 20 
+#define tamdasinstrucoes 20
 #define cacheSup3 90
 #define cacheSup2 36
 #define cacheSup1 12
+
+//0 - 15 cache1
+//16 - 47 cache3
+//48 - 112 cache3
+//ramm > 113
 
 typedef struct {
     int opcode;
@@ -36,7 +41,7 @@ void iniciacache2 (blocodememoria *cache2);
 void iniciacache3 (blocodememoria *cache3);
 void inicialerinstrucoes (instrucao *instrucao);
 void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2,blocodememoria *cache3, instrucao *instrucao, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal);
-int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss , int *custoTotal);
+int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss , int *custoTotal);
 int definen (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int n);
 void imprimirRelatorio(int cacheHit , int cacheMiss, int custoTotal);
 
@@ -66,15 +71,12 @@ int main() {
 }
 
 
-//primeira funcao que inicia as memorias:
-//no bloco nao usamos identificadores convencionais para nao confundir ram com cache...
-//Nas funcoes que iniciam vamos preencher as memorias com valores aleatorizados.
 void iniciaram (blocodememoria *ram) {
     srand(time(NULL));
     for (int i = tamcache1 + tamcache2 + tamcache3; i < tamanhoram; i++) {
-        ram[i].endereco = i; //ta dando uma tag pro local, tipo identificador
-        ram[i].conteudo = rand() % 1000; //aqui dando valores aleatorios pra fazer as contas
-        ram[i].refresh = 1; //Serve para manter alinhados os valores da cache1 com a ram, pra nao ter blocos o mesmo com valores diferentes
+        ram[i].endereco = i; 
+        ram[i].conteudo = rand() % 1000; 
+        ram[i].refresh = 1;
     }
     
 }
@@ -82,7 +84,6 @@ void iniciaram (blocodememoria *ram) {
 void iniciacache1 (blocodememoria *cache1) {
     srand(time(NULL));
     for (int i = 0; i < tamcache1; i++) {
-        //cache1[i].endereco = (i + 1) * -1; //nao pode ser igual o i da cache para nao pegar os mesmos identificadores
         cache1[i].endereco = i ;
         cache1[i].conteudo = rand() % 1000;
         cache1[i].refresh = 0; //pra saber que quando inicia a cache nenhum valor ainda foi inputado
@@ -92,7 +93,6 @@ void iniciacache1 (blocodememoria *cache1) {
 void iniciacache2 (blocodememoria *cache2) {
     srand(time(NULL));
     for (int i = tamcache1; i < tamcache1 + tamcache2; i++) {
-        //cache2[i].endereco = (i + 1) * -1; //nao pode ser igual o i da cache para nao pegar os mesmos identificadores
         cache2[i].endereco = i ;
         cache2[i].conteudo = rand() % 1000;
         cache2[i].refresh = 0;
@@ -102,7 +102,6 @@ void iniciacache2 (blocodememoria *cache2) {
 void iniciacache3 (blocodememoria *cache3) {
     srand(time(NULL));
     for (int i = tamcache1 + tamcache2; i < tamcache1 + tamcache2 + tamcache3; i++) {
-        //cache3[i].endereco = (i + 1) * -1; //nao pode ser igual o i da cache para nao pegar os mesmos identificadores
         cache3[i].endereco = i ;
         cache3[i].conteudo = rand() % 1000;
         cache3[i].refresh = 0;
@@ -112,8 +111,8 @@ void iniciacache3 (blocodememoria *cache3) {
 void inicialerinstrucoes (instrucao *instrucao) {
     srand(time(NULL));
     for (int i = 0; i < tamdasinstrucoes; i++) {
-        instrucao[i].opcode = rand() % 2; //estamos gerando instrucoes aleatorias pro opcode processar 
-        instrucao[i].end1 = rand() % 1000; //os enderecoes das intrucoes foram passados de acordo com valores aleatorios que foram sorteados no inicia ram
+        instrucao[i].opcode = rand() % 2; 
+        instrucao[i].end1 = rand() % 1000; 
         instrucao[i].end2 = rand() % 1000;
         instrucao[i].end3 = rand() % 1000;
     }
@@ -124,20 +123,23 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
     int n , k ;
     for (int i = 0; i < tamdasinstrucoes; i++) {
         if (instrucao[i].opcode == 0) { //soma
-            //Como buscar os valores:
-            retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[cacheSup1].conteudo; printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
-            retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal);
-            k = cache1[cacheSup1].conteudo; printf("|Segundo Valor na cache1 = %d|\n\n" , k);
+            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
+            n = cache1[cacheSup1].conteudo;
+            printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
+            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal);
+            k = cache1[cacheSup1].conteudo;
+            printf("|Segundo Valor na cache1 = %d|\n\n" , k);
             ram[instrucao[i].end3].conteudo = n + k;
             printf("Soma: %d + %d = %d\n\n",n , k , ram[instrucao[i].end3].conteudo);
 
         }
         if (instrucao[i].opcode == 1) { //subtracao
-            retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[cacheSup1].conteudo; printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
-            retornarovalorbuscado(cache1, cache2, cache3, instrucao[i].end2, ram , cacheHit , cacheMiss , custoTotal);
-            k = cache1[cacheSup1].conteudo; printf("|Segundo valor na cache1 = %d|\n\n" , k);
+            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
+            n = cache1[cacheSup1].conteudo;
+            printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
+            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram , cacheHit , cacheMiss , custoTotal); 
+            k = cache1[cacheSup1].conteudo;
+            printf("|Segundo valor na cache1 = %d|\n\n" , k);
             ram[instrucao[i].end3].conteudo = n - k;
             printf("Subtração: %d - %d = %d\n\n",n , k , ram[instrucao[i].end3].conteudo);
 
@@ -145,7 +147,8 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
     }
 }
 
-int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal) { //endereco que vamos buscar, ele esta
+int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3,
+                     int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal) { 
 
     if(endereco >= 0 && endereco < tamcache1)
     {
@@ -159,18 +162,6 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
             }
         }
     }
-    
-
-
-    /*
-    for (int i = 0; i < tamcache1; i++) {
-        if (cache1[i].endereco == endereco || cache1[i].refresh == 0) {
-            printf("teste3 cache = %d\n", cache1[i].conteudo);
-            return cache1[i].conteudo;
-            
-        }
-    }
-    */
 
    else if(endereco >= tamcache1 && endereco < tamcache1 + tamcache2)
    {
@@ -180,27 +171,12 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
            {
                cache1[cacheSup1].conteudo = cache2[j].conteudo;
                printf("|Valor na cache2|  |Movendo valor da cache2 para cache1|\n");
-               //*cacheHit = *cacheHit + 1;
                *custoTotal = *custoTotal + 20; 
-               retornarovalorbuscado(cache1,cache2,cache3,cacheSup1,ram , cacheHit , cacheMiss , custoTotal);
+               mudancaDeValor(cache1,cache2,cache3,cacheSup1,ram , cacheHit , cacheMiss , custoTotal);
            }
        }
    }
 
-    /*for (int j = 0; j < tamcache2; j++) {
-        if (cache2[j].endereco == endereco || cache2[j].refresh == 0) {
-            //int n = definen(cache1, cache2, cache3, 1); //estamos escolhendo aqui qual posicao do cache1 vai ser apagado pra gente passar o da cache2 pra ca
-            int n = 1;
-            cache1[n] = cache2[j];  //transferindo o conteudo da cache2 pra posicao menos relevante da cache1
-            printf("teste4\n");
-            retornarovalorbuscado (cache1, cache2, cache3, endereco, ram);
-            //Agora precismos definir em qual posicao cache1[??] vai ser apagada
-            //precisamos trazer o valor da cache2 pra cache1 e apagar na cache 2
-            //de acordo com as hierarquias definidas la
-            
-        }
-    }
-    */
 
    else if(endereco >= tamcache1 + tamcache2 && endereco < tamcache1 + tamcache2 + tamcache3)
    {
@@ -210,16 +186,15 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
            {
                 cache2[cacheSup2].conteudo = cache3[k].conteudo;
                 printf("|Valor na cache3|  |Movendo valor da cache3 para cache2|\n");
-                //*cacheHit = *cacheHit + 1;
                 *custoTotal = *custoTotal + 30;
-                retornarovalorbuscado(cache1,cache2,cache3,cacheSup2,ram, cacheHit , cacheMiss , custoTotal);
+                mudancaDeValor(cache1,cache2,cache3,cacheSup2,ram, cacheHit , cacheMiss , custoTotal);
            }
        }
    }
 
    else if (endereco >= tamcache1 + tamcache2 + tamcache3 && endereco < tamanhoram)
    {
-       for(int l = tamcache1 + tamcache2 + tamcache3 ; l < tamanhoram ; l++)          // 0 16 48 112
+       for(int l = tamcache1 + tamcache2 + tamcache3 ; l < tamanhoram ; l++)          
        {
            if(ram[l].endereco == endereco)
            {
@@ -228,7 +203,7 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
                *cacheMiss = *cacheMiss + 1;
                *custoTotal = *custoTotal + 1000;
                *cacheHit = *cacheHit - 1;
-               retornarovalorbuscado(cache1,cache2,cache3,cacheSup3,ram , cacheHit , cacheMiss , custoTotal);   
+               mudancaDeValor(cache1,cache2,cache3,cacheSup3,ram , cacheHit , cacheMiss , custoTotal);   
            }
        }
    }
@@ -236,24 +211,6 @@ int retornarovalorbuscado (blocodememoria *cache1, blocodememoria *cache2, bloco
    return 0;
 
 
-
-
-    /*
-    for (int k = 0; k < tamcache3; k++) {
-        if (cache3[k].endereco == endereco || cache3[k].refresh == 0) {
-            //int n = definen(cache1, cache2, cache3, 2);
-            int n = 2;
-            cache2[n] = cache3[k];  //transferindo o conteudo da cache3 pra posicao menos relevante da cache2
-            printf("teste5\n");
-            retornarovalorbuscado (cache1, cache2, cache3, endereco, ram);
-            
-        }
-    }
-    //int n = definen(cache1, cache2, cache3, 2);
-    // cache3[n] = ram[endereco];  //transferindo o conteudo da cache3 pra posicao menos relevante da cache2
-    printf("teste6\n");
-    //retornarovalorbuscado (cache1, cache2, cache3, endereco, ram);
-    */
 }
 
 void imprimirRelatorio(int cacheHit , int cacheMiss , int custoTotal)
