@@ -6,15 +6,10 @@
 #define tamcache1 16
 #define tamcache2 32
 #define tamcache3 64
-#define tamdasinstrucoes 20
+#define tamdasinstrucoes 200
 #define cacheSup3 90
 #define cacheSup2 36
 #define cacheSup1 12
-
-//0 - 15 cache1
-//16 - 47 cache3
-//48 - 112 cache3
-//ramm > 113
 
 typedef struct {
     int opcode;
@@ -27,12 +22,7 @@ typedef struct {
     int endereco;
     int conteudo;
     int refresh;
-
-    /*
-    //para escolher quem fica caso a cache encha vamos ter que escolher quem fica conforme:
-    int prioridadeimportancia; // + importante
-    int prioridadeidade; // - importante
-    int soma; */ //apanhado do score da posicao da cache
+    int uso;
 } blocodememoria;
 
 void iniciaram (blocodememoria *ram);
@@ -86,7 +76,7 @@ void iniciacache1 (blocodememoria *cache1) {
     for (int i = 0; i < tamcache1; i++) {
         cache1[i].endereco = i ;
         cache1[i].conteudo = rand() % 1000;
-        cache1[i].refresh = 0; //pra saber que quando inicia a cache nenhum valor ainda foi inputado
+        cache1[i].refresh = 0; 
     }
 }
 
@@ -124,22 +114,18 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
     for (int i = 0; i < tamdasinstrucoes; i++) {
         if (instrucao[i].opcode == 0) { //soma
             mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[cacheSup1].conteudo;
-            printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
+            n = cache1[cacheSup1].conteudo; printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
             mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal);
-            k = cache1[cacheSup1].conteudo;
-            printf("|Segundo Valor na cache1 = %d|\n\n" , k);
+            k = cache1[cacheSup1].conteudo; printf("|Segundo Valor na cache1 = %d|\n\n" , k);
             ram[instrucao[i].end3].conteudo = n + k;
             printf("Soma: %d + %d = %d\n\n",n , k , ram[instrucao[i].end3].conteudo);
 
         }
         if (instrucao[i].opcode == 1) { //subtracao
             mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[cacheSup1].conteudo;
-            printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
+            n = cache1[cacheSup1].conteudo; printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
             mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram , cacheHit , cacheMiss , custoTotal); 
-            k = cache1[cacheSup1].conteudo;
-            printf("|Segundo valor na cache1 = %d|\n\n" , k);
+            k = cache1[cacheSup1].conteudo; printf("|Segundo valor na cache1 = %d|\n\n" , k);
             ram[instrucao[i].end3].conteudo = n - k;
             printf("Subtração: %d - %d = %d\n\n",n , k , ram[instrucao[i].end3].conteudo);
 
@@ -147,8 +133,7 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
     }
 }
 
-int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3,
-                     int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal) { 
+int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal) { //endereco que vamos buscar, ele esta
 
     if(endereco >= 0 && endereco < tamcache1)
     {
@@ -169,7 +154,11 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
        {
            if(cache2[j].endereco == endereco)
            {
+               blocodememoria aux;
+               aux.conteudo = cache1[cacheSup1].conteudo;
                cache1[cacheSup1].conteudo = cache2[j].conteudo;
+               cache2[j].conteudo = aux.conteudo;
+
                printf("|Valor na cache2|  |Movendo valor da cache2 para cache1|\n");
                *custoTotal = *custoTotal + 20; 
                mudancaDeValor(cache1,cache2,cache3,cacheSup1,ram , cacheHit , cacheMiss , custoTotal);
@@ -184,7 +173,11 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
        {
            if(cache3[k].endereco == endereco)
            {
+                blocodememoria aux;
+                aux.conteudo = cache2[cacheSup2].conteudo;
                 cache2[cacheSup2].conteudo = cache3[k].conteudo;
+                cache3[k].conteudo = aux.conteudo;
+                
                 printf("|Valor na cache3|  |Movendo valor da cache3 para cache2|\n");
                 *custoTotal = *custoTotal + 30;
                 mudancaDeValor(cache1,cache2,cache3,cacheSup2,ram, cacheHit , cacheMiss , custoTotal);
@@ -198,7 +191,12 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
        {
            if(ram[l].endereco == endereco)
            {
-               cache3[cacheSup3].conteudo = ram[l].conteudo;
+                blocodememoria aux;
+                aux.conteudo = cache3[cacheSup3].conteudo;
+                cache3[cacheSup3].conteudo = ram[l].conteudo;
+                ram[l].conteudo = aux.conteudo;
+
+               
                printf("|Valor na RAM|     |Movendo valor da RAM para cache3|\n");
                *cacheMiss = *cacheMiss + 1;
                *custoTotal = *custoTotal + 1000;
@@ -219,99 +217,3 @@ void imprimirRelatorio(int cacheHit , int cacheMiss , int custoTotal)
     printf("|Cache Miss:  %d|   ", cacheMiss);
     printf("|Custo Total: %d|\n\n", custoTotal);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//Essa funcao vai varrer as caches e descobrir qual endereco dela pode ser substituido, retornando a posicao que e
-int definen (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int n) {
-    int soma1 = 0;
-    int valor1, valor2;
-    if (n == 1) {
-        for (int i = 0; i < tamcache1; i++) {
-            valor1 = cache1[i].prioridadeimportancia * 100000;
-            valor2 = cache1[i].prioridadeidade * 10;
-            cache1[i].soma = valor1 + valor2;
-        }
-        int menor = cache1[0].soma;
-        for (int j = 0; j < tamcache1; j++) {
-            if (cache1[j].soma < menor) {
-                menor = cache1[j].soma;
-            }
-        }
-        int posicaonacachesubstituivel;
-        for (int i = 0; i < tamcache1; i++) {
-            if (cache1[i].soma == menor) {
-                posicaonacachesubstituivel = i;
-            }
-        }
-        return posicaonacachesubstituivel; //oq tiver menor prioridade vai ser o apagado
-    }
-    if (n == 2) {
-        for (int i = 0; i < tamcache2; i++) {
-            valor1 = cache2[i].prioridadeimportancia * 100000;
-            valor2 = cache2[i].prioridadeidade * 10;
-            cache2[i].soma = valor1 + valor2;
-        }
-        int menor = cache2[0].soma;
-        for (int j = 0; j < tamcache2; j++) {
-            if (cache2[j].soma < menor) {
-                menor = cache2[j].soma;
-            }
-        }
-        int posicaonacachesubstituivel;
-        for (int i = 0; i < tamcache2; i++) {
-            if (cache2[i].soma == menor) {
-                posicaonacachesubstituivel = i;
-            }
-        }
-        return posicaonacachesubstituivel;
-    }
-    
-    else {
-        for (int i = 0; i < tamcache3; i++) {
-            valor1 = cache3[i].prioridadeimportancia * 100000;
-            valor2 = cache3[i].prioridadeidade * 10;
-            cache3[i].soma = valor1 + valor2;
-        }
-        int menor = cache3[0].soma;
-        for (int j = 0; j < tamcache3; j++) {
-            if (cache3[j].soma < menor) {
-                menor = cache3[j].soma;
-            }
-        }
-        int posicaonacachesubstituivel;
-        for (int i = 0; i < tamcache3; i++) {
-            if (cache3[i].soma == menor) {
-                posicaonacachesubstituivel = i;
-            }
-        }
-        return posicaonacachesubstituivel;
-    }
-    
-}
-*/
-
-//preciso atribuir valores pra prioridade de importancia e de idade;
-//trazer da ram pra cache3
-//cache miss e quando tira da ram
-//cache hit eq aundo tira das caches
