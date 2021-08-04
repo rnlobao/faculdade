@@ -185,6 +185,7 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
 int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal, int rec) { 
     if((endereco >= 1000 && endereco < 1016) || rec == 1)
     {
+        printf("Chegamos na cache1\n");
         for(int i = 0; i < tamcache1 ; i++)
         {
             if(cache1[i].endereco == endereco)
@@ -193,6 +194,11 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                 *cacheHit = *cacheHit + 1;
                 *custoTotal = *custoTotal + 10;
                 printf("OOOOOOI %d\n", cache1[i].conteudo);
+                for (int i = 0; i < 16; i++) {
+                if (cache1[i].endereco == 1020) {
+                    printf("%d CONTEUDO NA 1020\n", cache1[i].conteudo);
+                }
+                }  
                 return cache1[i].conteudo;
             }
         }
@@ -200,6 +206,7 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
 
    else if((endereco >= 1016 && endereco < 1048) || rec == 2)
    {
+       printf("Chegamos na cache2\n");
        for(int j = 0 ; j < tamcache2 ; j++)
        {
            if(cache2[j].endereco == endereco)
@@ -214,7 +221,7 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                    }
                }
                *custoTotal = *custoTotal + 20; 
-               mudancaDeValor(cache1,cache2,cache3, eh_trocado(cache1, 1),ram , cacheHit , cacheMiss , custoTotal, 1);
+               return mudancaDeValor(cache1,cache2,cache3, eh_trocado(cache1, 1),ram , cacheHit , cacheMiss , custoTotal, 1);
            }
        }
    }
@@ -232,7 +239,7 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                 cache3[k] = aux;
                 
                 *custoTotal = *custoTotal + 30;
-                mudancaDeValor(cache1,cache2,cache3, eh_trocado(cache2, 2),ram, cacheHit , cacheMiss , custoTotal, 2);
+                return mudancaDeValor(cache1,cache2,cache3, eh_trocado(cache2, 2),ram, cacheHit , cacheMiss , custoTotal, 2);
            }
        }
    }
