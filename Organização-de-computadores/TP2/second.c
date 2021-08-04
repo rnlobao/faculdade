@@ -150,11 +150,6 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
             printf("%d ----- ESSE AQUI E O ENDERECO QUE A GENTE TA BUSCANDO PRA SOMA 2\n", instrucao[i].end2);
             n = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal, 0);
             k = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal, 0); 
-            for (int i = 0; i < 16; i++) {
-                if (cache1[i].endereco == 1020) {
-                    printf("%d CONTEUDO NA 1020\n", cache1[i].conteudo);
-                }
-            }
             cache1[eh_trocado(cache1, 1)].conteudo = n + k;
             printf("Soma: %d + %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo);
         }
@@ -165,12 +160,6 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
             n = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal, 0);
             printf("\n\n\n\n OUTRO VALOR\n\n");
             k = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal, 0); 
-
-            for (int i = 0; i < 16; i++) {
-                if (cache1[i].endereco == 1020) {
-                    printf("%d CONTEUDO NA 1020\n", cache1[i].conteudo);
-                }
-            }
             cache1[eh_trocado(cache1, 1)].conteudo = n - k;
             printf("Subtracao: %d - %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo); 
 
@@ -185,20 +174,13 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
 int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal, int rec) { 
     if((endereco >= 1000 && endereco < 1016) || rec == 1)
     {
-        printf("Chegamos na cache1\n");
         for(int i = 0; i < tamcache1 ; i++)
         {
             if(cache1[i].endereco == endereco)
             {
                 cache1[i].uso++;
                 *cacheHit = *cacheHit + 1;
-                *custoTotal = *custoTotal + 10;
-                printf("OOOOOOI %d\n", cache1[i].conteudo);
-                for (int i = 0; i < 16; i++) {
-                if (cache1[i].endereco == 1020) {
-                    printf("%d CONTEUDO NA 1020\n", cache1[i].conteudo);
-                }
-                }  
+                *custoTotal = *custoTotal + 10; 
                 return cache1[i].conteudo;
             }
         }
@@ -206,7 +188,6 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
 
    else if((endereco >= 1016 && endereco < 1048) || rec == 2)
    {
-       printf("Chegamos na cache2\n");
        for(int j = 0 ; j < tamcache2 ; j++)
        {
            if(cache2[j].endereco == endereco)
