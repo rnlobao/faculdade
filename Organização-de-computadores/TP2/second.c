@@ -114,28 +114,24 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
     int n , k ;
     for (int i = 0; i < tamdasinstrucoes; i++) {
         if (instrucao[i].opcode == 0) { //soma
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[].conteudo; 
+            n = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
             printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
 
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal);
-            k = cache1[].conteudo; 
+            k = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal); 
             printf("|Segundo Valor na cache1 = %d|\n\n" , k);
 
-            cache1[].conteudo = n + k;
-            printf("Soma: %d + %d = %d\n\n",n , k , cache1[].conteudo);
+            cache1[eh_trocado(cache1, 1)].conteudo = n + k;
+            printf("Soma: %d + %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo);
         }
         if (instrucao[i].opcode == 1) { //subtracao
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[].conteudo; 
+            n = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
             printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
 
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram , cacheHit , cacheMiss , custoTotal); 
-            k = cache1[].conteudo; 
-            printf("|Segundo valor na cache1 = %d|\n\n" , k);
+            k = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal); 
+            printf("|Segundo Valor na cache1 = %d|\n\n" , k);
 
-            cache1[].conteudo = n - k;
-            printf("Subtração: %d - %d = %d\n\n",n , k , cache1[].conteudo); 
+            cache1[eh_trocado(cache1, 1)].conteudo = n - k;
+            printf("Subtracao: %d - %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo); 
 
         }
     }
@@ -143,19 +139,47 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
 
 int eh_trocado (blocodememoria *blocogenerico, int qualbloco) {
     int menor = 2000;
-        if (qualbloco == 1) {
-            for (int i = 0; i < 16; i++) {
-                if (blocogenerico[i].uso == 0) {
-                    return blocogenerico[i].endereco;
+    if (qualbloco == 1) {
+        for (int i = 0; i < 16; i++) {
+            if (blocogenerico[i].uso == 0) {
+                return blocogenerico[i].endereco;
+            }
+            else {
+                if (blocogenerico[i].uso < menor) {
+                    menor = blocogenerico[i].uso;
                 }
-                else {
-                    if (blocogenerico[i].uso < menor) {
-                        menor = blocogenerico[i].uso;
-                    }
-                    return menor;
+                return menor;
+            }
+        }  
+    }
+
+    if (qualbloco == 2) {
+        for (int i = 0; i < 32; i++) {
+            if (blocogenerico[i].uso == 0) {
+                return blocogenerico[i].endereco;
+            }
+            else {
+                if (blocogenerico[i].uso < menor) {
+                    menor = blocogenerico[i].uso;
                 }
-            }  
-        }
+                return menor;
+            }
+        }  
+    }
+
+    if (qualbloco == 3) {
+        for (int i = 0; i < 64; i++) {
+            if (blocogenerico[i].uso == 0) {
+                return blocogenerico[i].endereco;
+            }
+            else {
+                if (blocogenerico[i].uso < menor) {
+                    menor = blocogenerico[i].uso;
+                }
+                return menor;
+            }
+        }  
+    }
 }
 
 int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal) { //endereco que vamos buscar, ele esta
@@ -182,9 +206,9 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
            {
                cache2[j].uso++;
                blocodememoria aux;
-               aux.conteudo = cache1[eh_trocado(cache1, 1)].conteudo;
-               cache1[eh_trocado(cache1, 1)].conteudo = cache2[j].conteudo;
-               cache2[j].conteudo = aux.conteudo;
+               aux = cache1[eh_trocado(cache1, 1)];
+               cache1[eh_trocado(cache1, 1)] = cache2[j];
+               cache2[j] = aux;
 
                printf("|Valor na cache2|  |Movendo valor da cache2 para cache1|\n");
                *custoTotal = *custoTotal + 20; 
@@ -201,13 +225,13 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
            if(cache3[k].endereco == endereco)
            {
                 blocodememoria aux;
-                aux.conteudo = cache2[cacheSup2].conteudo;
-                cache2[cacheSup2].conteudo = cache3[k].conteudo;
-                cache3[k].conteudo = aux.conteudo;
+                aux = cache2[eh_trocado(cache2, 2)];
+                cache2[eh_trocado(cache2, 2)] = cache3[k];
+                cache3[k] = aux;
                 
                 printf("|Valor na cache3|  |Movendo valor da cache3 para cache2|\n");
                 *custoTotal = *custoTotal + 30;
-                mudancaDeValor(cache1,cache2,cache3,cacheSup2,ram, cacheHit , cacheMiss , custoTotal);
+                mudancaDeValor(cache1,cache2,cache3, eh_trocado(cache2, 2),ram, cacheHit , cacheMiss , custoTotal);
            }
        }
    }
@@ -219,16 +243,16 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
            if(ram[l].endereco == endereco)
            {
                 blocodememoria aux;
-                aux.conteudo = cache3[cacheSup3].conteudo;
-                cache3[cacheSup3].conteudo = ram[l].conteudo;
-                ram[l].conteudo = aux.conteudo;
+                aux = cache3[eh_trocado(cache3, 3)];
+                cache3[eh_trocado(cache3, 3)] = ram[l];
+                ram[l] = aux;
 
                
                printf("|Valor na RAM|     |Movendo valor da RAM para cache3|\n");
                *cacheMiss = *cacheMiss + 1;
                *custoTotal = *custoTotal + 1000;
                *cacheHit = *cacheHit - 1;
-               mudancaDeValor(cache1,cache2,cache3,cacheSup3,ram , cacheHit , cacheMiss , custoTotal);   
+               mudancaDeValor(cache1,cache2,cache3,eh_trocado(cache3, 3)3,ram , cacheHit , cacheMiss , custoTotal);   
            }
        }
    }

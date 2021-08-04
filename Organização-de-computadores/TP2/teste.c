@@ -28,10 +28,8 @@ void iniciacache1 (blocodememoria *cache1);
 void iniciacache2 (blocodememoria *cache2);
 void iniciacache3 (blocodememoria *cache3);
 void inicialerinstrucoes (instrucao *instrucao);
-void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2,blocodememoria *cache3, instrucao *instrucao, blocodememoria *ram, int *cacheHit , int *cacheMiss, int *custoTotal);
 int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int endereco, blocodememoria *ram, int *cacheHit , int *cacheMiss , int *custoTotal);
 int definen (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, int n);
-void imprimirRelatorio(int cacheHit , int cacheMiss, int custoTotal);
 
 
 
@@ -40,7 +38,6 @@ int main() {
     blocodememoria cache1[tamcache1];
     blocodememoria cache2 [tamcache2];
     blocodememoria cache3 [tamcache3];
-    int cacheHit = 0 , cacheMiss = 0 , custoTotal = 0 ;
 
     iniciaram(ram);
     iniciacache1(cache1);
@@ -51,9 +48,7 @@ int main() {
 
     inicialerinstrucoes(lerinstrucoes);
 
-    maquinainterpretada (cache1, cache2, cache3, lerinstrucoes, ram , &cacheHit , &cacheMiss , &custoTotal);
-
-    imprimirRelatorio(cacheHit,cacheMiss,custoTotal);
+    maquinainterpretada (cache1, cache2, cache3, lerinstrucoes, ram);
 
     return 0;
 }
@@ -110,36 +105,7 @@ void inicialerinstrucoes (instrucao *instrucao) {
     }
 }
 
-void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocodememoria *cache3, instrucao *instrucao, blocodememoria *ram ,int *cacheHit , int *cacheMiss, int *custoTotal) {
-    int n , k ;
-    for (int i = 0; i < tamdasinstrucoes; i++) {
-        if (instrucao[i].opcode == 0) { //soma
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[].conteudo; 
-            printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
 
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal);
-            k = cache1[].conteudo; 
-            printf("|Segundo Valor na cache1 = %d|\n\n" , k);
-
-            cache1[].conteudo = n + k;
-            printf("Soma: %d + %d = %d\n\n",n , k , cache1[].conteudo);
-        }
-        if (instrucao[i].opcode == 1) { //subtracao
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal);
-            n = cache1[].conteudo; 
-            printf("|Primeiro Valor na cache1 = %d|\n\n" , n);
-
-            mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram , cacheHit , cacheMiss , custoTotal); 
-            k = cache1[].conteudo; 
-            printf("|Segundo valor na cache1 = %d|\n\n" , k);
-
-            cache1[].conteudo = n - k;
-            printf("Subtração: %d - %d = %d\n\n",n , k , cache1[].conteudo); 
-
-        }
-    }
-}
 
 int eh_trocado (blocodememoria *blocogenerico, int qualbloco) {
     int menor = 2000;
@@ -239,12 +205,4 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
 }
 
 
-
-
-void imprimirRelatorio(int cacheHit , int cacheMiss , int custoTotal)
-{
-    printf("\n|Cache Hit:   %d|   ", cacheHit);
-    printf("|Cache Miss:  %d|   ", cacheMiss);
-    printf("|Custo Total: %d|\n\n", custoTotal);
-}
 
