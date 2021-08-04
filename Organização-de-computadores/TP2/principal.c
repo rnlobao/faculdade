@@ -6,7 +6,7 @@
 #define tamcache1 16
 #define tamcache2 32
 #define tamcache3 64
-#define tamdasinstrucoes 1000
+#define tamdasinstrucoes 1
 
 
 typedef struct {
@@ -48,15 +48,40 @@ int main() {
     iniciacache2(cache2);
     iniciacache3(cache3);
 
+    for (int i = 0; i < tamanhoram; i++) {
+        printf("Ram - Endereco: %d --- Conteudo: %d\n", ram[i].endereco, ram[i].conteudo);
+    }
+
+    for (int i = 0; i < tamcache1; i++) {
+        printf("Cache1 - Endereco: %d --- Conteudo: %d\n", cache1[i].endereco, cache1[i].conteudo);
+    }
+
+    for (int i = 0; i < tamcache2; i++) {
+        printf("Cache2 - Endereco: %d --- Conteudo: %d\n", cache2[i].endereco, cache2[i].conteudo);
+    }
+
+    for (int i = 0; i < tamcache3; i++) {
+        printf("Cache3 - Endereco: %d --- Conteudo: %d\n", cache3[i].endereco, cache3[i].conteudo);
+    }
+    
     instrucao lerinstrucoes[tamdasinstrucoes];
-
     inicialerinstrucoes(lerinstrucoes);
-
     maquinainterpretada (cache1, cache2, cache3, lerinstrucoes, ram , &cacheHit , &cacheMiss , &custoTotal);
+    for (int i = 0; i < tamcache1; i++) {
+        printf("Cache1 - Endereco: %d --- Conteudo: %d\n", cache1[i].endereco, cache1[i].conteudo);
+    }
 
+    for (int i = 0; i < tamcache2; i++) {
+        printf("Cache2 - Endereco: %d --- Conteudo: %d\n", cache2[i].endereco, cache2[i].conteudo);
+    }
+
+    for (int i = 0; i < tamcache3; i++) {
+        printf("Cache3 - Endereco: %d --- Conteudo: %d\n", cache3[i].endereco, cache3[i].conteudo);
+    }
+    for (int i = 0; i < tamanhoram; i++) {
+        printf("Ram - Endereco: %d --- Conteudo: %d\n", ram[i].endereco, ram[i].conteudo);
+    }
     imprimirRelatorio(cacheHit,cacheMiss,custoTotal);
-
-
     return 0;
 }
 
@@ -106,8 +131,8 @@ void inicialerinstrucoes (instrucao *instrucao) {
     srand(time(NULL));
     for (int i = 0; i < tamdasinstrucoes; i++) {
         instrucao[i].opcode = rand() % 2; 
-        instrucao[i].end1 = rand() % 1112;
-        instrucao[i].end2 = rand() % 1112;
+        instrucao[i].end1 = 1034;
+        instrucao[i].end2 = 1092;
         instrucao[i].end3 = rand() % 1112;
     }
 }
@@ -128,6 +153,8 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
                     k = cache1[c].conteudo;
                 }
             }
+            printf("%d Endereco usado pra n\n", instrucao[i].end1);
+            printf("%d Endereco usado pra k\n", instrucao[i].end2);
 
             cache1[eh_trocado(cache1, 1)].conteudo = n + k;
             printf("Soma: %d + %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo);
@@ -145,6 +172,10 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
                     k = cache1[c].conteudo;
                 }
             }
+            printf("%d Endereco usado pra n\n", instrucao[i].end1);
+            printf("%d Endereco usado pra k\n", instrucao[i].end2);
+
+
             cache1[eh_trocado(cache1, 1)].conteudo = n + k;
             printf("Soma: %d + %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo); 
 
@@ -171,6 +202,7 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
             }
         }
     }
+
     //cache2
    else if((endereco >= 1016 && endereco < 1048) || rec == 2)
    {
@@ -189,11 +221,10 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                    }
                }
                *custoTotal = *custoTotal + 20; 
-               return mudancaDeValor(cache1,cache2,cache3, enderecotrocado,ram , cacheHit , cacheMiss , custoTotal, 1);
+               return mudancaDeValor(cache1,cache2,cache3, endereco,ram , cacheHit , cacheMiss , custoTotal, 1);
            }
        }
    }
-
     //cache3
    else if ((endereco >= 1048 && endereco < 1112) || rec == 3)
    {
@@ -212,7 +243,7 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                    }
                }
                *custoTotal = *custoTotal + 30; 
-               return mudancaDeValor(cache1,cache2,cache3, enderecotrocado,ram , cacheHit , cacheMiss , custoTotal, 2);
+               return mudancaDeValor(cache1,cache2,cache3, endereco,ram , cacheHit , cacheMiss , custoTotal, 2);
            }
        }
    }
@@ -236,14 +267,11 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                *cacheMiss = *cacheMiss + 1;
                *custoTotal = *custoTotal + 1000;
                *cacheHit = *cacheHit - 1; 
-               return mudancaDeValor(cache1,cache2,cache3, enderecotrocado,ram , cacheHit , cacheMiss , custoTotal, 2);
+               return mudancaDeValor(cache1,cache2,cache3, endereco,ram , cacheHit , cacheMiss , custoTotal, 3);
            }
        }
    }
-
    return 0;
-
-
 }
 
 
