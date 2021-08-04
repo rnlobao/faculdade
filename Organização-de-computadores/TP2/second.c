@@ -159,7 +159,6 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
         if (instrucao[i].opcode == 1) { //subtracao
             printf("%d ----- ESSE AQUI E O ENDERECO QUE A GENTE TA BUSCANDO PRA SOMA 1\n", instrucao[i].end1);
             printf("%d ----- ESSE AQUI E O ENDERECO QUE A GENTE TA BUSCANDO PRA SOMA 2\n", instrucao[i].end2);
-            
             n = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal, 0);
             k = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal, 0); 
             cache1[eh_trocado(cache1, 1)].conteudo = n - k;
@@ -199,7 +198,6 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
                int enderecotrocado = eh_trocado(cache1, 1);
                for (int i = 0; i < 16; i++) {
                    if (enderecotrocado == cache1[i].endereco) {
-                       printf("%d endereco trocado\n\n", eh_trocado(cache1, 1));
                        aux = cache1[i];
                        cache1[i] = cache2[j];
                        cache2[j] = aux;
