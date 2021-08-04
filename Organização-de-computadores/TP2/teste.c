@@ -247,3 +247,4 @@ void imprimirRelatorio(int cacheHit , int cacheMiss , int custoTotal)
     printf("|Cache Miss:  %d|   ", cacheMiss);
     printf("|Custo Total: %d|\n\n", custoTotal);
 }
+
