@@ -56,7 +56,9 @@ int main() {
 
     for (int i = 0; i < tamcache2; i++) {
         printf("ENDERECO NA CACHE2: %d---- ", cache2[i].endereco);
-        printf("CONTEUDO NA CACHE2: %d\n", cache2[i].conteudo);
+        printf("CONTEUDO NA CACHE2: %d-----", cache2[i].conteudo);
+        printf("ESSE EH O USO NA CACHE2: %d\n", cache2[i].uso);
+
     }
 
     
@@ -82,7 +84,8 @@ int main() {
 
     for (int i = 0; i < tamcache2; i++) {
         printf("ENDERECO NA CACHE2: %d---- ", cache2[i].endereco);
-        printf("CONTEUDO NA CACHE2: %d\n", cache2[i].conteudo);
+        printf("CONTEUDO NA CACHE2: %d-----", cache2[i].conteudo);
+        printf("ESSE EH O USO NA CACHE2: %d\n", cache2[i].uso);
     }
 
 
@@ -158,7 +161,6 @@ void maquinainterpretada (blocodememoria *cache1, blocodememoria *cache2, blocod
             printf("%d ----- ESSE AQUI E O ENDERECO QUE A GENTE TA BUSCANDO PRA SOMA 2\n", instrucao[i].end2);
             
             n = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end1, ram , cacheHit , cacheMiss , custoTotal, 0);
-            printf("\n\n\n\n OUTRO VALOR\n\n");
             k = mudancaDeValor(cache1, cache2, cache3, instrucao[i].end2, ram, cacheHit , cacheMiss , custoTotal, 0); 
             cache1[eh_trocado(cache1, 1)].conteudo = n - k;
             printf("Subtracao: %d - %d = %d\n\n",n , k , cache1[eh_trocado(cache1, 1)].conteudo); 
@@ -194,15 +196,17 @@ int mudancaDeValor (blocodememoria *cache1, blocodememoria *cache2, blocodememor
            {
                cache2[j].uso++;
                blocodememoria aux;
+               int enderecotrocado = eh_trocado(cache1, 1);
                for (int i = 0; i < 16; i++) {
-                   if (eh_trocado(cache1, 1) == cache1[i].endereco) {
+                   if (enderecotrocado == cache1[i].endereco) {
+                       printf("%d endereco trocado\n\n", eh_trocado(cache1, 1));
                        aux = cache1[i];
                        cache1[i] = cache2[j];
                        cache2[j] = aux;
                    }
                }
                *custoTotal = *custoTotal + 20; 
-               return mudancaDeValor(cache1,cache2,cache3, eh_trocado(cache1, 1),ram , cacheHit , cacheMiss , custoTotal, 1);
+               return mudancaDeValor(cache1,cache2,cache3, enderecotrocado,ram , cacheHit , cacheMiss , custoTotal, 1);
            }
        }
    }
