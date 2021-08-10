@@ -2,7 +2,9 @@
 # define prioridade_h
 
 typedef struct{
-	//preencher
+	int tempolevado;
+	int disponivel;
+	int tempodisponivel;
 } TipoCaixa;
 
 //Manter como especificado

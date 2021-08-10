@@ -5,21 +5,35 @@ int main ()
 {
 	int n, m;
 	TipoCaixa *heap;
-
-	//ler n e m
-	//alocar o vetor para o heap com tamanho n
-	//ler o tempo de atendimento de cada caixa
-	//criar a fila de prioridades
+	
+	scanf("%d", &n);
+	scanf("%d", &m);
+	heap = alocaVetor(heap, n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", heap[i].tempolevado);
+	}
+	Heap_Constroi(heap, n);
 	//a principio, cada caixa esta disponivel no tempo zero
-
-	while (m--) {
-		//para cada cliente, ler a quantidade de produtos
+	int qtdprodutos[200];
+	for (int i = 0; i < m; i++) {
+		scanf("%d", qtdprodutos[i]);
+	}
+	TipoCaixa aux;
+	int resposta = 0;
+	while (m--) {		
 		//verificar qual caixa estara disponivel primeiro
+		aux.tempolevado = heap[m-1].tempolevado;
+		heap[m-1].tempolevado = heap[0].tempolevado;
+		heap[0].tempolevado = aux.tempolevado;
+		m = m-1;
+		Heap_Refaz(heap, 0, m-1);
 		//alterar a disponibilidade do caixa selecionado
+		heap[m].disponivel = 1;
 		//armazenar qual o tempo maximo para atender todos clientes ate agora
+
 	}
 
-	//desalocar o vetor do heap
-	//imprimir a resposta
+	heap = desalocaVetor(heap);
+	printf("%d", resposta);
 	return 0;
 }
