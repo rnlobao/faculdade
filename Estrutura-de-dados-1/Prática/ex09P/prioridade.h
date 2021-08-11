@@ -4,7 +4,6 @@
 typedef struct{
 	int tempolevado;
 	int disponivel;
-	int tempodisponivel;
 } TipoCaixa;
 
 //Manter como especificado
