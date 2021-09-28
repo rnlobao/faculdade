@@ -1,0 +1,7 @@
+1890 lucas 7 9 3 9
+1891 rafael 8 6 3 5
+1892 joao 2 4 5 2
+1893 larissa 8 1 2 3 
+1894 vitoria 2 9 10 0
+1895 camila 10 10 10 20
+1896 mateus 3 6 1 5
