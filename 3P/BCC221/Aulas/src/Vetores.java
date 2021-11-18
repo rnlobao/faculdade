@@ -1,7 +1,7 @@
 public class Vetores {
     public static void main (String args[]) {
-        int c[];
-        c = new int [12];
+        int j[];
+        j = new int [12];
         //tem um length pra ver o tamanho do vetor
         int vet[] = {1, 2, 3, 4 ,5 ,6, 1, 2, 3, 4, 5, 6};
         for (int i : vet) {
