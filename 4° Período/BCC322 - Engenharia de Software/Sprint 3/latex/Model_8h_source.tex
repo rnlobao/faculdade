@@ -1,0 +1,160 @@
+\hypertarget{Model_8h_source}{}\doxysection{Model.\+h}
+\label{Model_8h_source}\index{/mnt/c/Users/rnlob/Documents/GitHub/Faculdade/4° Período/BCC322 -\/ Engenharia de Software/Sprint 2/src/Model.h@{/mnt/c/Users/rnlob/Documents/GitHub/Faculdade/4° Período/BCC322 -\/ Engenharia de Software/Sprint 2/src/Model.h}}
+\mbox{\hyperlink{Model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MODEL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MODEL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{System_8h}{./System.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Flow_8h}{./Flow.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classModel}{Model}}\{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19         \textcolor{keywordtype}{string} \mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}};}
+\DoxyCodeLine{24         \textcolor{keywordtype}{double} \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}}; }
+\DoxyCodeLine{29         vector<System*> \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}};}
+\DoxyCodeLine{34         vector<Flow*> \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}};      }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{42         \textcolor{keyword}{auto} \mbox{\hyperlink{classModel_a024a35dbf6315ab5360c365c66e28581}{beginSystems}}( \textcolor{keywordtype}{void} )\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{43             \textcolor{keywordflow}{return} \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}.begin();}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{50         \textcolor{keyword}{auto} \mbox{\hyperlink{classModel_ab953b68dbc2e166a2da19b3bc71b3d5a}{endSystems}}( \textcolor{keywordtype}{void} )\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{51             \textcolor{keywordflow}{return} \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}.end();}
+\DoxyCodeLine{52         \} }
+\DoxyCodeLine{58         \textcolor{keyword}{auto} \mbox{\hyperlink{classModel_a01149bb4e58a5fc0ed714e8066a60706}{beginFlows}}( \textcolor{keywordtype}{void} )\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{59             \textcolor{keywordflow}{return} \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}.begin();}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{66         \textcolor{keyword}{auto} \mbox{\hyperlink{classModel_a29533e2653c5d35027c08781c86d3cef}{endFlows}}( \textcolor{keywordtype}{void} )\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{67             \textcolor{keywordflow}{return} \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}.end();}
+\DoxyCodeLine{68         \} }
+\DoxyCodeLine{73         \mbox{\hyperlink{classModel_ae3b375de5f6df4faf74a95d64748e048}{Model}}()\{\}}
+\DoxyCodeLine{80         \mbox{\hyperlink{classModel_a6a108a568d0854408c888f82da4acff8}{Model}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}} = \textcolor{stringliteral}{"{}"{}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = 0.0):\mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}}(\mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}}), \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}}(\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})\{\}}
+\DoxyCodeLine{85         \textcolor{keyword}{virtual} \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{\string~Model}}()\{           }
+\DoxyCodeLine{86             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classSystem}{System}}* item : \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}) \{}
+\DoxyCodeLine{87                 \textcolor{keyword}{delete} (item);}
+\DoxyCodeLine{88             \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classFlow}{Flow}}* item : \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}) \{}
+\DoxyCodeLine{91                 \textcolor{keyword}{delete} (item);}
+\DoxyCodeLine{92             \}}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{101         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a273107c9cf6c1d12737c53215b9e9ed6}{execute}}(\textcolor{keywordtype}{double} start = 0.0, \textcolor{keywordtype}{double} \textcolor{keyword}{final} = 0.0, \textcolor{keywordtype}{double} increment = 1.0)\{}
+\DoxyCodeLine{102             vector<double> resultados;}
+\DoxyCodeLine{103             \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{104             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{double} i = start; i < \textcolor{keyword}{final}; i += increment)\{}
+\DoxyCodeLine{105                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classFlow}{Flow}}* flowsPresentesNoModel : \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}) \{}
+\DoxyCodeLine{106                     \textcolor{keywordtype}{double} resultmaDeDestino = flowsPresentesNoModel-\/>getTarget();}
+\DoxyCodeLine{107                     sistemaDeDestino-\/>setValue(sistemaDeDestino-\/>getValue() + resultados[count]);}
+\DoxyCodeLine{108                     count++;}
+\DoxyCodeLine{109                 \} = flowsPresentesNoModel-\/>execute();}
+\DoxyCodeLine{110                     resultados.push\_back(result);}
+\DoxyCodeLine{111                 \}}
+\DoxyCodeLine{112                 count = 0;}
+\DoxyCodeLine{113                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classFlow}{Flow}}* flowsPresentesNoModel : \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}) \{}
+\DoxyCodeLine{114                     \mbox{\hyperlink{classSystem}{System}}* sistemaDeOrigem = flowsPresentesNoModel-\/>getSource();}
+\DoxyCodeLine{115                     sistemaDeOrigem-\/>\mbox{\hyperlink{classSystem_a931178516c532c6e0f3f51d0dc5654fc}{setValue}}(sistemaDeOrigem-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}() -\/ resultados[count]);}
+\DoxyCodeLine{116                     \mbox{\hyperlink{classSystem}{System}}* siste}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} j = \mbox{\hyperlink{classModel_a01149bb4e58a5fc0ed714e8066a60706}{beginFlows}}(); j != \mbox{\hyperlink{classModel_a29533e2653c5d35027c08781c86d3cef}{endFlows}}(); ++j)\{}
+\DoxyCodeLine{118                     resultados.pop\_back();}
+\DoxyCodeLine{119                 \}}
+\DoxyCodeLine{120                 \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} += increment;}
+\DoxyCodeLine{121             \}}
+\DoxyCodeLine{122         \}}
+\DoxyCodeLine{123         }
+\DoxyCodeLine{129         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\mbox{\hyperlink{classSystem}{System}}* sys)\{}
+\DoxyCodeLine{130             \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}.insert(\mbox{\hyperlink{classModel_ab953b68dbc2e166a2da19b3bc71b3d5a}{endSystems}}(), sys);}
+\DoxyCodeLine{131         \}}
+\DoxyCodeLine{137         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_ab69613bde0ace81c92bbf519660ccb2c}{add}}(\mbox{\hyperlink{classFlow}{Flow}}* flow)\{}
+\DoxyCodeLine{138             \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}.insert(\mbox{\hyperlink{classModel_a29533e2653c5d35027c08781c86d3cef}{endFlows}}(), flow);            }
+\DoxyCodeLine{139         \}}
+\DoxyCodeLine{145         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_acff68ba0ea92948c29e9a26a4de33f92}{remove}}(\mbox{\hyperlink{classSystem}{System}}* sys)\{}
+\DoxyCodeLine{146             \textcolor{keyword}{auto} i = \mbox{\hyperlink{classModel_a024a35dbf6315ab5360c365c66e28581}{beginSystems}}();}
+\DoxyCodeLine{147             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classSystem}{System}}* item : \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}})\{}
+\DoxyCodeLine{148                 \textcolor{keywordflow}{if} (sys == item)\{}
+\DoxyCodeLine{149                     \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}.erase(i);}
+\DoxyCodeLine{150                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{151                 \}}
+\DoxyCodeLine{152                 ++i;}
+\DoxyCodeLine{153             \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155         \}}
+\DoxyCodeLine{161         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a7b41df04211b99c65d5255c09ddc8e71}{remove}}(\mbox{\hyperlink{classFlow}{Flow}}* flow)\{}
+\DoxyCodeLine{162             \textcolor{keyword}{auto} i = \mbox{\hyperlink{classModel_a01149bb4e58a5fc0ed714e8066a60706}{beginFlows}}();}
+\DoxyCodeLine{163             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classFlow}{Flow}}* item : \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}})\{}
+\DoxyCodeLine{164                 \textcolor{keywordflow}{if} (flow == item)\{}
+\DoxyCodeLine{165                     \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}.erase(i);}
+\DoxyCodeLine{166                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{167                 \}}
+\DoxyCodeLine{168                 ++i;}
+\DoxyCodeLine{169             \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171         \}}
+\DoxyCodeLine{177         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a7bc7a5e33c18d74d9db574dd973d2cb1}{setName}}(\textcolor{keywordtype}{string} modelName)\{}
+\DoxyCodeLine{178             \mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}} = modelName;}
+\DoxyCodeLine{179         \}}
+\DoxyCodeLine{185         \textcolor{keywordtype}{string} \mbox{\hyperlink{classModel_a65e1711255fbab5883708002ef89f773}{getName}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{186             \textcolor{keywordflow}{return} \mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}};}
+\DoxyCodeLine{187         \}    }
+\DoxyCodeLine{193         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a33ca31884793d1061794affae16e009d}{setTime}}(\textcolor{keywordtype}{double} currentTime)\{}
+\DoxyCodeLine{194             \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = currentTime;}
+\DoxyCodeLine{195         \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{202         \textcolor{keywordtype}{double} \mbox{\hyperlink{classModel_a06d9f606f122597dc5426811f765987a}{getTime}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{203             \textcolor{keywordflow}{return} \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
+\DoxyCodeLine{204         \}    }
+\DoxyCodeLine{210         \textcolor{keywordtype}{void} \mbox{\hyperlink{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}{incrementTime}}(\textcolor{keywordtype}{double} increment) \{}
+\DoxyCodeLine{211             \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} += increment;}
+\DoxyCodeLine{212         \}}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214     \textcolor{keyword}{private}: }
+\DoxyCodeLine{220         \mbox{\hyperlink{classModel_ae3b375de5f6df4faf74a95d64748e048}{Model}} (\textcolor{keyword}{const} \mbox{\hyperlink{classModel}{Model}}\& model)\{}
+\DoxyCodeLine{221             \textcolor{keywordflow}{if} (\textcolor{keyword}{this} == \&model)\{}
+\DoxyCodeLine{222                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{223             \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225             \mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}} = model.\mbox{\hyperlink{classModel_a65e1711255fbab5883708002ef89f773}{getName}}();}
+\DoxyCodeLine{226             \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = model.\mbox{\hyperlink{classModel_a06d9f606f122597dc5426811f765987a}{getTime}}();   }
+\DoxyCodeLine{227             }
+\DoxyCodeLine{228             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classSystem}{System}}* item : \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}})\{}
+\DoxyCodeLine{229                 \mbox{\hyperlink{classSystem}{System}}* copy(item);}
+\DoxyCodeLine{230                 \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}.insert(\mbox{\hyperlink{classModel_ab953b68dbc2e166a2da19b3bc71b3d5a}{endSystems}}(), copy);}
+\DoxyCodeLine{231             \}         }
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classFlow}{Flow}}* item : \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}})\{}
+\DoxyCodeLine{234                 \mbox{\hyperlink{classFlow}{Flow}}* copy(item);}
+\DoxyCodeLine{235                 \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}.insert(\mbox{\hyperlink{classModel_a29533e2653c5d35027c08781c86d3cef}{endFlows}}(), copy);}
+\DoxyCodeLine{236             \}}
+\DoxyCodeLine{237            }
+\DoxyCodeLine{238         \}}
+\DoxyCodeLine{245         \mbox{\hyperlink{classModel}{Model}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{classModel}{Model}}\& model)\{}
+\DoxyCodeLine{246             \textcolor{keywordflow}{if} (\textcolor{keyword}{this} == \&model)\{}
+\DoxyCodeLine{247                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{248             \}}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250             \mbox{\hyperlink{classModel_a2d9aef6a80a205a03e4e99b5483af9a0}{name}} = model.\mbox{\hyperlink{classModel_a65e1711255fbab5883708002ef89f773}{getName}}();}
+\DoxyCodeLine{251             \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = model.\mbox{\hyperlink{classModel_a06d9f606f122597dc5426811f765987a}{getTime}}();}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classSystem}{System}}* item : \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}})\{}
+\DoxyCodeLine{255                 \mbox{\hyperlink{classSystem}{System}}* copy(item);}
+\DoxyCodeLine{256                 \mbox{\hyperlink{classModel_ac7dea8829149e597d2671dbc0a538bf7}{systems}}.insert(\mbox{\hyperlink{classModel_ab953b68dbc2e166a2da19b3bc71b3d5a}{endSystems}}(), copy);}
+\DoxyCodeLine{257             \}}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classFlow}{Flow}}* item : \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}})\{}
+\DoxyCodeLine{260                 \mbox{\hyperlink{classFlow}{Flow}}* copy(item);}
+\DoxyCodeLine{261                 \mbox{\hyperlink{classModel_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}.insert(\mbox{\hyperlink{classModel_a29533e2653c5d35027c08781c86d3cef}{endFlows}}(), copy);}
+\DoxyCodeLine{262             \}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{265         \}}
+\DoxyCodeLine{266 \};}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
