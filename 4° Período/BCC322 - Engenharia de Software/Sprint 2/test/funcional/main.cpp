@@ -1,4 +1,4 @@
-#ifndef  MAIN_FUNCIONAL_TESTS
+#ifndef MAIN_FUNCIONAL_TESTS
 #define MAIN_FUNCIONA_TESTS
 
 #include "funcionaltest.h"
