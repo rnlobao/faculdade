@@ -7,9 +7,6 @@
 
 using namespace std;
 
-//Nesse arquivo temos as implementações dos testes funcionais onde cada teste cria seu cenário e o executa
-//De acordo com a implementação do execute extendido da classe flow no arquivo .h
-
 void exponentialFuncionalTest(){
     cout << "Teste exponencial" << endl;
     System* pop1 = new System("valor 1", 100);

@@ -4,7 +4,6 @@
 #include "../../src/System.h"
 #include "../../src/Flow.h"
 
-//Nesse arquivos temos as função de teste do Vensim apresentado que extendem de flow e implementam seu execute
 
 class flowParaTesteExponencial : public Flow{
     public:
