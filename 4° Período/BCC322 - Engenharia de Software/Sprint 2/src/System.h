@@ -5,17 +5,17 @@
 
 using namespace std;
 
-class System {
+class System{
+
     protected:
         string name;
-        double value;
+        double value; 
 
     public:
         friend class Flow;
-        friend class Model;
+        friend class Model; 
 
         System(string name = "", double value = 0.0):name(name), value(value){}
- 
         virtual ~System(){}
 
         void setName(string sysName){
@@ -24,7 +24,7 @@ class System {
 
         string getName() const {
             return name;
-        }    
+        } 
 
         void setValue(double sysValue){
             value = sysValue;
@@ -32,22 +32,19 @@ class System {
 
         double getValue() const{
             return value;
-        }  
-
+        } 
     private:
-        System (const System& s){
-            name = s.name;
-            value = s.value;
+        System (const System& sys){
+            name = sys.name;
+            value = sys.value;
         }
 
-        System& operator=(const System& s){
-            if (this == &s){
+        System& operator=(const System& sys){
+            if (this == &sys){
                 return *this;
             }
-
-            name = s.name;
-            value = s.value;  
-
+            name = sys.name;
+            value = sys.value;
             return *this;
         }
 };
