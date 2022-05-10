@@ -8,16 +8,18 @@
 using namespace std;
 
 void exponentialFuncionalTest(){
-    cout << "Teste exponencial" << endl;
-    System* pop1 = new System("valor 1", 100);
-    System* pop2 = new System("valor 2", 0);
-    flowParaTesteExponencial* flowExponencial = new flowParaTesteExponencial("cresce exponencialmente", pop1, pop2);
-    Model* expModel = new Model("Modelo Exponencial", 0.0);
-    expModel->add(pop1);
-    expModel->add(pop2);
-    expModel->add(flowExponencial);
-    expModel->execute(0, 100, 1);
-    delete (expModel);
+    cout << "Teste equacao exponencial" << endl;
+    System pop1("valor 1", 100);
+    System pop2("valor 2", 0);
+    flowParaTesteExponencial myFlow("cresce exponencialmente", pop1, pop2);
+    Model myModel("Modelo Exponencial", 0.0);
+    myModel->add(pop1);
+    myModel->add(pop2);
+    myModel->add(myFlow);
+    myModel->execute(0, 100, 1);
+
+    assert(fabs(pop1.getValue() - 36.6032) < 0.0001);
+    assert(fabs(pop2.getValue() - 63.3968) < 0.0001);
     cout << "Done" << endl;
 }
 

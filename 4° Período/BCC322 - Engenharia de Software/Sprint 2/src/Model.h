@@ -126,23 +126,10 @@ class Model{
 
     private: 
         Model (const Model& model){
-            if (this == &model){
-                return;
-            }
-
-            name = model.getName();
-            time = model.getTime();   
-            
-            for (System* item : model.systems){
-                System* copy(item);
-                systems.insert(endSystems(), copy);
-            }         
-
-            for (Flow* item : flows){
-                Flow* copy(item);
-                flows.insert(endFlows(), copy);
-            }
-           
+            name = model.name;
+            time = model.time;   
+            systems = model.systems;
+            flows = model.flows;
         }
 
         Model& operator=(const Model& model){
@@ -150,20 +137,10 @@ class Model{
                 return *this;
             }
 
-            name = model.getName();
-            time = model.getTime();
-
-
-            for (System* item : systems){
-                System* copy(item);
-                systems.insert(endSystems(), copy);
-            }
-
-            for (Flow* item : flows){
-                Flow* copy(item);
-                flows.insert(endFlows(), copy);
-            }
-
+            name = model.name;
+            time = model.time;   
+            systems = model.systems;
+            flows = model.flows;
             return *this;
         }
 };

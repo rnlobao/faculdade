@@ -42,14 +42,10 @@ class Flow {
         }
 
     private:
-        Flow (const Flow& flow){
-            //nao fazer new
-            System* sourceCopy = new System(flow.getSource()->getName(), flow.getSource()->getValue());
-            System* targetCopy = new System(flow.getTarget()->getName(), flow.getTarget()->getValue());
-            
-            name = flow.getName();           
-            source = sourceCopy;
-            target = targetCopy;
+        Flow (const Flow& flow){         
+            source = flow.source;
+            target = flow.target;
+            name = flow.name;
         }
 
         Flow& operator=(const Flow& flow){
@@ -57,20 +53,9 @@ class Flow {
                 return *this;
             }
 
-            if(getSource() != NULL){
-                delete (getSource());
-            }
-
-            if(getTarget() != NULL){
-                delete (getTarget());
-            }
-
-            System* sourceCopy = new System(flow.getSource()->getName(), flow.getSource()->getValue());
-            System* targetCopy = new System(flow.getTarget()->getName(), flow.getTarget()->getValue());
-
-            name = flow.getName();
-            source = sourceCopy;
-            target = targetCopy;
+            target = flow.target;
+            source = flow.source;
+            name = flow.name;
             return *this;
         }
 };

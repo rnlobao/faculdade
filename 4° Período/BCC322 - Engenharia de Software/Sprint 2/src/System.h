@@ -36,8 +36,8 @@ class System {
 
     private:
         System (const System& s){
-            name = s.getName();
-            value = s.getValue();
+            name = s.name;
+            value = s.value;
         }
 
         System& operator=(const System& s){
@@ -45,8 +45,8 @@ class System {
                 return *this;
             }
 
-            name = s.getName();
-            value = s.getValue();  
+            name = s.name;
+            value = s.value;  
 
             return *this;
         }
