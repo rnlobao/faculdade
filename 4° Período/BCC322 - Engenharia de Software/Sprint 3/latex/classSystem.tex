@@ -2,6 +2,11 @@
 \label{classSystem}\index{System@{System}}
 
 
+My system class.  
+
+
+
+
 {\ttfamily \#include $<$System.\+h$>$}
 
 
@@ -23,27 +28,30 @@ virtual \mbox{\hyperlink{classSystem_a2fc0f34023977cab9b628aa9f734d88c}{$\sim$\+
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classSystem}{System}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_a26cbee8054a1973f77380dd6d9f28379}{set\+Name}} (string sys\+Name)
 \begin{DoxyCompactList}\small\item\em Set the Name object. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classSystem_a47ece132a04247cd74aea11537830bd4}{get\+Name}} () const
+string \mbox{\hyperlink{classSystem_a935bafb390fe6423ed5b3a087069d718}{get\+Name}} ()
 \begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_a931178516c532c6e0f3f51d0dc5654fc}{set\+Value}} (double sys\+Value)
 \begin{DoxyCompactList}\small\item\em Set the Value object. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{get\+Value}} () const
+double \mbox{\hyperlink{classSystem_ac6f5cf5f07a414398ac2ef5843531d1b}{get\+Value}} ()
 \begin{DoxyCompactList}\small\item\em Get the Value object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classSystem_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}
-\begin{DoxyCompactList}\small\item\em name of the system \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Name of the \mbox{\hyperlink{classSystem}{System}}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}}
-\begin{DoxyCompactList}\small\item\em initial value of system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Value of the \mbox{\hyperlink{classSystem}{System}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classSystem_a4f3bf5ddad62048a5ba0f424952c3e35}{Flow}}
-\begin{DoxyCompactList}\small\item\em declaring friend classes \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Friend class \mbox{\hyperlink{classFlow}{Flow}}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSystem_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model}}
-\begin{DoxyCompactList}\small\item\em declaring friend classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Friend class \mbox{\hyperlink{classModel}{Model}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+My system class. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classSystem_a666ed721e77edc31b4971c643678aa51}\label{classSystem_a666ed721e77edc31b4971c643678aa51}} 
@@ -58,9 +66,9 @@ Construct a new \mbox{\hyperlink{classSystem}{System}} object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & \\
+{\em name} & Name of \mbox{\hyperlink{classSystem}{System}} \\
 \hline
-{\em value} & \\
+{\em value} & Value of \mbox{\hyperlink{classSystem}{System}} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classSystem_a2fc0f34023977cab9b628aa9f734d88c}\label{classSystem_a2fc0f34023977cab9b628aa9f734d88c}} 
@@ -76,11 +84,11 @@ Destroy the \mbox{\hyperlink{classSystem}{System}} object.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSystem_a47ece132a04247cd74aea11537830bd4}\label{classSystem_a47ece132a04247cd74aea11537830bd4}} 
+\mbox{\Hypertarget{classSystem_a935bafb390fe6423ed5b3a087069d718}\label{classSystem_a935bafb390fe6423ed5b3a087069d718}} 
 \index{System@{System}!getName@{getName}}
 \index{getName@{getName}!System@{System}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily string System\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily string System\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -89,11 +97,11 @@ Get the Name object.
 \begin{DoxyReturn}{Returns}
 string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSystem_aa7d17369d1034e7d8643a63f69d1901d}\label{classSystem_aa7d17369d1034e7d8643a63f69d1901d}} 
+\mbox{\Hypertarget{classSystem_ac6f5cf5f07a414398ac2ef5843531d1b}\label{classSystem_ac6f5cf5f07a414398ac2ef5843531d1b}} 
 \index{System@{System}!getValue@{getValue}}
 \index{getValue@{getValue}!System@{System}}
 \doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
-{\footnotesize\ttfamily double System\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double System\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -106,7 +114,7 @@ double
 \index{System@{System}!setName@{setName}}
 \index{setName@{setName}!System@{System}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void System\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{sys\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void System\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{sys\+Name }\end{DoxyParamCaption})}
 
 
 
@@ -114,14 +122,14 @@ Set the Name object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em sys\+Name} & \\
+{\em sys\+Name} & The name for my system \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classSystem_a931178516c532c6e0f3f51d0dc5654fc}\label{classSystem_a931178516c532c6e0f3f51d0dc5654fc}} 
 \index{System@{System}!setValue@{setValue}}
 \index{setValue@{setValue}!System@{System}}
 \doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
-{\footnotesize\ttfamily void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{sys\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{sys\+Value }\end{DoxyParamCaption})}
 
 
 
@@ -129,7 +137,7 @@ Set the Value object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em sys\+Value} & \\
+{\em sys\+Value} & The value for my system \\
 \hline
 \end{DoxyParams}
 
@@ -143,7 +151,7 @@ Set the Value object.
 
 
 
-declaring friend classes 
+Friend class \mbox{\hyperlink{classFlow}{Flow}}. 
 
 \mbox{\Hypertarget{classSystem_a2bf2a0e9b454c55aa5dcb5aa4698697b}\label{classSystem_a2bf2a0e9b454c55aa5dcb5aa4698697b}} 
 \index{System@{System}!Model@{Model}}
@@ -153,7 +161,7 @@ declaring friend classes
 
 
 
-declaring friend classes 
+Friend class \mbox{\hyperlink{classModel}{Model}}. 
 
 
 
@@ -166,7 +174,7 @@ declaring friend classes
 
 
 
-name of the system 
+Name of the \mbox{\hyperlink{classSystem}{System}}. 
 
 \mbox{\Hypertarget{classSystem_a879687b1125ef20757c2a61345fedd00}\label{classSystem_a879687b1125ef20757c2a61345fedd00}} 
 \index{System@{System}!value@{value}}
@@ -176,10 +184,11 @@ name of the system
 
 
 
-initial value of system 
+Value of the \mbox{\hyperlink{classSystem}{System}}. 
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/mnt/c/\+Users/rnlob/\+Documents/\+Git\+Hub/\+Faculdade/4° Período/\+BCC322 -\/ Engenharia de Software/\+Sprint 2/src/\mbox{\hyperlink{System_8h}{System.\+h}}\end{DoxyCompactItemize}
+/mnt/c/\+Users/rnlob/\+Documents/\+Git\+Hub/\+Faculdade/4° Período/\+BCC322 -\/ Engenharia de Software/\+Sprint 3/src/\mbox{\hyperlink{System_8h}{System.\+h}}\item 
+/mnt/c/\+Users/rnlob/\+Documents/\+Git\+Hub/\+Faculdade/4° Período/\+BCC322 -\/ Engenharia de Software/\+Sprint 3/src/\mbox{\hyperlink{System_8cpp}{System.\+cpp}}\end{DoxyCompactItemize}

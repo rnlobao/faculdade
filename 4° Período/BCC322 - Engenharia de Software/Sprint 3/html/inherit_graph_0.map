@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classFlow.html" title="My flow class." alt="" coords="5,183,59,209"/>
+<area shape="rect" id="node2" href="$classbigTheoryFlowF.html" title="Flow for complex F." alt="" coords="139,5,265,32"/>
+<area shape="rect" id="node3" href="$classbigTheoryFlowG.html" title="Flow for complex G." alt="" coords="138,56,266,83"/>
+<area shape="rect" id="node4" href="$classbigTheoryFlowR.html" title="Flow for complex R." alt="" coords="139,107,265,133"/>
+<area shape="rect" id="node5" href="$classbigTheoryFlowT.html" title="Flow for complex T." alt="" coords="139,157,265,184"/>
+<area shape="rect" id="node6" href="$classbigTheoryFlowU.html" title="Flow for complex U." alt="" coords="138,208,266,235"/>
+<area shape="rect" id="node7" href="$classbigTheoryFlowV.html" title="Flow for complex V." alt="" coords="139,259,265,285"/>
+<area shape="rect" id="node8" href="$classflowParaTesteExponencial.html" title="Flow for exponencial test." alt="" coords="107,309,297,336"/>
+<area shape="rect" id="node9" href="$classflowParaTesteLogistico.html" title="Flow for logistical test." alt="" coords="117,360,287,387"/>
+</map>

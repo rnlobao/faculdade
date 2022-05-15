@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7eflow_0',['~Flow',['../classFlow.html#a325d284a50ca3274b126b21f5c39b9af',1,'Flow']]],
-  ['_7emodel_1',['~Model',['../classModel.html#af032d8433c87a0a3a431faf6563a1f03',1,'Model']]],
-  ['_7esystem_2',['~System',['../classSystem.html#a2fc0f34023977cab9b628aa9f734d88c',1,'System']]]
+  ['remove_0',['remove',['../classModel.html#acff68ba0ea92948c29e9a26a4de33f92',1,'Model::remove(System *sys)'],['../classModel.html#a7b41df04211b99c65d5255c09ddc8e71',1,'Model::remove(Flow *flow)']]]
 ];
