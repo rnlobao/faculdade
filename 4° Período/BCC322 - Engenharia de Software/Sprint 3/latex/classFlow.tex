@@ -2,23 +2,8 @@
 \label{classFlow}\index{Flow@{Flow}}
 
 
-My flow class.  
-
-
-
-
 {\ttfamily \#include $<$Flow.\+h$>$}
 
-
-
-Inheritance diagram for Flow\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classFlow__inherit__graph}
-\end{center}
-\end{figure}
 
 
 Collaboration diagram for Flow\+:
@@ -26,70 +11,51 @@ Collaboration diagram for Flow\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=172pt]{classFlow__coll__graph}
+\includegraphics[width=166pt]{classFlow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}} ()
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classFlow}{Flow}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlow_a3463be777e9b7a62a4daf48f062004cb}{Flow}} (string \mbox{\hyperlink{classFlow_a8801d2ed91a9d96003d4bc8024451551}{name}}=\char`\"{}\char`\"{}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}=NULL, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}}=NULL)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classFlow}{Flow}} object. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlow_a325d284a50ca3274b126b21f5c39b9af}{$\sim$\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classFlow}{Flow}} object. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
-\begin{DoxyCompactList}\small\item\em Execute of the flow. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classFlow_ae722fae0ffe2270a5c84152a80a7d842}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Later in the code the execute will be implemented depending on the flow context. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classFlow_a62bbc54ff95eeb0795511519edf32077}{get\+Name}} () const
 \begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classFlow_a6d7aa9221de09c4f8bb507365e284e5a}{set\+Name}} (string flow\+Name)
+void \mbox{\hyperlink{classFlow_ade8faee46535b0675619e8a0808da5d3}{set\+Name}} (string name\+Flow)
 \begin{DoxyCompactList}\small\item\em Set the Name object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlow_ad3414435f50a4ff1621092420a2f33a3}{get\+Source}} ()
-\begin{DoxyCompactList}\small\item\em Get the Source object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classFlow_acc378289b39a931a7f9398e20d0f57e4}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} $\ast$source\+Sys)
-\begin{DoxyCompactList}\small\item\em Set the Source object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classFlow_af262728866a280fef6b60e26257a6d6f}{clear\+Source}} ()
-\begin{DoxyCompactList}\small\item\em clear the source \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlow_a11974680143b3294b4d909f8a5839612}{get\+Target}} ()
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{get\+Target}} () const
 \begin{DoxyCompactList}\small\item\em Get the Target object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlow_a7e23b80f3450bc358adbe8266233bc78}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} $\ast$target\+Sys)
 \begin{DoxyCompactList}\small\item\em Set the Target object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classFlow_a2d1ef837436f4982de52096c2b802e4e}{clear\+Target}} ()
-\begin{DoxyCompactList}\small\item\em clear the target \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlow_a1f3858f90d141807377c2640fb5dd0fc}{get\+Source}} () const
+\begin{DoxyCompactList}\small\item\em Get the Source object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlow_acc378289b39a931a7f9398e20d0f57e4}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} $\ast$source\+Sys)
+\begin{DoxyCompactList}\small\item\em Set the Source object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classFlow_a8801d2ed91a9d96003d4bc8024451551}{name}}
-\begin{DoxyCompactList}\small\item\em Name in flow class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Name of the flow. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}
-\begin{DoxyCompactList}\small\item\em Source of the \mbox{\hyperlink{classFlow}{Flow}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em which system this flow is conected \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}}
-\begin{DoxyCompactList}\small\item\em Target of the flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em which system this flow is connecting \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model}}
-\begin{DoxyCompactList}\small\item\em Friend class model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-My flow class. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classFlow_ac9975e144e606242748197798e87dd32}\label{classFlow_ac9975e144e606242748197798e87dd32}} 
-\index{Flow@{Flow}!Flow@{Flow}}
-\index{Flow@{Flow}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{Flow()}{Flow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Flow\+::\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Construct a new \mbox{\hyperlink{classFlow}{Flow}} object. 
-
 \mbox{\Hypertarget{classFlow_a3463be777e9b7a62a4daf48f062004cb}\label{classFlow_a3463be777e9b7a62a4daf48f062004cb}} 
 \index{Flow@{Flow}!Flow@{Flow}}
 \index{Flow@{Flow}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{Flow()}{Flow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Flow()}{Flow()}}
 {\footnotesize\ttfamily Flow\+::\+Flow (\begin{DoxyParamCaption}\item[{string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -98,11 +64,11 @@ Construct a new \mbox{\hyperlink{classFlow}{Flow}} object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & name of class \\
+{\em name} & \\
 \hline
-{\em source} & source of class \\
+{\em source} & \\
 \hline
-{\em target} & target of class \\
+{\em target} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classFlow_a325d284a50ca3274b126b21f5c39b9af}\label{classFlow_a325d284a50ca3274b126b21f5c39b9af}} 
@@ -118,26 +84,6 @@ Destroy the \mbox{\hyperlink{classFlow}{Flow}} object.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classFlow_af262728866a280fef6b60e26257a6d6f}\label{classFlow_af262728866a280fef6b60e26257a6d6f}} 
-\index{Flow@{Flow}!clearSource@{clearSource}}
-\index{clearSource@{clearSource}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{clearSource()}{clearSource()}}
-{\footnotesize\ttfamily void Flow\+::clear\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-clear the source 
-
-\mbox{\Hypertarget{classFlow_a2d1ef837436f4982de52096c2b802e4e}\label{classFlow_a2d1ef837436f4982de52096c2b802e4e}} 
-\index{Flow@{Flow}!clearTarget@{clearTarget}}
-\index{clearTarget@{clearTarget}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{clearTarget()}{clearTarget()}}
-{\footnotesize\ttfamily void Flow\+::clear\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-clear the target 
-
 \mbox{\Hypertarget{classFlow_a619be0b590c78202127bc6ac7fb04029}\label{classFlow_a619be0b590c78202127bc6ac7fb04029}} 
 \index{Flow@{Flow}!execute@{execute}}
 \index{execute@{execute}!Flow@{Flow}}
@@ -146,20 +92,16 @@ clear the target
 
 
 
-Execute of the flow. 
+Later in the code the execute will be implemented depending on the flow context. 
 
 \begin{DoxyReturn}{Returns}
 double 
 \end{DoxyReturn}
-
-
-Implemented in \mbox{\hyperlink{classflowParaTesteExponencial_a469654c30b3734c71d863c91d457f649}{flow\+Para\+Teste\+Exponencial}}, \mbox{\hyperlink{classflowParaTesteLogistico_af5b24c6d12671d035ce2b5b8141a53cc}{flow\+Para\+Teste\+Logistico}}, \mbox{\hyperlink{classbigTheoryFlowF_a361e41a73d42e75bfeaf0e1edb616e1a}{big\+Theory\+FlowF}}, \mbox{\hyperlink{classbigTheoryFlowT_a07cfa9cbc8eb3b8e5747367a60e0c3bb}{big\+Theory\+FlowT}}, \mbox{\hyperlink{classbigTheoryFlowU_a19757207859acd83812064f3eae214ca}{big\+Theory\+FlowU}}, \mbox{\hyperlink{classbigTheoryFlowV_ace5284e6b6a67a2b48c4f54bf18efbea}{big\+Theory\+FlowV}}, \mbox{\hyperlink{classbigTheoryFlowG_a177f7c5fa641d73c798c862371da0bc4}{big\+Theory\+FlowG}}, and \mbox{\hyperlink{classbigTheoryFlowR_a64e961efa3f7e1f38aeafdc8c248c124}{big\+Theory\+FlowR}}.
-
-\mbox{\Hypertarget{classFlow_ae722fae0ffe2270a5c84152a80a7d842}\label{classFlow_ae722fae0ffe2270a5c84152a80a7d842}} 
+\mbox{\Hypertarget{classFlow_a62bbc54ff95eeb0795511519edf32077}\label{classFlow_a62bbc54ff95eeb0795511519edf32077}} 
 \index{Flow@{Flow}!getName@{getName}}
 \index{getName@{getName}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily string Flow\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily string Flow\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -168,11 +110,11 @@ Get the Name object.
 \begin{DoxyReturn}{Returns}
 string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classFlow_ad3414435f50a4ff1621092420a2f33a3}\label{classFlow_ad3414435f50a4ff1621092420a2f33a3}} 
+\mbox{\Hypertarget{classFlow_a1f3858f90d141807377c2640fb5dd0fc}\label{classFlow_a1f3858f90d141807377c2640fb5dd0fc}} 
 \index{Flow@{Flow}!getSource@{getSource}}
 \index{getSource@{getSource}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Flow\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Flow\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -181,11 +123,11 @@ Get the Source object.
 \begin{DoxyReturn}{Returns}
 System$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classFlow_a11974680143b3294b4d909f8a5839612}\label{classFlow_a11974680143b3294b4d909f8a5839612}} 
+\mbox{\Hypertarget{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}\label{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}} 
 \index{Flow@{Flow}!getTarget@{getTarget}}
 \index{getTarget@{getTarget}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Flow\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Flow\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -194,11 +136,11 @@ Get the Target object.
 \begin{DoxyReturn}{Returns}
 System$\ast$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classFlow_a6d7aa9221de09c4f8bb507365e284e5a}\label{classFlow_a6d7aa9221de09c4f8bb507365e284e5a}} 
+\mbox{\Hypertarget{classFlow_ade8faee46535b0675619e8a0808da5d3}\label{classFlow_ade8faee46535b0675619e8a0808da5d3}} 
 \index{Flow@{Flow}!setName@{setName}}
 \index{setName@{setName}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void Flow\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{flow\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Flow\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name\+Flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -206,14 +148,14 @@ Set the Name object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em flow\+Name} & here we give the flow name \\
+{\em name\+Flow} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classFlow_acc378289b39a931a7f9398e20d0f57e4}\label{classFlow_acc378289b39a931a7f9398e20d0f57e4}} 
 \index{Flow@{Flow}!setSource@{setSource}}
 \index{setSource@{setSource}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
-{\footnotesize\ttfamily void Flow\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source\+Sys }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Flow\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source\+Sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -221,14 +163,14 @@ Set the Source object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em source\+Sys} & here we give the source of the system \\
+{\em source\+Sys} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classFlow_a7e23b80f3450bc358adbe8266233bc78}\label{classFlow_a7e23b80f3450bc358adbe8266233bc78}} 
 \index{Flow@{Flow}!setTarget@{setTarget}}
 \index{setTarget@{setTarget}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
-{\footnotesize\ttfamily void Flow\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target\+Sys }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Flow\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target\+Sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -236,7 +178,7 @@ Set the Target object.
 
 
 \begin{DoxyParams}{Parameters}
-{\em target\+Sys} & here we give the target of the system \\
+{\em target\+Sys} & \\
 \hline
 \end{DoxyParams}
 
@@ -250,10 +192,6 @@ Set the Target object.
 
 
 
-Friend class model. 
-
-
-
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classFlow_a8801d2ed91a9d96003d4bc8024451551}\label{classFlow_a8801d2ed91a9d96003d4bc8024451551}} 
 \index{Flow@{Flow}!name@{name}}
@@ -263,7 +201,7 @@ Friend class model.
 
 
 
-Name in flow class. 
+Name of the flow. 
 
 \mbox{\Hypertarget{classFlow_a963ca162995d112f0f30322e2bb9de63}\label{classFlow_a963ca162995d112f0f30322e2bb9de63}} 
 \index{Flow@{Flow}!source@{source}}
@@ -273,7 +211,7 @@ Name in flow class.
 
 
 
-Source of the \mbox{\hyperlink{classFlow}{Flow}}. 
+which system this flow is conected 
 
 \mbox{\Hypertarget{classFlow_a87be88d9bae4e927b29205faabeaf387}\label{classFlow_a87be88d9bae4e927b29205faabeaf387}} 
 \index{Flow@{Flow}!target@{target}}
@@ -283,11 +221,10 @@ Source of the \mbox{\hyperlink{classFlow}{Flow}}.
 
 
 
-Target of the flow. 
+which system this flow is connecting 
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/mnt/c/\+Users/rnlob/\+Documents/\+Git\+Hub/\+Faculdade/4° Período/\+BCC322 -\/ Engenharia de Software/\+Sprint 3/src/\mbox{\hyperlink{Flow_8h}{Flow.\+h}}\item 
-/mnt/c/\+Users/rnlob/\+Documents/\+Git\+Hub/\+Faculdade/4° Período/\+BCC322 -\/ Engenharia de Software/\+Sprint 3/src/\mbox{\hyperlink{Flow_8cpp}{Flow.\+cpp}}\end{DoxyCompactItemize}
+/mnt/c/\+Users/rnlob/\+Documents/\+Git\+Hub/\+Faculdade/4° Período/\+BCC322 -\/ Engenharia de Software/\+Sprint 2/src/\mbox{\hyperlink{Flow_8h}{Flow.\+h}}\end{DoxyCompactItemize}

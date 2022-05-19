@@ -1,0 +1,13 @@
+g++ -Wall -g -c src/FlowImpl.cpp -o obj/flow.o
+g++ -Wall -g -c src/ModelImpl.cpp -o obj/model.o
+g++ -Wall -g -c src/SystemImpl.cpp -o obj/system.o
+g++ -Wall -g -c test/funcional/funcionaltest.cpp -o obj/funcionaltest.o
+g++ -Wall -g -c test/funcional/main.cpp -o obj/main.o
+g++ -Wall -g  obj/funcionaltest.o  obj/main.o  obj/flow.o  obj/model.o  obj/system.o -o bin/testFuncional
+./bin/testFuncional
+
+
+Oq falta?
+Arrumar testes funcionais
+documentar
+arrumar esse mini make file

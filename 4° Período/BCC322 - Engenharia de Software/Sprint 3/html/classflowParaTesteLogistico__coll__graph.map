@@ -1,5 +1,5 @@
 <map id="flowParaTesteLogistico" name="flowParaTesteLogistico">
-<area shape="rect" id="node1" title="Flow for logistical test." alt="" coords="5,536,200,628"/>
-<area shape="rect" id="node2" href="$classFlow.html" title="My flow class." alt="" coords="41,248,164,487"/>
-<area shape="rect" id="node3" href="$classSystem.html" title="My system class." alt="" coords="49,5,156,171"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,536,180,628"/>
+<area shape="rect" id="node2" href="$classFlow.html" title=" " alt="" coords="37,248,148,487"/>
+<area shape="rect" id="node3" href="$classSystem.html" title=" " alt="" coords="45,5,140,171"/>
 </map>

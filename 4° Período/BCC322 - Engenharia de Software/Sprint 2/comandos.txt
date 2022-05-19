@@ -1,0 +1,7 @@
+g++ -Wall -g -c src/flow.cpp -o obj/flow.o
+g++ -Wall -g -c src/model.cpp -o obj/model.o
+g++ -Wall -g -c src/system.cpp -o obj/system.o
+g++ -Wall -g -c test/funcional/funcionaltest.cpp -o obj/funcionaltest.o
+g++ -Wall -g -c test/funcional/main.cpp -o obj/main.o
+g++ -Wall -g  obj/funcionaltest.o  obj/main.o  obj/flow.o  obj/model.o  obj/system.o -o bin/testFuncional
+./bin/testFuncional
