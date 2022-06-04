@@ -8,6 +8,7 @@ void unit_flow_constructor() {
     assert(flow1->getSource() == NULL);
     assert(flow1->getTarget() == NULL);
     cout << "Done" << endl;
+    delete(flow1);
 
     cout << "Flow constructor with parameters" << endl;
     System* source = new SystemImpl("Test System 1", 5.0);
@@ -17,37 +18,9 @@ void unit_flow_constructor() {
     assert(flow2->getSource() == source);
     assert(flow2->getTarget() == target);
     cout << "Done" << endl;
-}
-
-void UnitFlow::unit_flow_copy_constructor() { 
-    cout << "Flow copy constructor" << endl;
-    System* sys1 = new SystemImpl("Sys 1", 5.0);
-    System* sys2 = new SystemImpl("Sys 2", 6.0);
-    ExponencialFlow* flow1 = new ExponencialFlow("Flow 1");
-    Flow* flow2 = new ExponencialFlow(*flow1); 
-    flow1->setName("Original Flow 1");
-    flow1->setSource(sys1);
-    flow1->setTarget(sys2);
-    assert(flow2->getName() == "Flow 1");
-    assert(flow2->getSource() == NULL); 
-    assert(flow2->getTarget() == NULL);
-    cout << "Done" << endl;
-} 
-
-void UnitFlow::unit_flow_assingmentOperator(){
-    cout << "Flow assignment operator" << endl;
-    System* sys1 = new SystemImpl("Sys 1", 5.0);
-    System* sys2 = new SystemImpl("Sys 2", 6.0);
-    ExponencialFlow* flow1 = new ExponencialFlow("Flow 1");
-    ExponencialFlow* flow2 = new ExponencialFlow();
-    *flow2 = *flow1;
-    flow1->setName("Original Flow 1");
-    flow1->setSource(sys1);
-    flow1->setTarget(sys2);
-    assert(flow2->getName() == "Flow 1");
-    assert(flow2->getSource() == NULL);
-    assert(flow2->getTarget() == NULL);
-    cout << "Done" << endl;
+    delete(source);
+    delete(target);
+    delete(flow2);
 }
 
 void unit_flow_getName() {
@@ -55,6 +28,7 @@ void unit_flow_getName() {
     ExponencialFlow* flow = new ExponencialFlow("Flow 1");
     assert(flow->getName() == "Flow 1");
     cout << "Done" << endl;
+    delete(flow);
 }
 
 void unit_flow_setName() {
@@ -63,6 +37,7 @@ void unit_flow_setName() {
     flow->setName("Test Flow");
     assert(flow->getName() == "Test Flow");
     cout << "Done" << endl;
+    delete(flow);
 }
 
 void unit_flow_getSource(){
@@ -71,6 +46,8 @@ void unit_flow_getSource(){
     ExponencialFlow* flow = new ExponencialFlow("Flow 1", system);
     assert(flow->getSource()->getName() == "Test System");
     cout << "Done" << endl;
+    delete(system);
+    delete(flow);
 }
 
 void unit_flow_setSource(){
@@ -80,6 +57,8 @@ void unit_flow_setSource(){
     flow1->setSource(system);
     assert(flow1->getSource()->getName() == "Test System");
     cout << "Done" << endl;
+    delete(system);
+    delete(flow1);
 }
 
 void unit_flow_clearSource(){
@@ -89,6 +68,8 @@ void unit_flow_clearSource(){
     flow1->clearSource();
     assert(flow1->getSource() == NULL);
     cout << "Done" << endl;
+    delete(system);
+    delete(flow1);
 }
 
 void unit_flow_getTarget(){
@@ -97,6 +78,8 @@ void unit_flow_getTarget(){
     ExponencialFlow* flow = new ExponencialFlow("Flow 1",NULL,system);    
     assert(flow->getTarget()->getName() == "Test System");
     cout << "Done" << endl;
+    delete(system);
+    delete(flow);
 }
 
 void unit_flow_setTarget(){
@@ -106,6 +89,8 @@ void unit_flow_setTarget(){
     flow->setTarget(system);
     assert(flow->getTarget()->getName() == "Test System");
     cout << "Done" << endl;
+    delete(system);
+    delete(flow);
 }
 
 void unit_flow_clearTarget(){
@@ -115,6 +100,8 @@ void unit_flow_clearTarget(){
     flow->clearTarget();
     assert(flow->getTarget() == NULL);
     cout << "Done" << endl;
+    delete(system);
+    delete(flow);
 }
 
 void unit_flow_execute(){
@@ -125,13 +112,14 @@ void unit_flow_execute(){
     system2->setValue(flow->execute());
     assert(abs(flow->getTarget()->getValue() - 0.1) < 0.01);
     cout << "Done" << endl;
+    delete(system1);
+    delete(system2);
+    delete(flow);
 }
 
 void run_unit_tests_flow() {
     UnitFlow* unit_flow = new UnitFlow();
     unit_flow_constructor();  
-    unit_flow->unit_flow_copy_constructor();
-    unit_flow_destructor(); 
     unit_flow_getName();
     unit_flow_setName();
     unit_flow_getSource();
@@ -140,7 +128,6 @@ void run_unit_tests_flow() {
     unit_flow_getTarget();
     unit_flow_setTarget();
     unit_flow_clearTarget();
-    unit_flow->unit_flow_assingmentOperator();
     unit_flow_execute();
     delete(unit_flow);
 }

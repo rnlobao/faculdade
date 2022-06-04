@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classFlow.html" title="Flow class." alt="" coords="5,183,59,209"/>
+<area shape="rect" id="node2" href="$classFlowImpl.html" title="Flow Impl." alt="" coords="107,183,189,209"/>
+<area shape="rect" id="node3" href="$classComplexFlowF.html" title="Flow in complexF." alt="" coords="244,5,363,32"/>
+<area shape="rect" id="node4" href="$classComplexFlowG.html" title="Flow in complexG." alt="" coords="243,56,364,83"/>
+<area shape="rect" id="node5" href="$classComplexFlowR.html" title="Flow in ComplexR." alt="" coords="243,107,363,133"/>
+<area shape="rect" id="node6" href="$classComplexFlowT.html" title="Flow in complexT." alt="" coords="244,157,363,184"/>
+<area shape="rect" id="node7" href="$classComplexFlowU.html" title="Flow in complexU." alt="" coords="243,208,364,235"/>
+<area shape="rect" id="node8" href="$classComplexFlowV.html" title="Flow in complexV." alt="" coords="243,259,363,285"/>
+<area shape="rect" id="node9" href="$classExponencialFlow.html" title="Flow to exponencial." alt="" coords="237,309,369,336"/>
+<area shape="rect" id="node10" href="$classLogisticFlow.html" title="Flow to logistic." alt="" coords="252,360,355,387"/>
+</map>
