@@ -9,7 +9,7 @@ do Google Cloud.
 Algumas funcionalidades permitidas pelo nosso programa foi a de consultar e cadastrar usuários:
 
 <p align = "center">
-  <img width="400" height="400" src="Faculdade/Banco de Dados Distribuído/Captura de Tela 2022-08-19 às 14.24.19.png">
- <\p>
+  <img width="400" height="500" src="Captura de Tela 2022-08-19 às 14.24.19.png">
+</p>
 
-Faculdade/Banco de Dados Distribuído/Captura de Tela 2022-08-19 às 14.24.19.png
+Além de permitir ver os Nodes Workers que trabalham na aplicaçao e estressar o banco de dados com múltiplos inserts:
