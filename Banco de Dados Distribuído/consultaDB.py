@@ -36,7 +36,7 @@ if n == 1:
 
     cur.execute('INSERT INTO funcionario (first_name, last_name, email, gender, ip_address) VALUES (%s, %s, %s, %s, %s)', (firstname,
      secondname, email, gender, ipAddres))
-    print(f"Usuário %s inserido no banco!\n", firstname)
+    print(f"Usuário {firstname} inserido no banco!\n")
 
 if n == 2:
     busca = input("Digite o nome do usuário: ")
