@@ -6,7 +6,7 @@ Avaliaçao empírica do MergeSort, RadixSort e SelectionSort.
   <img src="https://user-images.githubusercontent.com/66230142/188340846-7cb4c443-920c-4959-8dad-5a19f33a0d5e.gif" width="300" height="200"/>
 </p>
 
-Sendo o mergeSort O(n * log n), SelectionSort O(𝑛2) e o Radix O(n+k)
+Sendo o mergeSort O(n * log n), SelectionSort O(𝑛2) e o Radix O(nk)
 
 Fez-se a análise estatística dos métodos fazendo 20 testes com instâncias variando de 100, 1.000, 10.000, 100.000 e 1.000.000 para saber seu desempenho e foi chegado nos seguintes resultados:
 
