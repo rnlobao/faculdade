@@ -1,34 +1,22 @@
-Avaliação empírica de 3 algoritmos para a Ordenação das chaves de um vetor.
-Dado um vetor com n valores inteiros como entrada, os algoritmos devem retornar um
-vetor com os valores do vetor de entrada, porém o valor de cada posição i deve ser menor
-ou igual ao da posição i+1, com 1≤𝑖 < 𝑛.
-Os 3 algoritmos a serem avaliados são o MergeSort, SelectionSort e RadixSort.
+Avaliaçao empírica do MergeSort, RadixSort e SelectionSort.
 
-Inicialmente, deve-se fazer a análise de complexidade de cada algoritmo, mostrando
-como se obteve a ordem de complexidade informada.
-Depois, cada grupo deverá implementar e avaliar o tempo de execução de cada algoritmo
-com as mesmas instâncias de entrada, ou seja, para cada tamanho n de instância:
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/66230142/188340840-d321b618-cdc3-4795-8de9-05446aadc488.gif" width="300" height="200"/>
+  <img src="https://user-images.githubusercontent.com/66230142/188340843-33a20eb9-c408-47ea-80a5-6753fce22327.gif" width="300" height="200"/>
+  <img src="https://user-images.githubusercontent.com/66230142/188340846-7cb4c443-920c-4959-8dad-5a19f33a0d5e.gif" width="300" height="200"/>
+</p>
 
-1) Devem ser geradas 20 instâncias, cujos valores (chaves) devem ser preenchidos
-aleatoriamente com valores entre 1 e n.
-2) Para uma mesma instância (vetor), deve-se executar cada algoritmo de ordenação e
-medir o tempo de execução.
-3) Fazer o teste estatístico t pareado com 95% de confiança e verificar se houve empate
-estatístico ou informar qual obteve estatisticamente o melhor desempenho.
+Sendo o mergeSort O(n * log n), SelectionSort O(𝑛2) e o Radix O(n+k)
 
-Deve-se também apresentar um gráfico e analisá-lo, mostrando o tempo médio com
-intervalo de confiança para a execução de cada algoritmo, considerando os tamanhos de
-instâncias avaliados.
+Fez-se a análise estatística dos métodos fazendo 20 testes com instâncias variando de 100, 1.000, 10.000, 100.000 e 1.000.000 para saber seu desempenho e foi chegado nos seguintes resultados:
 
-Comece com n=100 e vá aumentando-o em potência de 10. Ou seja, use n=100, 1.000,
-10.000, 100.000, 1.000.000, ...
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/66230142/188341306-397f3d30-6ad2-4362-b942-e739c837e9ce.png" width="700" height="350"/>
+</p>
 
-Entrega: Cada grupo deverá entregar um documento/relatório. O texto desse documento
-deve conter, pelo menos, título, autores (alunos), resumo, introdução (descrever o
-problema, o objetivo do trabalho, resumidamente os resultados obtidos e a organização do
-trabalho), descrição dos métodos com suas análises de complexidades, avaliação
-experimental (descrever a configuração dos experimentos (máquina, S.O., linguagem,
-compilador, geração das instâncias,...), métrica de avaliação, resultados e
-comentários/análises), conclusão e referências bibliográficas.
 
-Apresentação: Cada grupo terá de 10 a 15 minutos para apresentar o trabalho à turma.
+Averiguando que quanto maior a instância mais o algoritmo com análise assintótica pior, no caso o Selection, vai se tornando ineficiente:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/66230142/188341501-ab6935e3-3cae-487c-95e4-7afda8473b0b.png" width="400" height="350"/>
+</p>
