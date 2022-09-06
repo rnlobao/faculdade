@@ -1,11 +1,11 @@
 Em engenharia de software 1 aprendi alguns conceitos importantes:
-Modularize seu projeto de software
-Se voce puder fazer de tudo para o seu software ser independente em modulos faca
-implemente primeiro um fusca, depois uma porsche
-o cliente sabe o resultado que quer, nao as tecnologias
-Mantenha uma documentacao atualizada
-Trabalhe em sprints, e mais facil mensurar desenvolvimento
-Faca testes, funcionais e unitarios
+- Modularize seu projeto de software
+- Se voce puder fazer de tudo para o seu software ser independente em modulos faca
+- implemente primeiro um fusca, depois uma porsche
+- o cliente sabe o resultado que quer, nao as tecnologias
+- Mantenha uma documentacao atualizada
+- Trabalhe em sprints, e mais facil mensurar desenvolvimento
+- Faca testes, funcionais e unitarios
 
 A primeira parte da materia foi fazer um documento para o cliente, fui elogiado pelo meu documento e ele ficou assim:
 
