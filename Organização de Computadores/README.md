@@ -1,22 +1,18 @@
-Avaliaçao empírica do MergeSort, RadixSort e SelectionSort.
+Na disciplina de organizacao de computadores, o trabalho foi criar um computador em C, basicamente o computador é dividido em memorias, secundaria, ram, cache, registradores, e em C, tentamos simular a mesma coisa, fazendo o processamento de arquivos txt para simular operacoes:
 
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/66230142/188340840-d321b618-cdc3-4795-8de9-05446aadc488.gif" width="300" height="200"/>
-  <img src="https://user-images.githubusercontent.com/66230142/188340843-33a20eb9-c408-47ea-80a5-6753fce22327.gif" width="300" height="200"/>
-  <img src="https://user-images.githubusercontent.com/66230142/188340846-7cb4c443-920c-4959-8dad-5a19f33a0d5e.gif" width="300" height="200"/>
-</p>
+<img width="113" alt="image" src="https://user-images.githubusercontent.com/66230142/188623915-f44415a7-a7b2-4f47-a1e1-21450ec34e5e.png">
 
-Sendo o mergeSort O(n * log n), SelectionSort O(𝑛2) e o Radix O(nk)
+Essa e a versao final do miniPC, em que há a criacao de caches e RAM:
 
-Fez-se a análise estatística dos métodos fazendo 20 testes com instâncias variando de 100, 1.000, 10.000, 100.000 e 1.000.000 para saber seu desempenho e foi chegado nos seguintes resultados:
+<img width="255" alt="image" src="https://user-images.githubusercontent.com/66230142/188624606-78e459d5-e79b-4efb-a45d-247872c8aead.png">
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/66230142/188341306-397f3d30-6ad2-4362-b942-e739c837e9ce.png" width="700" height="350"/>
-</p>
+Aprendi tambem a saber quais infos manterem nas memorias de rapido acesso, dependendo de parametros como ultimo acesso ou mais acessos:
+
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/66230142/188625016-f614c2a4-fbc3-4f51-85d0-2cb84b94df62.png">
+
+Alem de mensurar o cache hit e cache miss das aplicacoes, onde o mini computador fica fazendo calculos aleatorios com os dados passados e mostrando se as infos foram tiradas da RAM, registradores ou cache
+
+![0*lm_MXgomFm9-TVtO](https://user-images.githubusercontent.com/66230142/188625355-15e896d9-f732-4927-a3d0-524198df5632.gif)
 
 
-Averiguando que quanto maior a instância mais o algoritmo com análise assintótica pior, no caso o Selection, vai se tornando ineficiente:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/66230142/188341501-ab6935e3-3cae-487c-95e4-7afda8473b0b.png" width="400" height="350"/>
-</p>
