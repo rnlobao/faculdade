@@ -5,4 +5,3 @@ Apresentação do trabalho em C do 1P sobre o jogo resta um: https://www.youtube
 
 Apresentação do trabalho do 2P sobre a importância do letramento nos cursos de exata: https://www.youtube.com/watch?v=xI7i8u9yFnk
 
-Apresentação do trabalho em Java do 3P sobre uma imobiliária: https://www.youtube.com/watch?v=D_mg95SHtsM
