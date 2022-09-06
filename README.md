@@ -1,5 +1,5 @@
 # Faculdade
-Todos meus códigos na faculdade de ciência da computação na UFOP
+Mais relevantes da minha faculdade de ciência da computação na UFOP
 
 Apresentação do trabalho em C do 1P sobre o jogo resta um: https://www.youtube.com/watch?v=6CIyd4Kkpu8&t=413s
 
