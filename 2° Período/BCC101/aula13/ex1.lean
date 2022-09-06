@@ -1,4 +1,0 @@
-import tactic 
-
-open nat
-
