@@ -8,6 +8,9 @@
 #include <time.h>
 
 // fores e formato de texto
-#define ANSI_RESET "\x1b[0m"
-#define ANSI_BOLD "\x1b[1m"
+#define ANSI_RESET            "\x1b[0m"
+#define ANSI_BOLD             "\x1b[1m"
+#define ANSI_COLOR_BLACK      "\x1b[30m"
+#define ANSI_COLOR_RED        "\x1b[31m"
+
 
