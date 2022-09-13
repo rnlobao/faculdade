@@ -2,6 +2,3 @@ Nesse repositório tem todos os exercícios feitos na matéria de estrutura de d
 
 Além disso foi onde fiz meu primeiro CRUD em CLI nos trabalhos práticos. Minha nota nessa matéria foi 9.0 :)
 
-<p align = "center">
-  <img width="400" height="250" src="https://user-images.githubusercontent.com/66230142/188526409-41b941a0-a7ac-4f03-a058-87aa8b898a6a.jpeg">
-</p>
