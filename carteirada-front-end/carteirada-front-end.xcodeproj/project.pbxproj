@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B12E8558FF35EADE67628C6 /* Pods_carteirada_front_endTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36273D98A6D5443ACCEA4331 /* Pods_carteirada_front_endTests.framework */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
 		91F3D97E28D906FC00DD62CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97D28D906FC00DD62CB /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		91F3D99128D906FD00DD62CB /* carteirada_front_endTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99028D906FD00DD62CB /* carteirada_front_endTests.swift */; };
 		91F3D99B28D906FD00DD62CB /* carteirada_front_endUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99A28D906FD00DD62CB /* carteirada_front_endUITests.swift */; };
 		91F3D99D28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99C28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift */; };
+		BA84C546C4F90E44EC936052 /* Pods_carteirada_front_end_carteirada_front_endUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5147FFDD4E3F566C061EA1DD /* Pods_carteirada_front_end_carteirada_front_endUITests.framework */; };
+		DF71856294B426DBCA81072E /* Pods_carteirada_front_end.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8F7B48CCD48F59A725EE91 /* Pods_carteirada_front_end.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13C25C2F7454E39ECF8D3B9E /* Pods-carteirada-front-endTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-endTests.debug.xcconfig"; path = "Target Support Files/Pods-carteirada-front-endTests/Pods-carteirada-front-endTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2288B3E9538244B1BF9B3F06 /* Pods-carteirada-front-end.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-end.release.xcconfig"; path = "Target Support Files/Pods-carteirada-front-end/Pods-carteirada-front-end.release.xcconfig"; sourceTree = "<group>"; };
+		36273D98A6D5443ACCEA4331 /* Pods_carteirada_front_endTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carteirada_front_endTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5147FFDD4E3F566C061EA1DD /* Pods_carteirada_front_end_carteirada_front_endUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carteirada_front_end_carteirada_front_endUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58831D3BDB704AB22F39CE9C /* Pods-carteirada-front-endTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-endTests.release.xcconfig"; path = "Target Support Files/Pods-carteirada-front-endTests/Pods-carteirada-front-endTests.release.xcconfig"; sourceTree = "<group>"; };
+		6AEA59AC01D964E28E970BB6 /* Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig"; path = "Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		91F3D99628D906FD00DD62CB /* carteirada-front-endUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "carteirada-front-endUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D99A28D906FD00DD62CB /* carteirada_front_endUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteirada_front_endUITests.swift; sourceTree = "<group>"; };
 		91F3D99C28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteirada_front_endUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		97ED808C2E2369E3E757A6B8 /* Pods-carteirada-front-end-carteirada-front-endUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-end-carteirada-front-endUITests.release.xcconfig"; path = "Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D28226A2B0F8AE2EC636BB69 /* Pods-carteirada-front-end.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-end.debug.xcconfig"; path = "Target Support Files/Pods-carteirada-front-end/Pods-carteirada-front-end.debug.xcconfig"; sourceTree = "<group>"; };
+		DC8F7B48CCD48F59A725EE91 /* Pods_carteirada_front_end.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carteirada_front_end.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF71856294B426DBCA81072E /* Pods_carteirada_front_end.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B12E8558FF35EADE67628C6 /* Pods_carteirada_front_endTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA84C546C4F90E44EC936052 /* Pods_carteirada_front_end_carteirada_front_endUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FA9CECBAE91788AF2000FF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC8F7B48CCD48F59A725EE91 /* Pods_carteirada_front_end.framework */,
+				5147FFDD4E3F566C061EA1DD /* Pods_carteirada_front_end_carteirada_front_endUITests.framework */,
+				36273D98A6D5443ACCEA4331 /* Pods_carteirada_front_endTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91F3D96D28D906FC00DD62CB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				91F3D98F28D906FD00DD62CB /* carteirada-front-endTests */,
 				91F3D99928D906FD00DD62CB /* carteirada-front-endUITests */,
 				91F3D97728D906FC00DD62CB /* Products */,
+				CD005CA572026B576FC8998E /* Pods */,
+				6FA9CECBAE91788AF2000FF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +154,20 @@
 			path = "carteirada-front-endUITests";
 			sourceTree = "<group>";
 		};
+		CD005CA572026B576FC8998E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D28226A2B0F8AE2EC636BB69 /* Pods-carteirada-front-end.debug.xcconfig */,
+				2288B3E9538244B1BF9B3F06 /* Pods-carteirada-front-end.release.xcconfig */,
+				6AEA59AC01D964E28E970BB6 /* Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig */,
+				97ED808C2E2369E3E757A6B8 /* Pods-carteirada-front-end-carteirada-front-endUITests.release.xcconfig */,
+				13C25C2F7454E39ECF8D3B9E /* Pods-carteirada-front-endTests.debug.xcconfig */,
+				58831D3BDB704AB22F39CE9C /* Pods-carteirada-front-endTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F3D9A028D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-end" */;
 			buildPhases = (
+				52909508802F75212A1A93C4 /* [CP] Check Pods Manifest.lock */,
 				91F3D97228D906FC00DD62CB /* Sources */,
 				91F3D97328D906FC00DD62CB /* Frameworks */,
 				91F3D97428D906FC00DD62CB /* Resources */,
+				BC8930EDCE664BF934F7755D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F3D9A328D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-endTests" */;
 			buildPhases = (
+				A58A61A938E6EA6BDC63016A /* [CP] Check Pods Manifest.lock */,
 				91F3D98828D906FD00DD62CB /* Sources */,
 				91F3D98928D906FD00DD62CB /* Frameworks */,
 				91F3D98A28D906FD00DD62CB /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F3D9A628D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-endUITests" */;
 			buildPhases = (
+				DFF457A5AC1B56BCBBD18E64 /* [CP] Check Pods Manifest.lock */,
 				91F3D99228D906FD00DD62CB /* Sources */,
 				91F3D99328D906FD00DD62CB /* Frameworks */,
 				91F3D99428D906FD00DD62CB /* Resources */,
+				75E593669765FF44C68E4257 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52909508802F75212A1A93C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carteirada-front-end-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E593669765FF44C68E4257 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A58A61A938E6EA6BDC63016A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carteirada-front-endTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC8930EDCE664BF934F7755D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end/Pods-carteirada-front-end-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end/Pods-carteirada-front-end-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end/Pods-carteirada-front-end-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFF457A5AC1B56BCBBD18E64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carteirada-front-end-carteirada-front-endUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91F3D97228D906FC00DD62CB /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		91F3D9A128D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28226A2B0F8AE2EC636BB69 /* Pods-carteirada-front-end.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +609,7 @@
 		};
 		91F3D9A228D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2288B3E9538244B1BF9B3F06 /* Pods-carteirada-front-end.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +637,7 @@
 		};
 		91F3D9A428D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C25C2F7454E39ECF8D3B9E /* Pods-carteirada-front-endTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +657,7 @@
 		};
 		91F3D9A528D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58831D3BDB704AB22F39CE9C /* Pods-carteirada-front-endTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +677,7 @@
 		};
 		91F3D9A728D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AEA59AC01D964E28E970BB6 /* Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +695,7 @@
 		};
 		91F3D9A828D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97ED808C2E2369E3E757A6B8 /* Pods-carteirada-front-end-carteirada-front-endUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
