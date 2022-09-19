@@ -1,14 +1,14 @@
 //
-//  CarteiradaTests.swift
-//  CarteiradaTests
+//  carteirada_front_endTests.swift
+//  carteirada-front-endTests
 //
 //  Created by Robson Novato Lobao on 19/09/22.
 //
 
 import XCTest
-@testable import Carteirada
+@testable import carteirada_front_end
 
-class CarteiradaTests: XCTestCase {
+class carteirada_front_endTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

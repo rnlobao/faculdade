@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91C9EC0F28D9063600460FF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EC0E28D9063600460FF5 /* AppDelegate.swift */; };
-		91C9EC1128D9063600460FF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EC1028D9063600460FF5 /* SceneDelegate.swift */; };
-		91C9EC1328D9063600460FF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EC1228D9063600460FF5 /* ViewController.swift */; };
-		91C9EC1628D9063600460FF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C9EC1428D9063600460FF5 /* Main.storyboard */; };
-		91C9EC1828D9063A00460FF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C9EC1728D9063A00460FF5 /* Assets.xcassets */; };
-		91C9EC1B28D9063A00460FF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C9EC1928D9063A00460FF5 /* LaunchScreen.storyboard */; };
-		91C9EC2628D9063B00460FF5 /* CarteiradaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EC2528D9063B00460FF5 /* CarteiradaTests.swift */; };
-		91C9EC3028D9063B00460FF5 /* CarteiradaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EC2F28D9063B00460FF5 /* CarteiradaUITests.swift */; };
-		91C9EC3228D9063B00460FF5 /* CarteiradaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EC3128D9063B00460FF5 /* CarteiradaUITestsLaunchTests.swift */; };
+		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
+		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
+		91F3D97E28D906FC00DD62CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97D28D906FC00DD62CB /* ViewController.swift */; };
+		91F3D98128D906FC00DD62CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D97F28D906FC00DD62CB /* Main.storyboard */; };
+		91F3D98328D906FD00DD62CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D98228D906FD00DD62CB /* Assets.xcassets */; };
+		91F3D98628D906FD00DD62CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D98428D906FD00DD62CB /* LaunchScreen.storyboard */; };
+		91F3D99128D906FD00DD62CB /* carteirada_front_endTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99028D906FD00DD62CB /* carteirada_front_endTests.swift */; };
+		91F3D99B28D906FD00DD62CB /* carteirada_front_endUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99A28D906FD00DD62CB /* carteirada_front_endUITests.swift */; };
+		91F3D99D28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99C28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		91C9EC2228D9063B00460FF5 /* PBXContainerItemProxy */ = {
+		91F3D98D28D906FD00DD62CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 91C9EC0328D9063600460FF5 /* Project object */;
+			containerPortal = 91F3D96E28D906FC00DD62CB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 91C9EC0A28D9063600460FF5;
-			remoteInfo = Carteirada;
+			remoteGlobalIDString = 91F3D97528D906FC00DD62CB;
+			remoteInfo = "carteirada-front-end";
 		};
-		91C9EC2C28D9063B00460FF5 /* PBXContainerItemProxy */ = {
+		91F3D99728D906FD00DD62CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 91C9EC0328D9063600460FF5 /* Project object */;
+			containerPortal = 91F3D96E28D906FC00DD62CB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 91C9EC0A28D9063600460FF5;
-			remoteInfo = Carteirada;
+			remoteGlobalIDString = 91F3D97528D906FC00DD62CB;
+			remoteInfo = "carteirada-front-end";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		91C9EC0B28D9063600460FF5 /* Carteirada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carteirada.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C9EC0E28D9063600460FF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91C9EC1028D9063600460FF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91C9EC1228D9063600460FF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91C9EC1528D9063600460FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91C9EC1728D9063A00460FF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		91C9EC1A28D9063A00460FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		91C9EC1C28D9063A00460FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91C9EC2128D9063B00460FF5 /* CarteiradaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarteiradaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C9EC2528D9063B00460FF5 /* CarteiradaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteiradaTests.swift; sourceTree = "<group>"; };
-		91C9EC2B28D9063B00460FF5 /* CarteiradaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarteiradaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C9EC2F28D9063B00460FF5 /* CarteiradaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteiradaUITests.swift; sourceTree = "<group>"; };
-		91C9EC3128D9063B00460FF5 /* CarteiradaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteiradaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		91F3D97D28D906FC00DD62CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91F3D98028D906FC00DD62CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91F3D98228D906FD00DD62CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91F3D98528D906FD00DD62CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91F3D98728D906FD00DD62CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F3D98C28D906FD00DD62CB /* carteirada-front-endTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "carteirada-front-endTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F3D99028D906FD00DD62CB /* carteirada_front_endTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteirada_front_endTests.swift; sourceTree = "<group>"; };
+		91F3D99628D906FD00DD62CB /* carteirada-front-endUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "carteirada-front-endUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F3D99A28D906FD00DD62CB /* carteirada_front_endUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteirada_front_endUITests.swift; sourceTree = "<group>"; };
+		91F3D99C28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carteirada_front_endUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		91C9EC0828D9063600460FF5 /* Frameworks */ = {
+		91F3D97328D906FC00DD62CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9EC1E28D9063B00460FF5 /* Frameworks */ = {
+		91F3D98928D906FD00DD62CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9EC2828D9063B00460FF5 /* Frameworks */ = {
+		91F3D99328D906FD00DD62CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,137 +76,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		91C9EC0228D9063600460FF5 = {
+		91F3D96D28D906FC00DD62CB = {
 			isa = PBXGroup;
 			children = (
-				91C9EC0D28D9063600460FF5 /* Carteirada */,
-				91C9EC2428D9063B00460FF5 /* CarteiradaTests */,
-				91C9EC2E28D9063B00460FF5 /* CarteiradaUITests */,
-				91C9EC0C28D9063600460FF5 /* Products */,
+				91F3D97828D906FC00DD62CB /* carteirada-front-end */,
+				91F3D98F28D906FD00DD62CB /* carteirada-front-endTests */,
+				91F3D99928D906FD00DD62CB /* carteirada-front-endUITests */,
+				91F3D97728D906FC00DD62CB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		91C9EC0C28D9063600460FF5 /* Products */ = {
+		91F3D97728D906FC00DD62CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91C9EC0B28D9063600460FF5 /* Carteirada.app */,
-				91C9EC2128D9063B00460FF5 /* CarteiradaTests.xctest */,
-				91C9EC2B28D9063B00460FF5 /* CarteiradaUITests.xctest */,
+				91F3D97628D906FC00DD62CB /* carteirada-front-end.app */,
+				91F3D98C28D906FD00DD62CB /* carteirada-front-endTests.xctest */,
+				91F3D99628D906FD00DD62CB /* carteirada-front-endUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		91C9EC0D28D9063600460FF5 /* Carteirada */ = {
+		91F3D97828D906FC00DD62CB /* carteirada-front-end */ = {
 			isa = PBXGroup;
 			children = (
-				91C9EC0E28D9063600460FF5 /* AppDelegate.swift */,
-				91C9EC1028D9063600460FF5 /* SceneDelegate.swift */,
-				91C9EC1228D9063600460FF5 /* ViewController.swift */,
-				91C9EC1428D9063600460FF5 /* Main.storyboard */,
-				91C9EC1728D9063A00460FF5 /* Assets.xcassets */,
-				91C9EC1928D9063A00460FF5 /* LaunchScreen.storyboard */,
-				91C9EC1C28D9063A00460FF5 /* Info.plist */,
+				91F3D97928D906FC00DD62CB /* AppDelegate.swift */,
+				91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */,
+				91F3D97D28D906FC00DD62CB /* ViewController.swift */,
+				91F3D97F28D906FC00DD62CB /* Main.storyboard */,
+				91F3D98228D906FD00DD62CB /* Assets.xcassets */,
+				91F3D98428D906FD00DD62CB /* LaunchScreen.storyboard */,
+				91F3D98728D906FD00DD62CB /* Info.plist */,
 			);
-			path = Carteirada;
+			path = "carteirada-front-end";
 			sourceTree = "<group>";
 		};
-		91C9EC2428D9063B00460FF5 /* CarteiradaTests */ = {
+		91F3D98F28D906FD00DD62CB /* carteirada-front-endTests */ = {
 			isa = PBXGroup;
 			children = (
-				91C9EC2528D9063B00460FF5 /* CarteiradaTests.swift */,
+				91F3D99028D906FD00DD62CB /* carteirada_front_endTests.swift */,
 			);
-			path = CarteiradaTests;
+			path = "carteirada-front-endTests";
 			sourceTree = "<group>";
 		};
-		91C9EC2E28D9063B00460FF5 /* CarteiradaUITests */ = {
+		91F3D99928D906FD00DD62CB /* carteirada-front-endUITests */ = {
 			isa = PBXGroup;
 			children = (
-				91C9EC2F28D9063B00460FF5 /* CarteiradaUITests.swift */,
-				91C9EC3128D9063B00460FF5 /* CarteiradaUITestsLaunchTests.swift */,
+				91F3D99A28D906FD00DD62CB /* carteirada_front_endUITests.swift */,
+				91F3D99C28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift */,
 			);
-			path = CarteiradaUITests;
+			path = "carteirada-front-endUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91C9EC0A28D9063600460FF5 /* Carteirada */ = {
+		91F3D97528D906FC00DD62CB /* carteirada-front-end */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91C9EC3528D9063B00460FF5 /* Build configuration list for PBXNativeTarget "Carteirada" */;
+			buildConfigurationList = 91F3D9A028D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-end" */;
 			buildPhases = (
-				91C9EC0728D9063600460FF5 /* Sources */,
-				91C9EC0828D9063600460FF5 /* Frameworks */,
-				91C9EC0928D9063600460FF5 /* Resources */,
+				91F3D97228D906FC00DD62CB /* Sources */,
+				91F3D97328D906FC00DD62CB /* Frameworks */,
+				91F3D97428D906FC00DD62CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Carteirada;
-			productName = Carteirada;
-			productReference = 91C9EC0B28D9063600460FF5 /* Carteirada.app */;
+			name = "carteirada-front-end";
+			productName = "carteirada-front-end";
+			productReference = 91F3D97628D906FC00DD62CB /* carteirada-front-end.app */;
 			productType = "com.apple.product-type.application";
 		};
-		91C9EC2028D9063B00460FF5 /* CarteiradaTests */ = {
+		91F3D98B28D906FD00DD62CB /* carteirada-front-endTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91C9EC3828D9063B00460FF5 /* Build configuration list for PBXNativeTarget "CarteiradaTests" */;
+			buildConfigurationList = 91F3D9A328D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-endTests" */;
 			buildPhases = (
-				91C9EC1D28D9063B00460FF5 /* Sources */,
-				91C9EC1E28D9063B00460FF5 /* Frameworks */,
-				91C9EC1F28D9063B00460FF5 /* Resources */,
+				91F3D98828D906FD00DD62CB /* Sources */,
+				91F3D98928D906FD00DD62CB /* Frameworks */,
+				91F3D98A28D906FD00DD62CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				91C9EC2328D9063B00460FF5 /* PBXTargetDependency */,
+				91F3D98E28D906FD00DD62CB /* PBXTargetDependency */,
 			);
-			name = CarteiradaTests;
-			productName = CarteiradaTests;
-			productReference = 91C9EC2128D9063B00460FF5 /* CarteiradaTests.xctest */;
+			name = "carteirada-front-endTests";
+			productName = "carteirada-front-endTests";
+			productReference = 91F3D98C28D906FD00DD62CB /* carteirada-front-endTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		91C9EC2A28D9063B00460FF5 /* CarteiradaUITests */ = {
+		91F3D99528D906FD00DD62CB /* carteirada-front-endUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91C9EC3B28D9063B00460FF5 /* Build configuration list for PBXNativeTarget "CarteiradaUITests" */;
+			buildConfigurationList = 91F3D9A628D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-endUITests" */;
 			buildPhases = (
-				91C9EC2728D9063B00460FF5 /* Sources */,
-				91C9EC2828D9063B00460FF5 /* Frameworks */,
-				91C9EC2928D9063B00460FF5 /* Resources */,
+				91F3D99228D906FD00DD62CB /* Sources */,
+				91F3D99328D906FD00DD62CB /* Frameworks */,
+				91F3D99428D906FD00DD62CB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				91C9EC2D28D9063B00460FF5 /* PBXTargetDependency */,
+				91F3D99828D906FD00DD62CB /* PBXTargetDependency */,
 			);
-			name = CarteiradaUITests;
-			productName = CarteiradaUITests;
-			productReference = 91C9EC2B28D9063B00460FF5 /* CarteiradaUITests.xctest */;
+			name = "carteirada-front-endUITests";
+			productName = "carteirada-front-endUITests";
+			productReference = 91F3D99628D906FD00DD62CB /* carteirada-front-endUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		91C9EC0328D9063600460FF5 /* Project object */ = {
+		91F3D96E28D906FC00DD62CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					91C9EC0A28D9063600460FF5 = {
+					91F3D97528D906FC00DD62CB = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					91C9EC2028D9063B00460FF5 = {
+					91F3D98B28D906FD00DD62CB = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 91C9EC0A28D9063600460FF5;
+						TestTargetID = 91F3D97528D906FC00DD62CB;
 					};
-					91C9EC2A28D9063B00460FF5 = {
+					91F3D99528D906FD00DD62CB = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 91C9EC0A28D9063600460FF5;
+						TestTargetID = 91F3D97528D906FC00DD62CB;
 					};
 				};
 			};
-			buildConfigurationList = 91C9EC0628D9063600460FF5 /* Build configuration list for PBXProject "Carteirada" */;
+			buildConfigurationList = 91F3D97128D906FC00DD62CB /* Build configuration list for PBXProject "carteirada-front-end" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,37 +214,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 91C9EC0228D9063600460FF5;
-			productRefGroup = 91C9EC0C28D9063600460FF5 /* Products */;
+			mainGroup = 91F3D96D28D906FC00DD62CB;
+			productRefGroup = 91F3D97728D906FC00DD62CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91C9EC0A28D9063600460FF5 /* Carteirada */,
-				91C9EC2028D9063B00460FF5 /* CarteiradaTests */,
-				91C9EC2A28D9063B00460FF5 /* CarteiradaUITests */,
+				91F3D97528D906FC00DD62CB /* carteirada-front-end */,
+				91F3D98B28D906FD00DD62CB /* carteirada-front-endTests */,
+				91F3D99528D906FD00DD62CB /* carteirada-front-endUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		91C9EC0928D9063600460FF5 /* Resources */ = {
+		91F3D97428D906FC00DD62CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C9EC1B28D9063A00460FF5 /* LaunchScreen.storyboard in Resources */,
-				91C9EC1828D9063A00460FF5 /* Assets.xcassets in Resources */,
-				91C9EC1628D9063600460FF5 /* Main.storyboard in Resources */,
+				91F3D98628D906FD00DD62CB /* LaunchScreen.storyboard in Resources */,
+				91F3D98328D906FD00DD62CB /* Assets.xcassets in Resources */,
+				91F3D98128D906FC00DD62CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9EC1F28D9063B00460FF5 /* Resources */ = {
+		91F3D98A28D906FD00DD62CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9EC2928D9063B00460FF5 /* Resources */ = {
+		91F3D99428D906FD00DD62CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,61 +254,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		91C9EC0728D9063600460FF5 /* Sources */ = {
+		91F3D97228D906FC00DD62CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C9EC1328D9063600460FF5 /* ViewController.swift in Sources */,
-				91C9EC0F28D9063600460FF5 /* AppDelegate.swift in Sources */,
-				91C9EC1128D9063600460FF5 /* SceneDelegate.swift in Sources */,
+				91F3D97E28D906FC00DD62CB /* ViewController.swift in Sources */,
+				91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */,
+				91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9EC1D28D9063B00460FF5 /* Sources */ = {
+		91F3D98828D906FD00DD62CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C9EC2628D9063B00460FF5 /* CarteiradaTests.swift in Sources */,
+				91F3D99128D906FD00DD62CB /* carteirada_front_endTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9EC2728D9063B00460FF5 /* Sources */ = {
+		91F3D99228D906FD00DD62CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C9EC3228D9063B00460FF5 /* CarteiradaUITestsLaunchTests.swift in Sources */,
-				91C9EC3028D9063B00460FF5 /* CarteiradaUITests.swift in Sources */,
+				91F3D99D28D906FD00DD62CB /* carteirada_front_endUITestsLaunchTests.swift in Sources */,
+				91F3D99B28D906FD00DD62CB /* carteirada_front_endUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		91C9EC2328D9063B00460FF5 /* PBXTargetDependency */ = {
+		91F3D98E28D906FD00DD62CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91C9EC0A28D9063600460FF5 /* Carteirada */;
-			targetProxy = 91C9EC2228D9063B00460FF5 /* PBXContainerItemProxy */;
+			target = 91F3D97528D906FC00DD62CB /* carteirada-front-end */;
+			targetProxy = 91F3D98D28D906FD00DD62CB /* PBXContainerItemProxy */;
 		};
-		91C9EC2D28D9063B00460FF5 /* PBXTargetDependency */ = {
+		91F3D99828D906FD00DD62CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91C9EC0A28D9063600460FF5 /* Carteirada */;
-			targetProxy = 91C9EC2C28D9063B00460FF5 /* PBXContainerItemProxy */;
+			target = 91F3D97528D906FC00DD62CB /* carteirada-front-end */;
+			targetProxy = 91F3D99728D906FD00DD62CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		91C9EC1428D9063600460FF5 /* Main.storyboard */ = {
+		91F3D97F28D906FC00DD62CB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				91C9EC1528D9063600460FF5 /* Base */,
+				91F3D98028D906FC00DD62CB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		91C9EC1928D9063A00460FF5 /* LaunchScreen.storyboard */ = {
+		91F3D98428D906FD00DD62CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				91C9EC1A28D9063A00460FF5 /* Base */,
+				91F3D98528D906FD00DD62CB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		91C9EC3328D9063B00460FF5 /* Debug */ = {
+		91F3D99E28D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		91C9EC3428D9063B00460FF5 /* Release */ = {
+		91F3D99F28D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,7 +430,7 @@
 			};
 			name = Release;
 		};
-		91C9EC3628D9063B00460FF5 /* Debug */ = {
+		91F3D9A128D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -438,7 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Carteirada/Info.plist;
+				INFOPLIST_FILE = "carteirada-front-end/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -449,7 +449,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robson.Carteirada;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson.carteirada-front-end";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -457,7 +457,7 @@
 			};
 			name = Debug;
 		};
-		91C9EC3728D9063B00460FF5 /* Release */ = {
+		91F3D9A228D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -465,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Carteirada/Info.plist;
+				INFOPLIST_FILE = "carteirada-front-end/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -476,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robson.Carteirada;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson.carteirada-front-end";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -484,7 +484,7 @@
 			};
 			name = Release;
 		};
-		91C9EC3928D9063B00460FF5 /* Debug */ = {
+		91F3D9A428D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -494,16 +494,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robson.CarteiradaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson.carteirada-front-endTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carteirada.app/Carteirada";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carteirada-front-end.app/carteirada-front-end";
 			};
 			name = Debug;
 		};
-		91C9EC3A28D9063B00460FF5 /* Release */ = {
+		91F3D9A528D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -513,16 +513,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robson.CarteiradaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson.carteirada-front-endTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carteirada.app/Carteirada";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carteirada-front-end.app/carteirada-front-end";
 			};
 			name = Release;
 		};
-		91C9EC3C28D9063B00460FF5 /* Debug */ = {
+		91F3D9A728D906FD00DD62CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -530,16 +530,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robson.CarteiradaUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson.carteirada-front-endUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Carteirada;
+				TEST_TARGET_NAME = "carteirada-front-end";
 			};
 			name = Debug;
 		};
-		91C9EC3D28D9063B00460FF5 /* Release */ = {
+		91F3D9A828D906FD00DD62CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -547,55 +547,55 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robson.CarteiradaUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson.carteirada-front-endUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Carteirada;
+				TEST_TARGET_NAME = "carteirada-front-end";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91C9EC0628D9063600460FF5 /* Build configuration list for PBXProject "Carteirada" */ = {
+		91F3D97128D906FC00DD62CB /* Build configuration list for PBXProject "carteirada-front-end" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91C9EC3328D9063B00460FF5 /* Debug */,
-				91C9EC3428D9063B00460FF5 /* Release */,
+				91F3D99E28D906FD00DD62CB /* Debug */,
+				91F3D99F28D906FD00DD62CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91C9EC3528D9063B00460FF5 /* Build configuration list for PBXNativeTarget "Carteirada" */ = {
+		91F3D9A028D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-end" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91C9EC3628D9063B00460FF5 /* Debug */,
-				91C9EC3728D9063B00460FF5 /* Release */,
+				91F3D9A128D906FD00DD62CB /* Debug */,
+				91F3D9A228D906FD00DD62CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91C9EC3828D9063B00460FF5 /* Build configuration list for PBXNativeTarget "CarteiradaTests" */ = {
+		91F3D9A328D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-endTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91C9EC3928D9063B00460FF5 /* Debug */,
-				91C9EC3A28D9063B00460FF5 /* Release */,
+				91F3D9A428D906FD00DD62CB /* Debug */,
+				91F3D9A528D906FD00DD62CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91C9EC3B28D9063B00460FF5 /* Build configuration list for PBXNativeTarget "CarteiradaUITests" */ = {
+		91F3D9A628D906FD00DD62CB /* Build configuration list for PBXNativeTarget "carteirada-front-endUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91C9EC3C28D9063B00460FF5 /* Debug */,
-				91C9EC3D28D9063B00460FF5 /* Release */,
+				91F3D9A728D906FD00DD62CB /* Debug */,
+				91F3D9A828D906FD00DD62CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 91C9EC0328D9063600460FF5 /* Project object */;
+	rootObject = 91F3D96E28D906FC00DD62CB /* Project object */;
 }

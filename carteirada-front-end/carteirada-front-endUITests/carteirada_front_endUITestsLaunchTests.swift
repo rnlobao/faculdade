@@ -1,13 +1,13 @@
 //
-//  CarteiradaUITestsLaunchTests.swift
-//  CarteiradaUITests
+//  carteirada_front_endUITestsLaunchTests.swift
+//  carteirada-front-endUITests
 //
 //  Created by Robson Novato Lobao on 19/09/22.
 //
 
 import XCTest
 
-class CarteiradaUITestsLaunchTests: XCTestCase {
+class carteirada_front_endUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
