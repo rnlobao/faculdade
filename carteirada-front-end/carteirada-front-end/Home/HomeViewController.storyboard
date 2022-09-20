@@ -24,18 +24,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO4-Nk-IOq">
-                                <rect key="frame" x="279" y="349" width="10" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="647-kv-zfM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="grT-jC-BbY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="grT-jC-BbY" firstAttribute="trailing" secondItem="647-kv-zfM" secondAttribute="trailing" id="9aM-Sb-Mxq"/>
+                            <constraint firstItem="647-kv-zfM" firstAttribute="top" secondItem="grT-jC-BbY" secondAttribute="top" id="ahn-HB-WBi"/>
+                            <constraint firstItem="grT-jC-BbY" firstAttribute="bottom" secondItem="647-kv-zfM" secondAttribute="bottom" id="h4A-4R-Pfg"/>
+                            <constraint firstItem="647-kv-zfM" firstAttribute="leading" secondItem="grT-jC-BbY" secondAttribute="leading" id="lte-En-0us"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="x1e-FM-rOo"/>
+                    <connections>
+                        <outlet property="tableView" destination="647-kv-zfM" id="bjB-sj-XKL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpf-4e-AVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,9 +77,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MMP-o1-Yps" customClass="CustomTabBar" customModule="carteirada_front_end" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MTu-zC-yHe">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MTu-zC-yHe" customClass="TabBarVC" customModule="carteirada_front_end" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="aCP-cL-3Mg" kind="relationship" relationship="viewControllers" id="KFs-Ij-yi5"/>
@@ -83,7 +91,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4g-p1-PBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136.23188405797103" y="192.85714285714286"/>
+            <point key="canvasLocation" x="-71" y="193"/>
         </scene>
         <!--Adicionar-->
         <scene sceneID="KBl-EO-Lab">
@@ -261,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4px-Ci-1Cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1439.1304347826087" y="943.52678571428567"/>
+            <point key="canvasLocation" x="-761" y="944"/>
         </scene>
     </scenes>
     <resources>
