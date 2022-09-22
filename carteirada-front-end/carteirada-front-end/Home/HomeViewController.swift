@@ -12,8 +12,24 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupTableView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        isItUser()
+    }
+    
+    func isItUser() {
+        if !UserDefaults.standard.bool(forKey: "user") {
+            
+            let myViewController = Register2ViewController()
+            myViewController.modalPresentationStyle = .fullScreen
+            self.present(myViewController, animated: true, completion: nil)
+            
+//            let vc = RegisterViewController()
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true, completion: nil)
+        }
     }
 
 

@@ -19,4 +19,6 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
         self.selectedIndex = 1
         self.editButtonItem.tintColor = UIColor(named: "")
     }
+    
+    
 }

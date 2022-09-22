@@ -1,25 +1,26 @@
 //
-//  ViewController.swift
+//  Register2ViewController.swift
 //  carteirada-front-end
 //
-//  Created by Robson Novato Lobao on 19/09/22.
+//  Created by Robson Novato Lobao on 22/09/22.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class Register2ViewController: UIViewController {
 
     @IBOutlet weak var registerButtonEdit: UIButton!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var userTF: UITextField!
+    @IBOutlet weak var pwTF: UITextField!
+    @IBOutlet weak var confirmPWTF: UITextField!
     
-    @IBAction func registerButton(_ sender: Any) {
-        //let vc = HomeViewController()
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true, completion: nil)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
     }
+    
+    
     
     func setupButton() {
         registerButtonEdit.layer.cornerRadius = 20
@@ -30,6 +31,4 @@ class RegisterViewController: UIViewController {
         registerButtonEdit.layer.masksToBounds = false
     }
 
-
 }
-

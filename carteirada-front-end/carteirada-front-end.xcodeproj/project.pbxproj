@@ -15,9 +15,14 @@
 		9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100B9C128D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift */; };
 		9100B9C428D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100B9C228D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib */; };
 		91070B9028DC9DD8003598D0 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91070B8F28DC9DD8003598D0 /* AddViewModel.swift */; };
+		9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172228DCB817004FF59E /* Register2ViewController.swift */; };
+		9171172528DCB817004FF59E /* Register2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9171172328DCB817004FF59E /* Register2ViewController.xib */; };
+		9171172728DCBE00004FF59E /* Register2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172628DCBE00004FF59E /* Register2ViewModel.swift */; };
+		9171172A28DCBF1C004FF59E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172928DCBF1C004FF59E /* NetworkService.swift */; };
+		9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172B28DCBF4F004FF59E /* RegisterUserService.swift */; };
+		9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172D28DCBFA2004FF59E /* UserModel.swift */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
-		91F3D97E28D906FC00DD62CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97D28D906FC00DD62CB /* RegisterViewController.swift */; };
 		91F3D98328D906FD00DD62CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D98228D906FD00DD62CB /* Assets.xcassets */; };
 		91F3D98628D906FD00DD62CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D98428D906FD00DD62CB /* LaunchScreen.storyboard */; };
 		91F3D99128D906FD00DD62CB /* carteirada_front_endTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D99028D906FD00DD62CB /* carteirada_front_endTests.swift */; };
@@ -41,7 +46,6 @@
 		91F3D9CB28D9355700DD62CB /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D9B928D9355600DD62CB /* Poppins-Medium.ttf */; };
 		91F3D9CC28D9355700DD62CB /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D9BA28D9355600DD62CB /* Poppins-ExtraLight.ttf */; };
 		91F3D9CD28D9355700DD62CB /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D9BB28D9355700DD62CB /* Poppins-ThinItalic.ttf */; };
-		91F3D9D928D941E800DD62CB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D9D828D941E800DD62CB /* RegisterViewController.xib */; };
 		91F3D9DE28D9453300DD62CB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D9DD28D9453300DD62CB /* HomeViewController.storyboard */; };
 		91F3D9E128D945D200DD62CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D9DF28D945D200DD62CB /* HomeViewController.swift */; };
 		91F3D9E628D9491E00DD62CB /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D9E528D9491E00DD62CB /* AddViewController.swift */; };
@@ -82,10 +86,15 @@
 		9100B9C128D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9100B9C228D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivesCollectionViewCell.xib; sourceTree = "<group>"; };
 		91070B8F28DC9DD8003598D0 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		9171172228DCB817004FF59E /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
+		9171172328DCB817004FF59E /* Register2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Register2ViewController.xib; sourceTree = "<group>"; };
+		9171172628DCBE00004FF59E /* Register2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewModel.swift; sourceTree = "<group>"; };
+		9171172928DCBF1C004FF59E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9171172B28DCBF4F004FF59E /* RegisterUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserService.swift; sourceTree = "<group>"; };
+		9171172D28DCBFA2004FF59E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91F3D97D28D906FC00DD62CB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		91F3D98228D906FD00DD62CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91F3D98528D906FD00DD62CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91F3D98728D906FD00DD62CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +121,6 @@
 		91F3D9B928D9355600DD62CB /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		91F3D9BA28D9355600DD62CB /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		91F3D9BB28D9355700DD62CB /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
-		91F3D9D828D941E800DD62CB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		91F3D9DD28D9453300DD62CB /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		91F3D9DF28D945D200DD62CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91F3D9E528D9491E00DD62CB /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +198,15 @@
 			path = CollectionCells;
 			sourceTree = "<group>";
 		};
+		9171172828DCBF10004FF59E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9171172928DCBF1C004FF59E /* NetworkService.swift */,
+				9171172B28DCBF4F004FF59E /* RegisterUserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		91F3D96D28D906FC00DD62CB = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +232,7 @@
 		91F3D97828D906FC00DD62CB /* carteirada-front-end */ = {
 			isa = PBXGroup;
 			children = (
+				9171172828DCBF10004FF59E /* Service */,
 				91F3D9CE28D9355E00DD62CB /* Assets */,
 				91F3D9DC28D9423A00DD62CB /* Register */,
 				91F3D9E428D948EA00DD62CB /* Add */,
@@ -293,8 +311,10 @@
 		91F3D9DC28D9423A00DD62CB /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				91F3D97D28D906FC00DD62CB /* RegisterViewController.swift */,
-				91F3D9D828D941E800DD62CB /* RegisterViewController.xib */,
+				9171172228DCB817004FF59E /* Register2ViewController.swift */,
+				9171172328DCB817004FF59E /* Register2ViewController.xib */,
+				9171172628DCBE00004FF59E /* Register2ViewModel.swift */,
+				9171172D28DCBFA2004FF59E /* UserModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -442,8 +462,8 @@
 				91F3D9DE28D9453300DD62CB /* HomeViewController.storyboard in Resources */,
 				91F3D9C028D9355700DD62CB /* Poppins-Black.ttf in Resources */,
 				91F3D9C728D9355700DD62CB /* Poppins-Light.ttf in Resources */,
+				9171172528DCB817004FF59E /* Register2ViewController.xib in Resources */,
 				91F3D9C628D9355700DD62CB /* Poppins-Thin.ttf in Resources */,
-				91F3D9D928D941E800DD62CB /* RegisterViewController.xib in Resources */,
 				91F3D98628D906FD00DD62CB /* LaunchScreen.storyboard in Resources */,
 				91F3D9C928D9355700DD62CB /* Poppins-ExtraLightItalic.ttf in Resources */,
 				91F3D9C528D9355700DD62CB /* Poppins-BoldItalic.ttf in Resources */,
@@ -592,14 +612,18 @@
 			files = (
 				91070B9028DC9DD8003598D0 /* AddViewModel.swift in Sources */,
 				9100B9BA28D9DF2600ED0BD4 /* ChartTableViewCell.swift in Sources */,
+				9171172728DCBE00004FF59E /* Register2ViewModel.swift in Sources */,
 				91F3D9E828D9494100DD62CB /* ProfileViewController.swift in Sources */,
 				9100B9BE28D9E43B00ED0BD4 /* ClassesTableViewCell.swift in Sources */,
 				91F3D9E628D9491E00DD62CB /* AddViewController.swift in Sources */,
 				91F3D9EA28D94AF100DD62CB /* CustomTabBar.swift in Sources */,
-				91F3D97E28D906FC00DD62CB /* RegisterViewController.swift in Sources */,
+				9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */,
 				91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */,
 				9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */,
 				91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */,
+				9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */,
+				9171172A28DCBF1C004FF59E /* NetworkService.swift in Sources */,
+				9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */,
 				91F3D9E128D945D200DD62CB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
