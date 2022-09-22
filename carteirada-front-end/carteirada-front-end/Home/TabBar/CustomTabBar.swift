@@ -8,8 +8,15 @@
 import UIKit
 
 class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
+    
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
-        //self.tabBar.
+        super.viewDidLoad()
         self.selectedIndex = 1
+        self.editButtonItem.tintColor = UIColor(named: "")
     }
 }

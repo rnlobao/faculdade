@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3B12E8558FF35EADE67628C6 /* Pods_carteirada_front_endTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36273D98A6D5443ACCEA4331 /* Pods_carteirada_front_endTests.framework */; };
-		9100B9B528D9D8CA00ED0BD4 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100B9B428D9D8CA00ED0BD4 /* TabBarVC.swift */; };
 		9100B9BA28D9DF2600ED0BD4 /* ChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100B9B828D9DF2600ED0BD4 /* ChartTableViewCell.swift */; };
 		9100B9BB28D9DF2600ED0BD4 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100B9B928D9DF2600ED0BD4 /* ChartTableViewCell.xib */; };
 		9100B9BE28D9E43B00ED0BD4 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100B9BC28D9E43B00ED0BD4 /* ClassesTableViewCell.swift */; };
 		9100B9BF28D9E43B00ED0BD4 /* ClassesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100B9BD28D9E43B00ED0BD4 /* ClassesTableViewCell.xib */; };
 		9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100B9C128D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift */; };
 		9100B9C428D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100B9C228D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib */; };
+		91070B9028DC9DD8003598D0 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91070B8F28DC9DD8003598D0 /* AddViewModel.swift */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
 		91F3D97E28D906FC00DD62CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97D28D906FC00DD62CB /* RegisterViewController.swift */; };
@@ -75,13 +75,13 @@
 		5147FFDD4E3F566C061EA1DD /* Pods_carteirada_front_end_carteirada_front_endUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carteirada_front_end_carteirada_front_endUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58831D3BDB704AB22F39CE9C /* Pods-carteirada-front-endTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-endTests.release.xcconfig"; path = "Target Support Files/Pods-carteirada-front-endTests/Pods-carteirada-front-endTests.release.xcconfig"; sourceTree = "<group>"; };
 		6AEA59AC01D964E28E970BB6 /* Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig"; path = "Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9100B9B428D9D8CA00ED0BD4 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9100B9B828D9DF2600ED0BD4 /* ChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTableViewCell.swift; sourceTree = "<group>"; };
 		9100B9B928D9DF2600ED0BD4 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
 		9100B9BC28D9E43B00ED0BD4 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		9100B9BD28D9E43B00ED0BD4 /* ClassesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassesTableViewCell.xib; sourceTree = "<group>"; };
 		9100B9C128D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9100B9C228D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivesCollectionViewCell.xib; sourceTree = "<group>"; };
+		91070B8F28DC9DD8003598D0 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				91F3D9E928D94AF100DD62CB /* CustomTabBar.swift */,
-				9100B9B428D9D8CA00ED0BD4 /* TabBarVC.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -312,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				91F3D9E528D9491E00DD62CB /* AddViewController.swift */,
+				91070B8F28DC9DD8003598D0 /* AddViewModel.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -590,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91070B9028DC9DD8003598D0 /* AddViewModel.swift in Sources */,
 				9100B9BA28D9DF2600ED0BD4 /* ChartTableViewCell.swift in Sources */,
 				91F3D9E828D9494100DD62CB /* ProfileViewController.swift in Sources */,
 				9100B9BE28D9E43B00ED0BD4 /* ClassesTableViewCell.swift in Sources */,
@@ -599,7 +600,6 @@
 				91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */,
 				9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */,
 				91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */,
-				9100B9B528D9D8CA00ED0BD4 /* TabBarVC.swift in Sources */,
 				91F3D9E128D945D200DD62CB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
