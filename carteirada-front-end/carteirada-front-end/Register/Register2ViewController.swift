@@ -21,6 +21,13 @@ class Register2ViewController: UIViewController {
     @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var pwTF: UITextField!
     @IBOutlet weak var confirmPWTF: UITextField!
+    @IBOutlet weak var alreadyHasAccountEdit: UIButton!
+    
+    @IBAction func AlreadyHasAccount(_ sender: Any) {
+        let myViewController = LoginViewController()
+        myViewController.modalPresentationStyle = .fullScreen
+        self.present(myViewController, animated: false, completion: nil)
+    }
     
     private var viewModel: Register2ViewModel!
     
@@ -62,25 +69,27 @@ class Register2ViewController: UIViewController {
 
 extension Register2ViewController: ServiceDelegate {
     func dataSucess() {
-            let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-                self.dismiss(animated: true, completion: nil)
-                
-            }))
-            self.present(alert, animated: true)
-        }
+        let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true)
+        UserDefaults.standard.set(true, forKey: "logado4")
+        UserDefaults.standard.set(emailTF.text, forKey: "email")
+        UserDefaults.standard.set(userTF.text, forKey: "usuario")
+    }
         
-        func dataFail(error: Error) {
-            let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-            self.present(alert, animated: true)
-        }
+    func dataFail(error: Error) {
+        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
+        self.present(alert, animated: true)
+    }
         
-        func showLoad() {
-            showSpinner(onView: view)
-        }
+    func showLoad() {
+        showSpinner(onView: view)
+    }
         
-        func removeLoad() {
-            removeSpinner()
-        }
+    func removeLoad() {
+        removeSpinner()
+    }
 }

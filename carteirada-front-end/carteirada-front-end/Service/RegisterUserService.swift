@@ -10,15 +10,27 @@ import Alamofire
 
 class RegisterUserService {
     func postUser(login: String, email: String, password: String, sucess: @escaping (User)-> Void,error: @escaping (Error)-> Void) {
-            var parameter =  [String:Any]()
-            parameter["login"] = login
-            parameter["email"] = email
-            parameter["password"] = password
-            
-            NetworkService.request(url: "https://carteirada-back-end-production.up.railway.app/user", method: .post, params: parameter, obj: User.self) { result in
-                sucess(result)
-            } error: { e in
-                error(e)
-            }
+        var parameter =  [String:Any]()
+        parameter["login"] = login
+        parameter["email"] = email
+        parameter["password"] = password
+        
+        NetworkService.request(url: "https://carteirada-back-end-production.up.railway.app/user", method: .post, params: parameter, obj: User.self) { result in
+            sucess(result)
+        } error: { e in
+            error(e)
         }
+    }
+    
+    func loginWithUser(email: String, password: String, sucess: @escaping (User)-> Void,error: @escaping (Error)-> Void) {
+        var parameter =  [String:Any]()
+        parameter["email"] = email
+        parameter["password"] = password
+        
+//        NetworkService.request(url: "https://carteirada-back-end-production.up.railway.app/auth/\()", method: .get, params: parameter, obj: User.self) { result in
+//            sucess(result)
+//        } error: { e in
+//            error(e)
+//        }
+    }
 }

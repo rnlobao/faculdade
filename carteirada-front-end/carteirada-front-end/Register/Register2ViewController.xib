@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Register2ViewController" customModule="carteirada_front_end" customModuleProvider="target">
             <connections>
+                <outlet property="alreadyHasAccountEdit" destination="YJu-kY-y2Q" id="4O3-Zz-2VX"/>
                 <outlet property="confirmPWTF" destination="M9G-UX-X9X" id="4vT-4K-6Fg"/>
                 <outlet property="emailTF" destination="HxW-4v-3a5" id="J49-BY-5GB"/>
                 <outlet property="pwTF" destination="Lno-ID-PjS" id="Z5m-TQ-uwq"/>
@@ -32,13 +33,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymb-ck-wLE">
-                    <rect key="frame" x="20" y="308.5" width="374" height="21"/>
-                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                    <rect key="frame" x="20" y="298.5" width="374" height="17"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-UX-X9X">
-                    <rect key="frame" x="20" y="572.5" width="374" height="40"/>
+                    <rect key="frame" x="20" y="546.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="6di-5H-2Sj"/>
                     </constraints>
@@ -46,13 +47,13 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-qV-A4c">
-                    <rect key="frame" x="20" y="551.5" width="374" height="21"/>
-                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                    <rect key="frame" x="20" y="529.5" width="374" height="17"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lno-ID-PjS">
-                    <rect key="frame" x="20" y="491.5" width="374" height="40"/>
+                    <rect key="frame" x="20" y="469.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ZXA-dG-Jie"/>
                     </constraints>
@@ -60,7 +61,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HxW-4v-3a5">
-                    <rect key="frame" x="20" y="329.5" width="374" height="40"/>
+                    <rect key="frame" x="20" y="315.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="MsG-QK-cHj"/>
                     </constraints>
@@ -68,13 +69,13 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-Wv-YCb">
-                    <rect key="frame" x="20" y="470.5" width="374" height="21"/>
-                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                    <rect key="frame" x="20" y="452.5" width="374" height="17"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-Vi-CPI">
-                    <rect key="frame" x="20" y="410.5" width="374" height="40"/>
+                    <rect key="frame" x="20" y="392.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Mkl-q1-j66"/>
                     </constraints>
@@ -109,11 +110,22 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-Mh-qcU">
-                    <rect key="frame" x="20" y="389.5" width="374" height="21"/>
-                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                    <rect key="frame" x="20" y="375.5" width="374" height="17"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-kY-y2Q">
+                    <rect key="frame" x="20" y="606.5" width="374" height="32"/>
+                    <color key="tintColor" systemColor="systemGray2Color"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Já tem uma conta? Entrar">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="AlreadyHasAccount:" destination="-1" eventType="touchUpInside" id="2a9-IM-6sp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -123,6 +135,7 @@
                 <constraint firstItem="5Ke-CB-PQU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="8jo-D2-HEk"/>
                 <constraint firstItem="M9G-UX-X9X" firstAttribute="top" secondItem="yfJ-qV-A4c" secondAttribute="bottom" id="922-8g-nKB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kWN-Wv-YCb" secondAttribute="trailing" constant="20" id="9As-dp-Esw"/>
+                <constraint firstItem="YJu-kY-y2Q" firstAttribute="top" secondItem="M9G-UX-X9X" secondAttribute="bottom" constant="20" id="DjT-ZB-Nni"/>
                 <constraint firstItem="kWN-Wv-YCb" firstAttribute="top" secondItem="SWl-Vi-CPI" secondAttribute="bottom" constant="20" id="KKF-o4-HQe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eeb-t5-BKw" secondAttribute="trailing" constant="20" id="KqC-0D-kZh"/>
                 <constraint firstItem="eeb-t5-BKw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Lbn-sD-5qb"/>
@@ -133,11 +146,13 @@
                 <constraint firstItem="Lno-ID-PjS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="a4M-3F-SQj"/>
                 <constraint firstItem="SWl-Vi-CPI" firstAttribute="top" secondItem="hdh-Mh-qcU" secondAttribute="bottom" id="aFQ-AF-zCl"/>
                 <constraint firstItem="yfJ-qV-A4c" firstAttribute="top" secondItem="Lno-ID-PjS" secondAttribute="bottom" constant="20" id="cET-Zq-xZY"/>
-                <constraint firstItem="Ymb-ck-wLE" firstAttribute="top" secondItem="eeb-t5-BKw" secondAttribute="bottom" constant="30" id="eUI-dS-I8c"/>
+                <constraint firstItem="YJu-kY-y2Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dch-kk-ap4"/>
+                <constraint firstItem="Ymb-ck-wLE" firstAttribute="top" secondItem="eeb-t5-BKw" secondAttribute="bottom" constant="20" id="eUI-dS-I8c"/>
                 <constraint firstItem="5Ke-CB-PQU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="108" id="eUq-pA-exc"/>
                 <constraint firstItem="Lno-ID-PjS" firstAttribute="top" secondItem="kWN-Wv-YCb" secondAttribute="bottom" id="gn2-if-1Pk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yfJ-qV-A4c" secondAttribute="trailing" constant="20" id="hBi-Cc-beK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ymb-ck-wLE" secondAttribute="trailing" constant="20" id="hSt-5M-CI5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YJu-kY-y2Q" secondAttribute="trailing" constant="20" id="ihJ-jz-nbh"/>
                 <constraint firstItem="SWl-Vi-CPI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kkl-Yt-KRY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HxW-4v-3a5" secondAttribute="trailing" constant="20" id="kql-OE-xiJ"/>
                 <constraint firstItem="Ymb-ck-wLE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mEz-b6-auy"/>
@@ -162,6 +177,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

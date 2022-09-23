@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-ExtraBold.ttf">
+            <string>Poppins-ExtraBold</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="carteirada_front_end" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTF" destination="jYK-yd-kKa" id="YWC-s6-o3C"/>
+                <outlet property="loginButtonEddit" destination="vZL-BZ-SoR" id="zp2-b7-naY"/>
+                <outlet property="pwTF" destination="TRt-mn-hlL" id="Qhe-T5-Yr3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdO-a1-vZO">
+                    <rect key="frame" x="20" y="245" width="374" height="17"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRt-mn-hlL">
+                    <rect key="frame" x="20" y="339" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hRv-Ae-czo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYK-yd-kKa">
+                    <rect key="frame" x="20" y="262" width="374" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="oo5-VV-Ywc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnR-BJ-RJY">
+                    <rect key="frame" x="20" y="322" width="374" height="17"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D5-5B-EOv">
+                    <rect key="frame" x="20" y="192" width="374" height="33"/>
+                    <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZL-BZ-SoR">
+                    <rect key="frame" x="50" y="762" width="314" height="50"/>
+                    <color key="backgroundColor" red="0.52941176469999995" green="0.73333333329999995" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Yti-8Y-de1"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Logar">
+                        <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="nTw-vp-N2G"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoWithoutWord" translatesAutoresizingMaskIntoConstraints="NO" id="O9d-vV-2nJ">
+                    <rect key="frame" x="108" y="74" width="198" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="B7e-ws-9cu"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-wM-on4">
+                    <rect key="frame" x="20" y="419" width="374" height="32"/>
+                    <color key="tintColor" systemColor="systemGray2Color"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Registre-se">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="HNn-n5-knb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vZL-BZ-SoR" secondAttribute="bottom" constant="50" id="0xC-0m-FlA"/>
+                <constraint firstItem="vZL-BZ-SoR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="1d8-Qx-B0D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O9d-vV-2nJ" secondAttribute="trailing" constant="108" id="3Yh-Vq-qdG"/>
+                <constraint firstItem="TRt-mn-hlL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5YP-H4-GTU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UnR-BJ-RJY" secondAttribute="trailing" constant="20" id="7V9-jj-4wD"/>
+                <constraint firstItem="c7c-wM-on4" firstAttribute="top" secondItem="TRt-mn-hlL" secondAttribute="bottom" constant="40" id="BcY-R7-pVz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jdO-a1-vZO" secondAttribute="trailing" constant="20" id="DKP-NQ-KMW"/>
+                <constraint firstItem="1D5-5B-EOv" firstAttribute="top" secondItem="O9d-vV-2nJ" secondAttribute="bottom" constant="18" id="E7j-Am-sMi"/>
+                <constraint firstItem="TRt-mn-hlL" firstAttribute="top" secondItem="UnR-BJ-RJY" secondAttribute="bottom" id="EjH-Nk-P9S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vZL-BZ-SoR" secondAttribute="trailing" constant="50" id="I0X-dg-AQv"/>
+                <constraint firstItem="jYK-yd-kKa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MVf-U6-46K"/>
+                <constraint firstItem="jdO-a1-vZO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="PFx-aa-FzC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c7c-wM-on4" secondAttribute="trailing" constant="20" id="ZgI-Tk-E6D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TRt-mn-hlL" secondAttribute="trailing" constant="20" id="akh-1o-flX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jYK-yd-kKa" secondAttribute="trailing" constant="20" id="bbk-dd-IPc"/>
+                <constraint firstItem="O9d-vV-2nJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="108" id="bsP-0N-AdY"/>
+                <constraint firstItem="jdO-a1-vZO" firstAttribute="top" secondItem="1D5-5B-EOv" secondAttribute="bottom" constant="20" id="cmE-h7-hhd"/>
+                <constraint firstItem="c7c-wM-on4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="euI-MS-QOm"/>
+                <constraint firstItem="UnR-BJ-RJY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fzl-aF-7la"/>
+                <constraint firstItem="O9d-vV-2nJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="hC1-GZ-csY"/>
+                <constraint firstItem="jYK-yd-kKa" firstAttribute="top" secondItem="jdO-a1-vZO" secondAttribute="bottom" id="k5x-D7-rls"/>
+                <constraint firstItem="1D5-5B-EOv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="khz-wO-U8X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1D5-5B-EOv" secondAttribute="trailing" constant="20" id="qo0-7Z-QeX"/>
+                <constraint firstItem="UnR-BJ-RJY" firstAttribute="top" secondItem="jYK-yd-kKa" secondAttribute="bottom" constant="20" id="v3g-z3-usp"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="61"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LogoWithoutWord" width="174" height="154"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
