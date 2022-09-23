@@ -24,9 +24,9 @@ class Register2ViewModel {
             return false
     }
     
-    func postDataZuppers(name: String, email: String, password: String) {
+    func postDataUser(login: String, email: String, password: String) {
             delegate?.showLoad()
-            service?.postUser(name: name, email: email, password: password, sucess: { result in
+            service?.postUser(login: login, email: email, password: password, sucess: { result in
                 self.delegate?.dataSucess()
                 self.delegate?.removeLoad()
             }, error: { error in

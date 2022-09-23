@@ -8,5 +8,5 @@
 import Foundation
 
 struct User: Codable {
-    var name, email, password: String?
+    var login, email, password: String?
 }

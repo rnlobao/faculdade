@@ -21,6 +21,7 @@
 		9171172A28DCBF1C004FF59E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172928DCBF1C004FF59E /* NetworkService.swift */; };
 		9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172B28DCBF4F004FF59E /* RegisterUserService.swift */; };
 		9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172D28DCBFA2004FF59E /* UserModel.swift */; };
+		91DB34CC28DE2AA50064B811 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB34CB28DE2AA50064B811 /* SpinnerView.swift */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
 		91F3D98328D906FD00DD62CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D98228D906FD00DD62CB /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		9171172928DCBF1C004FF59E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9171172B28DCBF4F004FF59E /* RegisterUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserService.swift; sourceTree = "<group>"; };
 		9171172D28DCBFA2004FF59E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		91DB34CB28DE2AA50064B811 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		91DB34CA28DE2A800064B811 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91DB34CB28DE2AA50064B811 /* SpinnerView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		91F3D96D28D906FC00DD62CB = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +242,7 @@
 		91F3D97828D906FC00DD62CB /* carteirada-front-end */ = {
 			isa = PBXGroup;
 			children = (
+				91DB34CA28DE2A800064B811 /* Utils */,
 				9171172828DCBF10004FF59E /* Service */,
 				91F3D9CE28D9355E00DD62CB /* Assets */,
 				91F3D9DC28D9423A00DD62CB /* Register */,
@@ -616,6 +627,7 @@
 				91F3D9E828D9494100DD62CB /* ProfileViewController.swift in Sources */,
 				9100B9BE28D9E43B00ED0BD4 /* ClassesTableViewCell.swift in Sources */,
 				91F3D9E628D9491E00DD62CB /* AddViewController.swift in Sources */,
+				91DB34CC28DE2AA50064B811 /* SpinnerView.swift in Sources */,
 				91F3D9EA28D94AF100DD62CB /* CustomTabBar.swift in Sources */,
 				9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */,
 				91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */,

@@ -99,7 +99,7 @@
                         <color key="baseForegroundColor" systemColor="labelColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="hJu-UT-UCN"/>
+                        <action selector="sendUser:" destination="-1" eventType="touchUpInside" id="4Sy-ps-h6e"/>
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoWithoutWord" translatesAutoresizingMaskIntoConstraints="NO" id="5Ke-CB-PQU">
