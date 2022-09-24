@@ -74,7 +74,7 @@ extension Register2ViewController: ServiceDelegate {
             self.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true)
-        UserDefaults.standard.set(true, forKey: "logado4")
+        UserDefaults.standard.set(true, forKey: "logado5")
         UserDefaults.standard.set(emailTF.text, forKey: "email")
         UserDefaults.standard.set(userTF.text, forKey: "usuario")
     }
