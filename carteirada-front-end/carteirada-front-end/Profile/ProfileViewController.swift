@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func exitButton(_ sender: Any) {
-        UserDefaults.standard.set(false, forKey: "logado3")
+        UserDefaults.standard.set(false, forKey: "logado")
         let myViewController = Register2ViewController()
         myViewController.modalPresentationStyle = .fullScreen
         self.present(myViewController, animated: true, completion: nil)

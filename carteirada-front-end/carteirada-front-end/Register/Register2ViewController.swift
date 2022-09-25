@@ -14,6 +14,11 @@ protocol ServiceDelegate {
     func removeLoad()
 }
 
+enum FieldsInRegister: CaseIterable {
+    case emailTF, userTF, pwTF, confirmPWTF
+}
+
+
 class Register2ViewController: UIViewController {
 
     @IBOutlet weak var registerButtonEdit: UIButton!
@@ -22,6 +27,8 @@ class Register2ViewController: UIViewController {
     @IBOutlet weak var pwTF: UITextField!
     @IBOutlet weak var confirmPWTF: UITextField!
     @IBOutlet weak var alreadyHasAccountEdit: UIButton!
+        
+    
     
     @IBAction func AlreadyHasAccount(_ sender: Any) {
         let myViewController = LoginViewController()
@@ -36,14 +43,13 @@ class Register2ViewController: UIViewController {
         viewModel = Register2ViewModel(delegate: self)
         setupButton()
         setupPWTextFields()
+        setupToolBar()
     }
     
     private func setupPWTextFields() {
         pwTF.isSecureTextEntry = true
         confirmPWTF.isSecureTextEntry = true
     }
-    
-    
     
     @IBAction func sendUser(_ sender: Any) {
 //        if viewModel.canWePostIt(user: String(userTF.text ?? ""), email: emailTF.text ?? "", senha: pwTF.text ?? "") == true  {
@@ -64,7 +70,89 @@ class Register2ViewController: UIViewController {
         registerButtonEdit.layer.shadowOpacity = 0.5
         registerButtonEdit.layer.masksToBounds = false
     }
-
+    
+    func setupToolBar() {
+        setupToolBarPW()
+        setupToolBarUser()
+        setupToolBarEmail()
+        setupToolBarConfirmPW()
+    }
+    
+    private func setupToolBarEmail() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let closeButtonItemEmail = UIBarButtonItem(title: "fechar", style: .done, target: self, action: #selector(closeKeyboardEmail))
+        let nextButtonItemEmail = UIBarButtonItem(title: "próximo", style: .done, target: self, action: #selector(nextTextFieldEmail))
+        keyboardToolbar.items = [flexBarButton, closeButtonItemEmail, nextButtonItemEmail]
+        emailTF.inputAccessoryView = keyboardToolbar
+    }
+    
+    private func setupToolBarUser() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let closeButtonItemUser = UIBarButtonItem(title: "fechar", style: .done, target: self, action: #selector(closeKeyboardUser))
+        let nextButtonItemUser = UIBarButtonItem(title: "próximo", style: .done, target: self, action: #selector(nextTextFieldUser))
+        keyboardToolbar.items = [flexBarButton, closeButtonItemUser, nextButtonItemUser]
+        userTF.inputAccessoryView = keyboardToolbar
+    }
+    
+    private func setupToolBarPW() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let closeButtonItemPW = UIBarButtonItem(title: "fechar", style: .done, target: self, action: #selector(closeKeyboardPW))
+        let nextButtonItemPW = UIBarButtonItem(title: "próximo", style: .done, target: self, action: #selector(nextTextFieldPW))
+        keyboardToolbar.items = [flexBarButton, closeButtonItemPW, nextButtonItemPW]
+        pwTF.inputAccessoryView = keyboardToolbar
+    }
+    
+    private func setupToolBarConfirmPW() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+       
+        
+        let closeButtonItemconfirmPW = UIBarButtonItem(title: "fechar", style: .done, target: self, action: #selector(closeKeyboardConfirmPW))
+        keyboardToolbar.items = [flexBarButton, closeButtonItemconfirmPW]
+        confirmPWTF.inputAccessoryView = keyboardToolbar
+    }
+    
+    
+    @objc func closeKeyboardEmail() {
+        emailTF.endEditing(true)
+    }
+    
+    @objc func closeKeyboardUser() {
+        userTF.endEditing(true)
+    }
+    
+    @objc func closeKeyboardPW() {
+        pwTF.endEditing(true)
+    }
+    
+    @objc func closeKeyboardConfirmPW() {
+        confirmPWTF.endEditing(true)
+    }
+    
+    @objc func nextTextFieldEmail() {
+        emailTF.resignFirstResponder()
+        userTF.becomeFirstResponder()
+    }
+    
+    @objc func nextTextFieldUser() {
+        userTF.resignFirstResponder()
+        pwTF.becomeFirstResponder()
+    }
+    
+    @objc func nextTextFieldPW() {
+        pwTF.resignFirstResponder()
+        confirmPWTF.becomeFirstResponder()
+    }
 }
 
 extension Register2ViewController: ServiceDelegate {
@@ -74,7 +162,7 @@ extension Register2ViewController: ServiceDelegate {
             self.dismiss(animated: true, completion: nil)
         }))
         self.present(alert, animated: true)
-        UserDefaults.standard.set(true, forKey: "logado5")
+        UserDefaults.standard.set(true, forKey: "logado")
         UserDefaults.standard.set(emailTF.text, forKey: "email")
         UserDefaults.standard.set(userTF.text, forKey: "usuario")
     }

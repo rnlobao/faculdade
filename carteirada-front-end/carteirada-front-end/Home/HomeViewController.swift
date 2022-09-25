@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     }
     
     func isItUser() {
-        if !UserDefaults.standard.bool(forKey: "logado5") {
+        if !UserDefaults.standard.bool(forKey: "logado") {
             let myViewController = Register2ViewController()
             myViewController.modalPresentationStyle = .fullScreen
             self.present(myViewController, animated: true, completion: nil)

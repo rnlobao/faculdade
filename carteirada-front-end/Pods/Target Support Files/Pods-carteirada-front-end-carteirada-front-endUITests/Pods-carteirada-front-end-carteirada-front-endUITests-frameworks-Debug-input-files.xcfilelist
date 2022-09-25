@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-carteirada-front-end-carteirada-front-endUITests/Pods-carteirada-front-end-carteirada-front-endUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
