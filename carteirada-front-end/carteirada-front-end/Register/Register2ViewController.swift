@@ -14,11 +14,6 @@ protocol ServiceDelegate {
     func removeLoad()
 }
 
-enum FieldsInRegister: CaseIterable {
-    case emailTF, userTF, pwTF, confirmPWTF
-}
-
-
 class Register2ViewController: UIViewController {
 
     @IBOutlet weak var registerButtonEdit: UIButton!
@@ -27,8 +22,7 @@ class Register2ViewController: UIViewController {
     @IBOutlet weak var pwTF: UITextField!
     @IBOutlet weak var confirmPWTF: UITextField!
     @IBOutlet weak var alreadyHasAccountEdit: UIButton!
-        
-    
+    @IBOutlet weak var errorEmailLabel: UILabel!
     
     @IBAction func AlreadyHasAccount(_ sender: Any) {
         let myViewController = LoginViewController()
@@ -44,6 +38,8 @@ class Register2ViewController: UIViewController {
         setupButton()
         setupPWTextFields()
         setupToolBar()
+        errorEmailLabel.isHidden = true
+        registerButtonEdit.isEnabled = true
     }
     
     private func setupPWTextFields() {
@@ -52,13 +48,6 @@ class Register2ViewController: UIViewController {
     }
     
     @IBAction func sendUser(_ sender: Any) {
-//        if viewModel.canWePostIt(user: String(userTF.text ?? ""), email: emailTF.text ?? "", senha: pwTF.text ?? "") == true  {
-//            viewModel.postDataUser(login: userTF.text ?? "", email: emailTF.text ?? "", password: pwTF.text ?? "")
-//        } else {
-//            let alert = UIAlertController(title: "aaa", message: "aaa", preferredStyle: .alert)
-//                        alert.addAction(UIAlertAction(title: "aaa", style: .destructive, handler: nil))
-//            self.present(alert, animated: true)
-//        }
         viewModel.postDataUser(login: userTF.text ?? "", email: emailTF.text ?? "", password: pwTF.text ?? "")
     }
     
@@ -153,6 +142,8 @@ class Register2ViewController: UIViewController {
         pwTF.resignFirstResponder()
         confirmPWTF.becomeFirstResponder()
     }
+    
+    
 }
 
 extension Register2ViewController: ServiceDelegate {
