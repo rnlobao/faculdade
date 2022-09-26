@@ -21,16 +21,4 @@ class RegisterUserService {
             error(e)
         }
     }
-    
-    func loginWithUser(email: String, password: String, sucess: @escaping (User)-> Void,error: @escaping (Error)-> Void) {
-        var parameter =  [String:Any]()
-        parameter["email"] = email
-        parameter["password"] = password
-        
-//        NetworkService.request(url: "https://carteirada-back-end-production.up.railway.app/auth/\()", method: .get, params: parameter, obj: User.self) { result in
-//            sucess(result)
-//        } error: { e in
-//            error(e)
-//        }
-    }
 }

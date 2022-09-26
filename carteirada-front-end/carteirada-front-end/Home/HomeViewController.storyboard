@@ -232,13 +232,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aws-Lg-oWc">
-                                <rect key="frame" x="20" y="226.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="246.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM2-hg-FaU">
-                                <rect key="frame" x="20" y="247.5" width="374" height="40"/>
+                                <rect key="frame" x="20" y="267.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="M7N-Am-C9F"/>
                                 </constraints>
@@ -246,13 +246,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-1T-aJH">
-                                <rect key="frame" x="20" y="307.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="327.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-V9-8dq">
-                                <rect key="frame" x="20" y="328.5" width="374" height="40"/>
+                                <rect key="frame" x="20" y="348.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8zv-Zg-5x1"/>
                                 </constraints>
@@ -260,13 +260,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDD-zo-vIa">
-                                <rect key="frame" x="20" y="388.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="408.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idN-Gz-Vd0">
-                                <rect key="frame" x="20" y="409.5" width="374" height="40"/>
+                                <rect key="frame" x="20" y="429.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="56M-We-NnQ"/>
                                 </constraints>
@@ -274,33 +274,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLx-5A-6b2">
-                                <rect key="frame" x="20" y="469.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="489.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZtG-fp-O5o">
-                                <rect key="frame" x="20" y="490.5" width="374" height="40"/>
+                                <rect key="frame" x="20" y="510.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dci-mO-hdH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4yM-4O-ciW">
-                                <rect key="frame" x="38" y="156.5" width="338" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="oCA-p7-Rgl"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aDL-jF-eyI">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-ge-mTc">
                                 <rect key="frame" x="50" y="713" width="314" height="50"/>
                                 <constraints>
@@ -315,30 +301,49 @@
                                     <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addButton:" destination="aCP-cL-3Mg" eventType="touchUpInside" id="E0A-f2-4lH"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdT-v2-wp4">
+                                <rect key="frame" x="20" y="166.5" width="374" height="60"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-y1-olj">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ld4-y1-olj" secondAttribute="bottom" id="CVh-2t-oTh"/>
+                                    <constraint firstItem="Ld4-y1-olj" firstAttribute="leading" secondItem="cdT-v2-wp4" secondAttribute="leading" id="RKj-qF-yCH"/>
+                                    <constraint firstItem="Ld4-y1-olj" firstAttribute="top" secondItem="cdT-v2-wp4" secondAttribute="top" id="Ucb-Eu-wO6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ld4-y1-olj" secondAttribute="trailing" id="iyL-F0-WY5"/>
+                                    <constraint firstAttribute="height" constant="60" id="oam-8B-Emr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nql-xc-MyG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gd2-5d-oUR" firstAttribute="leading" secondItem="r1F-gG-WzE" secondAttribute="leading" constant="20" id="0lX-lm-fJe"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="res-Az-0dd" secondAttribute="trailing" constant="20" id="1Dy-Md-xmN"/>
-                            <constraint firstItem="4yM-4O-ciW" firstAttribute="top" secondItem="gd2-5d-oUR" secondAttribute="bottom" constant="10" id="5fx-MG-Mab"/>
+                            <constraint firstItem="Aws-Lg-oWc" firstAttribute="top" secondItem="cdT-v2-wp4" secondAttribute="bottom" constant="20" id="1bn-AI-rxu"/>
+                            <constraint firstItem="cdT-v2-wp4" firstAttribute="top" secondItem="gd2-5d-oUR" secondAttribute="bottom" constant="20" id="Adl-sQ-Ozk"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="1ek-V9-8dq" secondAttribute="trailing" constant="20" id="AvW-UU-QII"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="gd2-5d-oUR" secondAttribute="trailing" constant="20" id="LcP-2l-ZNo"/>
-                            <constraint firstItem="4yM-4O-ciW" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="38" id="LmI-b7-Mpl"/>
                             <constraint firstItem="1ek-V9-8dq" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="MSq-Ta-lVp"/>
-                            <constraint firstItem="Aws-Lg-oWc" firstAttribute="top" secondItem="4yM-4O-ciW" secondAttribute="bottom" constant="10" id="MVe-5h-pky"/>
                             <constraint firstItem="Jia-ge-mTc" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="50" id="NO1-nq-E0A"/>
                             <constraint firstItem="6Sa-1T-aJH" firstAttribute="top" secondItem="nM2-hg-FaU" secondAttribute="bottom" constant="20" id="OHf-bV-W3W"/>
                             <constraint firstItem="Aws-Lg-oWc" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="P97-2o-miD"/>
                             <constraint firstItem="idN-Gz-Vd0" firstAttribute="top" secondItem="eDD-zo-vIa" secondAttribute="bottom" id="Pm5-E5-GaR"/>
+                            <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="cdT-v2-wp4" secondAttribute="trailing" constant="20" id="QpZ-2x-5Ib"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="idN-Gz-Vd0" secondAttribute="trailing" constant="20" id="Qs6-Cl-OyD"/>
                             <constraint firstItem="nM2-hg-FaU" firstAttribute="top" secondItem="Aws-Lg-oWc" secondAttribute="bottom" id="RuD-c4-YqJ"/>
                             <constraint firstItem="KLx-5A-6b2" firstAttribute="top" secondItem="idN-Gz-Vd0" secondAttribute="bottom" constant="20" id="SFc-AX-K6B"/>
-                            <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="4yM-4O-ciW" secondAttribute="trailing" constant="38" id="VIC-YS-cuu"/>
                             <constraint firstItem="eDD-zo-vIa" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="WUu-NO-JM8"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="Aws-Lg-oWc" secondAttribute="trailing" constant="20" id="X0v-rn-104"/>
                             <constraint firstItem="1ek-V9-8dq" firstAttribute="top" secondItem="6Sa-1T-aJH" secondAttribute="bottom" id="XlY-OQ-52y"/>
+                            <constraint firstItem="cdT-v2-wp4" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="Xvm-v8-AYH"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="Jia-ge-mTc" secondAttribute="trailing" constant="50" id="dEe-z6-RTe"/>
                             <constraint firstItem="res-Az-0dd" firstAttribute="top" secondItem="nql-xc-MyG" secondAttribute="top" constant="33" id="dYF-FX-R0n"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="eDD-zo-vIa" secondAttribute="trailing" constant="20" id="fEB-tx-rAw"/>
@@ -360,8 +365,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Adicionar" image="plus.circle.fill" catalog="system" id="c4o-qp-HXb"/>
                     <connections>
-                        <outlet property="collectionView" destination="4yM-4O-ciW" id="yBm-o5-b6N"/>
+                        <outlet property="dateTF" destination="ZtG-fp-O5o" id="rJt-YP-veb"/>
+                        <outlet property="pickerView" destination="Ld4-y1-olj" id="xNI-qT-fac"/>
+                        <outlet property="priceTF" destination="idN-Gz-Vd0" id="c0L-Qh-dro"/>
+                        <outlet property="qtdTF" destination="1ek-V9-8dq" id="HMg-aP-zhd"/>
                         <outlet property="registerButton" destination="Jia-ge-mTc" id="Lve-El-lyt"/>
+                        <outlet property="tickerTF" destination="nM2-hg-FaU" id="Jrx-Dd-IRk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4px-Ci-1Cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

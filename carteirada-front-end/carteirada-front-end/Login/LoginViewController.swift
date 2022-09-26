@@ -14,8 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwTF: UITextField!
     
+    var viewModel: LoginViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = LoginViewModel(delegate: self)
         setupButton()
     }
     @IBAction func registerButton(_ sender: Any) {
@@ -33,6 +36,32 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButton(_ sender: Any) {
+        viewModel.postLogUser(email: emailTF.text ?? "", password: pwTF.text ?? "")
+    }
+}
+
+extension LoginViewController: ServiceDelegate {
+    func dataSucess() {
+        let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true)
+        UserDefaults.standard.set(true, forKey: "logado")
+        UserDefaults.standard.set(emailTF.text, forKey: "email")
+    }
         
+    func dataFail(error: Error) {
+        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
+        self.present(alert, animated: true)
+    }
+        
+    func showLoad() {
+        showSpinner(onView: view)
+    }
+        
+    func removeLoad() {
+        removeSpinner()
     }
 }

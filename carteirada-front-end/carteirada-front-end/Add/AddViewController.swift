@@ -9,15 +9,19 @@ import Foundation
 import UIKit
 
 class AddViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var registerButton: UIButton!
-    private var viewModel = AddViewModel()
-    var theActives: [actives] = []
+    var theActives: [String] = []
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    @IBOutlet weak var tickerTF: UITextField!
+    @IBOutlet weak var qtdTF: UITextField!
+    @IBOutlet weak var priceTF: UITextField!
+    @IBOutlet weak var dateTF: UITextField!
     
     override func viewDidLoad() {
         setupRegisterButton()
-        theActives = viewModel.setupActives()
-        setupCollection()
+        setupPicker()
+        theActives = ["Fii's", "Ações", "Criptoativos"]
     }
     
     func setupRegisterButton() {
@@ -29,42 +33,25 @@ class AddViewController: UIViewController {
         registerButton.layer.masksToBounds = false
     }
     
-    func setupCollection() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 60.0, height: 60.0)
-        
-        collectionView.collectionViewLayout = layout
-        collectionView.register(ActivesCollectionViewCell.nib(), forCellWithReuseIdentifier: ActivesCollectionViewCell.identifier)
+    @IBAction func addButton(_ sender: Any) {
+        print(pickerView.selectedRow(inComponent: 0))
+    }
+    func setupPicker() {
+        pickerView.dataSource = self
+        pickerView.delegate = self
     }
 }
 
-extension AddViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+extension AddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivesCollectionViewCell", for: indexPath) as! ActivesCollectionViewCell
-        cell.setupActives(symbolImage: theActives[indexPath.row].image, typeOfActives: theActives[indexPath.row].whatKind)
-        return cell
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return theActives.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("You tapped \(indexPath.row + 1)")
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return theActives[row]
     }
-}
-
-extension AddViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 60.0, height: 60.0)
-    }
-    
-}
-
-struct actives {
-    var image: String
-    var whatKind: String
 }
