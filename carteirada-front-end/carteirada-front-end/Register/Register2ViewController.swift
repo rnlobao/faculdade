@@ -40,6 +40,13 @@ class Register2ViewController: UIViewController {
         setupToolBar()
         errorEmailLabel.isHidden = true
         registerButtonEdit.isEnabled = true
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "logado") {
+            self.dismiss(animated: false)
+        }
     }
     
     private func setupPWTextFields() {

@@ -15,14 +15,21 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pwTF: UITextField!
     
     var viewModel: LoginViewModel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = LoginViewModel(delegate: self)
         setupButton()
+        pwField()
     }
     @IBAction func registerButton(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        let myViewController = Register2ViewController()
+        myViewController.modalPresentationStyle = .fullScreen
+        self.present(myViewController, animated: false, completion: nil)
+    }
+    
+    private func pwField() {
+        pwTF.isSecureTextEntry = true
     }
     
 
@@ -44,7 +51,7 @@ extension LoginViewController: ServiceDelegate {
     func dataSucess() {
         let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: false)
         }))
         self.present(alert, animated: true)
         UserDefaults.standard.set(true, forKey: "logado")

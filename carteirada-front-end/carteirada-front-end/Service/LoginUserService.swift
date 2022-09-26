@@ -14,11 +14,10 @@ class LoginUserService {
         var parameter =  [String:Any]()
         parameter["email"] = email
         parameter["password"] = password
-        
+                
         NetworkService.request(url: "https://carteirada-back-end-production.up.railway.app/auth", method: .post, params: parameter, obj: Login.self){ result in
             sucess(result)
         } error: { e in
-            debugPrint()
             print("\n\nO erro está aqui:\n======\n\(e)")
             error(e)
         }
