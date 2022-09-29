@@ -17,7 +17,7 @@ class AddViewModel {
         self.delegate = delegate
     }
     
-    func postDataUser(email: String, active: String, date: Date, ticker: String, quantity: Int, price: Float) {
+    func postAsset(email: String, active: Int, date: String, ticker: String, quantity: Int, price: Float) {
             delegate?.showLoad()
             service?.postActive(email: email, active: active, date: date, ticker: ticker, quantity: quantity, price: price, sucess: { result in
                 self.delegate?.dataSucess()

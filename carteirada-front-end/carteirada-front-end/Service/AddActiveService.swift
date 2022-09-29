@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class AddActiveService {
-    func postActive(email: String, active: String, date: Date, ticker: String, quantity: Int, price: Float, sucess: @escaping (User)-> Void,error: @escaping (Error)-> Void) {
+    func postActive(email: String, active: Int, date: String, ticker: String, quantity: Int, price: Float, sucess: @escaping (User)-> Void,error: @escaping (Error)-> Void) {
         var parameter =  [String:Any]()
         parameter["email"] = email
         parameter["active"] = active
