@@ -36,7 +36,25 @@ Veja como ficou os desenvolvimentos das sprints:
 
 <details>
   <summary>Sprint 3</summary>
-  Aqui comecou a implementacao de fato
+  Aqui comecou a implementacao de fato, onde pudemos contar com o cadastro de usuários, uma tela de login e um cadastro de ativos no nosso app:
+  
+  <p float="left">
+     <img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/193101220-3e1f191e-5e57-4f5d-a45b-8109b9ae05d6.gif"> 
+    <img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/193101209-98153fde-6561-4bd8-8fbc-605a172c037a.gif"> 
+    <img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/193101229-ca4f1a46-e30c-41b8-bcc8-0642278cdd0c.gif"> 
+  </p>
+  
+  Alem disso pude treinar a utilizacao de tabBarController e conexão com backend atraves do alamofire com componentizacao de alguns itens visuais. Pela primeira vez, com o intuito de aprender novos itens, utilizei um PickerView, ademais fiz a gerência do teclado com os campos utilizando o IQKeyboard do swift em que permite scrollar a tela para ver os campos, troca-los e encerra-los com botoes fornecidos na toolBar do teclado
+  
+  Para trazer para um âmbito ágil, utilizamos um board kanban com divisao de tarefas:
+  
+  <p float="left">
+     <img width="500" alt="image" src="https://user-images.githubusercontent.com/66230142/193102648-61999f72-58b5-4da8-9377-1df56f60ad1a.png"> 
+    <img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/193102733-44a9fcee-2716-4cf2-96e0-0ebd057f9b95.png"> 
+  </p>
+
+
+
 </details>
 
 
