@@ -22,7 +22,7 @@ E por fim utilizamos a biblioteca Swing do Java no Netbeans para fazer a impleme
   <img width="698" alt="image" src="https://user-images.githubusercontent.com/66230142/188530208-e14009b4-66ed-411d-a600-f795c94b2941.png">
 </p>
 
-Por fim foi feito um relatório que consta nos arquivos acima, o trabalho foi realizado com a ajuda do Gabriel e do Rafael ;)
+Por fim foi feito um relatório que consta nos arquivos acima, o trabalho foi realizado com a ajuda do Gabriel, do Rafael e do Lucas ;)
 
 
 
