@@ -21,9 +21,8 @@
                 <outlet property="alreadyHasAccountEdit" destination="YJu-kY-y2Q" id="4O3-Zz-2VX"/>
                 <outlet property="confirmPWTF" destination="M9G-UX-X9X" id="4vT-4K-6Fg"/>
                 <outlet property="emailTF" destination="HxW-4v-3a5" id="J49-BY-5GB"/>
-                <outlet property="errorEmailLabel" destination="qAK-Wd-b6L" id="DLF-jm-zWK"/>
                 <outlet property="pwTF" destination="Lno-ID-PjS" id="Z5m-TQ-uwq"/>
-                <outlet property="registerButtonEdit" destination="ulV-rT-JnA" id="5l6-bc-ELS"/>
+                <outlet property="registerButtonEdit" destination="w8Q-lS-N8k" id="ubx-jt-DDW"/>
                 <outlet property="userTF" destination="SWl-Vi-CPI" id="aDO-Wk-KIU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -39,7 +38,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-UX-X9X">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-UX-X9X" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                     <rect key="frame" x="20" y="546.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="6di-5H-2Sj"/>
@@ -53,7 +52,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lno-ID-PjS">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lno-ID-PjS" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                     <rect key="frame" x="20" y="469.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ZXA-dG-Jie"/>
@@ -61,7 +60,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HxW-4v-3a5">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HxW-4v-3a5" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                     <rect key="frame" x="20" y="315.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="MsG-QK-cHj"/>
@@ -75,7 +74,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-Vi-CPI">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-Vi-CPI" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                     <rect key="frame" x="20" y="392.5" width="374" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Mkl-q1-j66"/>
@@ -89,21 +88,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulV-rT-JnA">
-                    <rect key="frame" x="50" y="762" width="314" height="50"/>
-                    <color key="backgroundColor" red="0.52941176469999995" green="0.73333333329999995" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="g11-ww-joU"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Cadastrar">
-                        <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
-                        <color key="baseForegroundColor" systemColor="labelColor"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="sendUser:" destination="-1" eventType="touchUpInside" id="4Sy-ps-h6e"/>
-                    </connections>
-                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoWithoutWord" translatesAutoresizingMaskIntoConstraints="NO" id="5Ke-CB-PQU">
                     <rect key="frame" x="108" y="74" width="198" height="154"/>
                     <constraints>
@@ -127,12 +111,17 @@
                         <action selector="AlreadyHasAccount:" destination="-1" eventType="touchUpInside" id="2a9-IM-6sp"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAK-Wd-b6L">
-                    <rect key="frame" x="367.5" y="355.5" width="26.5" height="12"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" systemColor="systemRedColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8Q-lS-N8k" customClass="DefaultButton" customModule="carteirada_front_end" customModuleProvider="target">
+                    <rect key="frame" x="20" y="762" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="RXr-hz-h3t"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="sendUser:" destination="-1" eventType="touchUpInside" id="C8V-aF-cvi"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,7 +131,6 @@
                 <constraint firstItem="5Ke-CB-PQU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="8jo-D2-HEk"/>
                 <constraint firstItem="M9G-UX-X9X" firstAttribute="top" secondItem="yfJ-qV-A4c" secondAttribute="bottom" id="922-8g-nKB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kWN-Wv-YCb" secondAttribute="trailing" constant="20" id="9As-dp-Esw"/>
-                <constraint firstItem="qAK-Wd-b6L" firstAttribute="top" secondItem="HxW-4v-3a5" secondAttribute="bottom" id="DX6-MS-kac"/>
                 <constraint firstItem="YJu-kY-y2Q" firstAttribute="top" secondItem="M9G-UX-X9X" secondAttribute="bottom" constant="20" id="DjT-ZB-Nni"/>
                 <constraint firstItem="kWN-Wv-YCb" firstAttribute="top" secondItem="SWl-Vi-CPI" secondAttribute="bottom" constant="20" id="KKF-o4-HQe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eeb-t5-BKw" secondAttribute="trailing" constant="20" id="KqC-0D-kZh"/>
@@ -150,9 +138,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M9G-UX-X9X" secondAttribute="trailing" constant="20" id="PtV-0p-ntg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Ke-CB-PQU" secondAttribute="trailing" constant="108" id="TVT-zK-PwO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hdh-Mh-qcU" secondAttribute="trailing" constant="20" id="XDE-y3-uI3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ulV-rT-JnA" secondAttribute="trailing" constant="50" id="a05-lg-wjI"/>
                 <constraint firstItem="Lno-ID-PjS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="a4M-3F-SQj"/>
                 <constraint firstItem="SWl-Vi-CPI" firstAttribute="top" secondItem="hdh-Mh-qcU" secondAttribute="bottom" id="aFQ-AF-zCl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="w8Q-lS-N8k" secondAttribute="bottom" constant="50" id="aLF-eE-RHd"/>
                 <constraint firstItem="yfJ-qV-A4c" firstAttribute="top" secondItem="Lno-ID-PjS" secondAttribute="bottom" constant="20" id="cET-Zq-xZY"/>
                 <constraint firstItem="YJu-kY-y2Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dch-kk-ap4"/>
                 <constraint firstItem="Ymb-ck-wLE" firstAttribute="top" secondItem="eeb-t5-BKw" secondAttribute="bottom" constant="20" id="eUI-dS-I8c"/>
@@ -163,35 +151,28 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YJu-kY-y2Q" secondAttribute="trailing" constant="20" id="ihJ-jz-nbh"/>
                 <constraint firstItem="SWl-Vi-CPI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kkl-Yt-KRY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HxW-4v-3a5" secondAttribute="trailing" constant="20" id="kql-OE-xiJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w8Q-lS-N8k" secondAttribute="trailing" constant="20" id="lMh-6L-ian"/>
                 <constraint firstItem="Ymb-ck-wLE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mEz-b6-auy"/>
                 <constraint firstItem="hdh-Mh-qcU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nsH-jt-qdb"/>
                 <constraint firstItem="HxW-4v-3a5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oud-DH-PGd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lno-ID-PjS" secondAttribute="trailing" constant="20" id="qEQ-Ro-x2U"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ulV-rT-JnA" secondAttribute="bottom" constant="50" id="qSR-G4-GzL"/>
-                <constraint firstItem="ulV-rT-JnA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="r4h-yJ-YZm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SWl-Vi-CPI" secondAttribute="trailing" constant="20" id="szp-Wn-zjR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qAK-Wd-b6L" secondAttribute="trailing" constant="20" id="tLS-Ul-r2g"/>
                 <constraint firstItem="yfJ-qV-A4c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tLr-Gj-jEt"/>
                 <constraint firstItem="HxW-4v-3a5" firstAttribute="top" secondItem="Ymb-ck-wLE" secondAttribute="bottom" id="wNE-Do-XKZ"/>
                 <constraint firstItem="M9G-UX-X9X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ygr-ls-a9u"/>
                 <constraint firstItem="eeb-t5-BKw" firstAttribute="top" secondItem="5Ke-CB-PQU" secondAttribute="bottom" constant="18" id="zap-e1-Lnd"/>
+                <constraint firstItem="w8Q-lS-N8k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zlj-Po-yEa"/>
             </constraints>
             <point key="canvasLocation" x="139" y="70"/>
         </view>
     </objects>
     <resources>
         <image name="LogoWithoutWord" width="174" height="154"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

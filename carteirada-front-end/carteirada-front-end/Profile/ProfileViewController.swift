@@ -14,23 +14,14 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var user: UILabel!
+    @IBOutlet weak var exitButtonEdit: DefaultButton!
     
-    @IBOutlet weak var exitButtonEdit: UIButton!
     
     override func viewDidLoad() {
         setupFirstField()
         setupSecondField()
         setupEmailAndUser()
-        setupButton()
-    }
-    
-    func setupButton() {
-        exitButtonEdit.layer.cornerRadius = 20
-        exitButtonEdit.layer.shadowColor = UIColor.black.cgColor
-        exitButtonEdit.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        exitButtonEdit.layer.shadowRadius = 4.0
-        exitButtonEdit.layer.shadowOpacity = 0.5
-        exitButtonEdit.layer.masksToBounds = false
+        exitButtonEdit.configure(whatsInside: "Sair")
     }
     
     func setupEmailAndUser() {

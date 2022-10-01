@@ -9,18 +9,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var loginButtonEddit: UIButton!
+    @IBOutlet weak var loginButtonEddit: DefaultButton!
     
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var pwTF: UITextField!
+    @IBOutlet weak var emailTF: DefaultTextField!
+    @IBOutlet weak var pwTF: DefaultTextField!
     
     var viewModel: LoginViewModel!
         
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = LoginViewModel(delegate: self)
-        setupButton()
         pwField()
+        loginButtonEddit.configure(whatsInside: "Logar")
     }
     @IBAction func registerButton(_ sender: Any) {
         let myViewController = Register2ViewController()
@@ -30,16 +30,6 @@ class LoginViewController: UIViewController {
     
     private func pwField() {
         pwTF.isSecureTextEntry = true
-    }
-    
-
-    private func setupButton() {
-        loginButtonEddit.layer.cornerRadius = 20
-        loginButtonEddit.layer.shadowColor = UIColor.black.cgColor
-        loginButtonEddit.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        loginButtonEddit.layer.shadowRadius = 4.0
-        loginButtonEddit.layer.shadowOpacity = 0.5
-        loginButtonEddit.layer.masksToBounds = false
     }
 
     @IBAction func loginButton(_ sender: Any) {

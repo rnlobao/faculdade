@@ -16,13 +16,12 @@ protocol ServiceDelegate {
 
 class Register2ViewController: UIViewController {
 
-    @IBOutlet weak var registerButtonEdit: UIButton!
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var userTF: UITextField!
-    @IBOutlet weak var pwTF: UITextField!
-    @IBOutlet weak var confirmPWTF: UITextField!
+    @IBOutlet weak var registerButtonEdit: DefaultButton!
+    @IBOutlet weak var emailTF: DefaultTextField!
+    @IBOutlet weak var userTF: DefaultTextField!
+    @IBOutlet weak var pwTF: DefaultTextField!
+    @IBOutlet weak var confirmPWTF: DefaultTextField!
     @IBOutlet weak var alreadyHasAccountEdit: UIButton!
-    @IBOutlet weak var errorEmailLabel: UILabel!
     
     @IBAction func AlreadyHasAccount(_ sender: Any) {
         let myViewController = LoginViewController()
@@ -35,11 +34,10 @@ class Register2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = Register2ViewModel(delegate: self)
-        setupButton()
         setupPWTextFields()
         setupToolBar()
-        errorEmailLabel.isHidden = true
         registerButtonEdit.isEnabled = true
+        registerButtonEdit.configure(whatsInside: "Registrar")
         
     }
     
@@ -56,15 +54,6 @@ class Register2ViewController: UIViewController {
     
     @IBAction func sendUser(_ sender: Any) {
         viewModel.postDataUser(login: userTF.text ?? "", email: emailTF.text ?? "", password: pwTF.text ?? "")
-    }
-    
-    func setupButton() {
-        registerButtonEdit.layer.cornerRadius = 20
-        registerButtonEdit.layer.shadowColor = UIColor.black.cgColor
-        registerButtonEdit.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        registerButtonEdit.layer.shadowRadius = 4.0
-        registerButtonEdit.layer.shadowOpacity = 0.5
-        registerButtonEdit.layer.masksToBounds = false
     }
     
     func setupToolBar() {

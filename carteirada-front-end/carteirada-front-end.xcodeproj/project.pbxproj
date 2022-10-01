@@ -27,6 +27,9 @@
 		9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172D28DCBFA2004FF59E /* UserModel.swift */; };
 		9180C05328E0DA750054423F /* AddActiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180C05228E0DA750054423F /* AddActiveService.swift */; };
 		9180C05528E0DBC80054423F /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180C05428E0DBC80054423F /* AddViewModel.swift */; };
+		919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B028E7ADFE0016AE76 /* DefaultButton.swift */; };
+		919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B228E7B7D40016AE76 /* DefaultTextField.swift */; };
+		919E42B528E7B8B30016AE76 /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B428E7B8B30016AE76 /* ProjectColors.swift */; };
 		91DB34CC28DE2AA50064B811 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB34CB28DE2AA50064B811 /* SpinnerView.swift */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
@@ -105,6 +108,9 @@
 		9171172D28DCBFA2004FF59E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9180C05228E0DA750054423F /* AddActiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActiveService.swift; sourceTree = "<group>"; };
 		9180C05428E0DBC80054423F /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		919E42B028E7ADFE0016AE76 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		919E42B228E7B7D40016AE76 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
+		919E42B428E7B8B30016AE76 /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
 		91DB34CB28DE2AA50064B811 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				91DB34CB28DE2AA50064B811 /* SpinnerView.swift */,
+				919E42B028E7ADFE0016AE76 /* DefaultButton.swift */,
+				919E42B228E7B7D40016AE76 /* DefaultTextField.swift */,
+				919E42B428E7B8B30016AE76 /* ProjectColors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -663,10 +672,13 @@
 				9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */,
 				91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */,
 				9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */,
+				919E42B528E7B8B30016AE76 /* ProjectColors.swift in Sources */,
 				91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */,
 				9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */,
+				919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */,
 				916CE4DB28DE6221004DCBF4 /* LoginViewController.swift in Sources */,
 				9171172A28DCBF1C004FF59E /* NetworkService.swift in Sources */,
+				919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */,
 				9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */,
 				91F3D9E128D945D200DD62CB /* HomeViewController.swift in Sources */,
 			);

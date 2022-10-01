@@ -9,32 +9,25 @@ import Foundation
 import UIKit
 
 class AddViewController: UIViewController {
-    @IBOutlet weak var registerButton: UIButton!
-    var theActives: [String] = []
-    @IBOutlet weak var pickerView: UIPickerView!
     
-    @IBOutlet weak var tickerTF: UITextField!
-    @IBOutlet weak var qtdTF: UITextField!
-    @IBOutlet weak var priceTF: UITextField!
-    @IBOutlet weak var dateTF: UITextField!
+    @IBOutlet weak var registerButton: DefaultButton!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var tickerTF: DefaultTextField!
+    @IBOutlet weak var qtdTF: DefaultTextField!
+    @IBOutlet weak var priceTF: DefaultTextField!
+    @IBOutlet weak var dateTF: DefaultTextField!
     
     private var viewModel: AddViewModel!
     
+    var theActives: [String] = []
+
+    
     override func viewDidLoad() {
         viewModel = AddViewModel(delegate: self)
-        setupRegisterButton()
         setupPicker()
         theActives = ["Fii's", "Ações", "Criptoativos"]
         setupDateTF()
-    }
-    
-    func setupRegisterButton() {
-        registerButton.layer.cornerRadius = 20
-        registerButton.layer.shadowColor = UIColor.black.cgColor
-        registerButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        registerButton.layer.shadowRadius = 4.0
-        registerButton.layer.shadowOpacity = 0.5
-        registerButton.layer.masksToBounds = false
+        registerButton.configure(whatsInside: "Adicionar")
     }
     
     @IBAction func addButton(_ sender: Any) {

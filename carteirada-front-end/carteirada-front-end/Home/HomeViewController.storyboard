@@ -140,22 +140,15 @@
                                     <constraint firstAttribute="bottom" secondItem="35o-PF-7f0" secondAttribute="bottom" id="y0I-3P-399"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0w-O3-xWD">
-                                <rect key="frame" x="50" y="713" width="314" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8T-ka-jFM" customClass="DefaultButton" customModule="carteirada_front_end" customModuleProvider="target">
+                                <rect key="frame" x="20" y="713" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="YK8-PG-mXI"/>
+                                    <constraint firstAttribute="height" constant="50" id="hc9-va-Rvw"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sair">
-                                    <backgroundConfiguration key="background" cornerRadius="20">
-                                        <color key="backgroundColor" red="0.52941176469999995" green="0.73333333329999995" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="exitButton:" destination="b8i-Cj-13G" eventType="touchUpInside" id="a1c-wo-R4f"/>
+                                    <action selector="exitButton:" destination="b8i-Cj-13G" eventType="touchUpInside" id="AmK-C3-uWy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,24 +156,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rIX-C1-kuC" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="01y-Bo-Pq0"/>
-                            <constraint firstItem="d0w-O3-xWD" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="50" id="8Wt-zg-9ar"/>
                             <constraint firstItem="tNW-cr-u9h" firstAttribute="top" secondItem="iYJ-VN-61F" secondAttribute="top" constant="33" id="Avt-yl-XAA"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="tNW-cr-u9h" secondAttribute="trailing" constant="20" id="AwQ-p5-stk"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="YOc-KY-eWG" secondAttribute="trailing" constant="20" id="Co0-W4-qbV"/>
+                            <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="L8T-ka-jFM" secondAttribute="trailing" constant="20" id="LcF-zA-XjP"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="rIX-C1-kuC" secondAttribute="trailing" constant="20" id="ODN-Z4-5oN"/>
                             <constraint firstItem="rIX-C1-kuC" firstAttribute="top" secondItem="YOc-KY-eWG" secondAttribute="bottom" constant="20" id="Tj8-If-t1w"/>
-                            <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="d0w-O3-xWD" secondAttribute="trailing" constant="50" id="hGc-HU-iut"/>
-                            <constraint firstItem="iYJ-VN-61F" firstAttribute="bottom" secondItem="d0w-O3-xWD" secondAttribute="bottom" constant="50" id="hwj-D4-Tww"/>
                             <constraint firstItem="YOc-KY-eWG" firstAttribute="top" secondItem="tNW-cr-u9h" secondAttribute="bottom" constant="30" id="kll-c4-7Sr"/>
+                            <constraint firstItem="iYJ-VN-61F" firstAttribute="bottom" secondItem="L8T-ka-jFM" secondAttribute="bottom" constant="50" id="ktU-hf-qnF"/>
                             <constraint firstItem="tNW-cr-u9h" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="l87-L5-QGw"/>
                             <constraint firstItem="YOc-KY-eWG" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="pnG-WG-Ovc"/>
+                            <constraint firstItem="L8T-ka-jFM" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="zjL-7w-Ytw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="bQG-JL-iQj"/>
                     <connections>
                         <outlet property="email" destination="ece-N6-Ijo" id="Ch5-Rc-lRO"/>
                         <outlet property="emailField" destination="YOc-KY-eWG" id="HXM-ad-eJA"/>
-                        <outlet property="exitButtonEdit" destination="d0w-O3-xWD" id="eD6-O4-igh"/>
+                        <outlet property="exitButtonEdit" destination="L8T-ka-jFM" id="zBr-Ed-J5f"/>
                         <outlet property="user" destination="ALt-cL-aNL" id="yf9-zz-dYs"/>
                         <outlet property="userField" destination="rIX-C1-kuC" id="9y2-Mw-Ek3"/>
                     </connections>
@@ -237,7 +230,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM2-hg-FaU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM2-hg-FaU" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                                 <rect key="frame" x="20" y="267.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="M7N-Am-C9F"/>
@@ -251,7 +244,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-V9-8dq">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-V9-8dq" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                                 <rect key="frame" x="20" y="348.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8zv-Zg-5x1"/>
@@ -265,7 +258,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idN-Gz-Vd0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idN-Gz-Vd0" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                                 <rect key="frame" x="20" y="429.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="56M-We-NnQ"/>
@@ -279,7 +272,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZtG-fp-O5o">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZtG-fp-O5o" customClass="DefaultTextField" customModule="carteirada_front_end" customModuleProvider="target">
                                 <rect key="frame" x="20" y="510.5" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dci-mO-hdH"/>
@@ -287,24 +280,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-ge-mTc">
-                                <rect key="frame" x="50" y="713" width="314" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="35M-xS-WrF"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Adicionar">
-                                    <backgroundConfiguration key="background" cornerRadius="20">
-                                        <color key="backgroundColor" red="0.52941176470588236" green="0.73333333333333328" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="addButton:" destination="aCP-cL-3Mg" eventType="touchUpInside" id="E0A-f2-4lH"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdT-v2-wp4">
                                 <rect key="frame" x="20" y="166.5" width="374" height="60"/>
                                 <subviews>
@@ -321,6 +296,17 @@
                                     <constraint firstAttribute="height" constant="60" id="oam-8B-Emr"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQb-0z-xge" customClass="DefaultButton" customModule="carteirada_front_end" customModuleProvider="target">
+                                <rect key="frame" x="20" y="713" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oBl-JH-cnR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="addButton:" destination="aCP-cL-3Mg" eventType="touchUpInside" id="iA4-X3-iKb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nql-xc-MyG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -332,24 +318,25 @@
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="1ek-V9-8dq" secondAttribute="trailing" constant="20" id="AvW-UU-QII"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="gd2-5d-oUR" secondAttribute="trailing" constant="20" id="LcP-2l-ZNo"/>
                             <constraint firstItem="1ek-V9-8dq" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="MSq-Ta-lVp"/>
-                            <constraint firstItem="Jia-ge-mTc" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="50" id="NO1-nq-E0A"/>
                             <constraint firstItem="6Sa-1T-aJH" firstAttribute="top" secondItem="nM2-hg-FaU" secondAttribute="bottom" constant="20" id="OHf-bV-W3W"/>
                             <constraint firstItem="Aws-Lg-oWc" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="P97-2o-miD"/>
                             <constraint firstItem="idN-Gz-Vd0" firstAttribute="top" secondItem="eDD-zo-vIa" secondAttribute="bottom" id="Pm5-E5-GaR"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="cdT-v2-wp4" secondAttribute="trailing" constant="20" id="QpZ-2x-5Ib"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="idN-Gz-Vd0" secondAttribute="trailing" constant="20" id="Qs6-Cl-OyD"/>
                             <constraint firstItem="nM2-hg-FaU" firstAttribute="top" secondItem="Aws-Lg-oWc" secondAttribute="bottom" id="RuD-c4-YqJ"/>
+                            <constraint firstItem="nql-xc-MyG" firstAttribute="bottom" secondItem="OQb-0z-xge" secondAttribute="bottom" constant="50" id="SAx-IF-7KI"/>
                             <constraint firstItem="KLx-5A-6b2" firstAttribute="top" secondItem="idN-Gz-Vd0" secondAttribute="bottom" constant="20" id="SFc-AX-K6B"/>
                             <constraint firstItem="eDD-zo-vIa" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="WUu-NO-JM8"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="Aws-Lg-oWc" secondAttribute="trailing" constant="20" id="X0v-rn-104"/>
                             <constraint firstItem="1ek-V9-8dq" firstAttribute="top" secondItem="6Sa-1T-aJH" secondAttribute="bottom" id="XlY-OQ-52y"/>
                             <constraint firstItem="cdT-v2-wp4" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="Xvm-v8-AYH"/>
-                            <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="Jia-ge-mTc" secondAttribute="trailing" constant="50" id="dEe-z6-RTe"/>
+                            <constraint firstItem="OQb-0z-xge" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="bgV-Zb-JQa"/>
                             <constraint firstItem="res-Az-0dd" firstAttribute="top" secondItem="nql-xc-MyG" secondAttribute="top" constant="33" id="dYF-FX-R0n"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="eDD-zo-vIa" secondAttribute="trailing" constant="20" id="fEB-tx-rAw"/>
                             <constraint firstItem="gd2-5d-oUR" firstAttribute="top" secondItem="res-Az-0dd" secondAttribute="bottom" constant="16" id="flX-yr-vyA"/>
                             <constraint firstItem="eDD-zo-vIa" firstAttribute="top" secondItem="1ek-V9-8dq" secondAttribute="bottom" constant="20" id="hHb-Eg-Elo"/>
                             <constraint firstItem="KLx-5A-6b2" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="hr5-wX-hBY"/>
+                            <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="OQb-0z-xge" secondAttribute="trailing" constant="20" id="i8F-73-JM5"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="ZtG-fp-O5o" secondAttribute="trailing" constant="20" id="lUf-mM-X6e"/>
                             <constraint firstItem="6Sa-1T-aJH" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="p5a-FW-asO"/>
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="KLx-5A-6b2" secondAttribute="trailing" constant="20" id="pAX-Ty-fva"/>
@@ -359,7 +346,6 @@
                             <constraint firstItem="nql-xc-MyG" firstAttribute="trailing" secondItem="6Sa-1T-aJH" secondAttribute="trailing" constant="20" id="uPW-1Z-Fov"/>
                             <constraint firstItem="res-Az-0dd" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="uTF-8I-hhy"/>
                             <constraint firstItem="nM2-hg-FaU" firstAttribute="leading" secondItem="nql-xc-MyG" secondAttribute="leading" constant="20" id="uz9-sD-jK5"/>
-                            <constraint firstItem="nql-xc-MyG" firstAttribute="bottom" secondItem="Jia-ge-mTc" secondAttribute="bottom" constant="50" id="viX-ib-j7o"/>
                             <constraint firstItem="ZtG-fp-O5o" firstAttribute="top" secondItem="KLx-5A-6b2" secondAttribute="bottom" id="ye1-2P-upl"/>
                         </constraints>
                     </view>
@@ -369,7 +355,7 @@
                         <outlet property="pickerView" destination="Ld4-y1-olj" id="xNI-qT-fac"/>
                         <outlet property="priceTF" destination="idN-Gz-Vd0" id="c0L-Qh-dro"/>
                         <outlet property="qtdTF" destination="1ek-V9-8dq" id="HMg-aP-zhd"/>
-                        <outlet property="registerButton" destination="Jia-ge-mTc" id="Lve-El-lyt"/>
+                        <outlet property="registerButton" destination="OQb-0z-xge" id="PpR-zy-aOD"/>
                         <outlet property="tickerTF" destination="nM2-hg-FaU" id="Jrx-Dd-IRk"/>
                     </connections>
                 </viewController>
