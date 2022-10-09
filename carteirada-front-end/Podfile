@@ -8,6 +8,7 @@ target 'carteirada-front-end' do
   # Pods for carteirada-front-end
 pod 'Alamofire'
 pod 'IQKeyboardManagerSwift'
+pod 'Charts'
 
   target 'carteirada-front-endTests' do
     inherit! :search_paths
