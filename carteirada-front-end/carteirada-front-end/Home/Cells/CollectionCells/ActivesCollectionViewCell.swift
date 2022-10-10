@@ -24,7 +24,7 @@ class ActivesCollectionViewCell: UICollectionViewCell {
         backgroundActives.layer.shadowOpacity = 0.5
         backgroundActives.layer.masksToBounds = false
         imageActives.image = UIImage(named: symbolImage)
-        imageActives.contentMode = .scaleToFill
+        imageActives.contentMode = .scaleAspectFit
         labelActives.text = typeOfActives
     }
     

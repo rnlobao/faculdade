@@ -54,6 +54,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "classes", for: indexPath) as! ClassesTableViewCell
+            cell.setup()
             return cell
         }
     }
