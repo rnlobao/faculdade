@@ -46,7 +46,6 @@ class ProfileViewController: UIViewController {
         UserDefaults.standard.set("", forKey: "usuario")
         UserDefaults.standard.set("", forKey: "email")
         let myViewController = Register2ViewController()
-        myViewController.modalPresentationStyle = .fullScreen
-        self.present(myViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(myViewController, animated: true)
     }
 }

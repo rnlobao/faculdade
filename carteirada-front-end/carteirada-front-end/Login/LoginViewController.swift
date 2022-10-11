@@ -21,11 +21,11 @@ class LoginViewController: UIViewController {
         viewModel = LoginViewModel(delegate: self)
         pwField()
         loginButtonEddit.configure(whatsInside: "Logar")
+        setupToolBarEmail()
+        setupToolBarPW()
     }
     @IBAction func registerButton(_ sender: Any) {
-        let myViewController = Register2ViewController()
-        myViewController.modalPresentationStyle = .fullScreen
-        self.present(myViewController, animated: false, completion: nil)
+        navigationController?.popViewController(animated: false)
     }
     
     private func pwField() {
@@ -33,7 +33,42 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButton(_ sender: Any) {
-        viewModel.postLogUser(email: emailTF.text ?? "", password: pwTF.text ?? "")
+        self.navigationController?.popToRootViewController(animated: true)
+
+        //viewModel.postLogUser(email: emailTF.text ?? "", password: pwTF.text ?? "")
+    }
+    
+    private func setupToolBarEmail() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let closeButtonItemEmail = UIBarButtonItem(title: "fechar", style: .done, target: self, action: #selector(closeKeyboardEmail))
+        let nextButtonItemEmail = UIBarButtonItem(title: "próximo", style: .done, target: self, action: #selector(nextTextFieldEmail))
+        keyboardToolbar.items = [flexBarButton, closeButtonItemEmail, nextButtonItemEmail]
+        emailTF.inputAccessoryView = keyboardToolbar
+    }
+    
+    private func setupToolBarPW() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let closeButtonItemEmail = UIBarButtonItem(title: "fechar", style: .done, target: self, action: #selector(closeKeyboardPW))
+        keyboardToolbar.items = [flexBarButton, closeButtonItemEmail]
+        pwTF.inputAccessoryView = keyboardToolbar
+    }
+    
+    @objc func closeKeyboardEmail() {
+        emailTF.endEditing(true)
+    }
+    
+    @objc func closeKeyboardPW() {
+        pwTF.endEditing(true)
+    }
+    
+    @objc func nextTextFieldEmail() {
+        emailTF.resignFirstResponder()
+        pwTF.becomeFirstResponder()
     }
 }
 
@@ -41,7 +76,7 @@ extension LoginViewController: ServiceDelegate {
     func dataSucess() {
         let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-            self.dismiss(animated: false)
+            self.navigationController?.popToRootViewController(animated: false)
         }))
         self.present(alert, animated: true)
         UserDefaults.standard.set(true, forKey: "logado")

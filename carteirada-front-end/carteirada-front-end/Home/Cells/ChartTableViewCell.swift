@@ -62,7 +62,8 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         pieChart.legend.enabled = false
         pieChart.rotationEnabled = false
         
-       // pieChart.drawSlicesUnderHoleEnabled = true
-        //pieChart.centerText = "Oiasasasas"
+        pieChart.transparentCircleColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0)
+        
+        
     }
 }

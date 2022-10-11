@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="fpD-dT-U5t">
             <objects>
                 <viewController id="G2P-gI-fkO" customClass="HomeViewController" customModule="carteirada_front_end" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="647-kv-zfM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -41,14 +41,14 @@
                             <constraint firstItem="647-kv-zfM" firstAttribute="leading" secondItem="grT-jC-BbY" secondAttribute="leading" id="lte-En-0us"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="x1e-FM-rOo"/>
+                    <navigationItem key="navigationItem" id="9IV-U5-SKh"/>
                     <connections>
                         <outlet property="tableView" destination="647-kv-zfM" id="bjB-sj-XKL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpf-4e-AVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="944"/>
+            <point key="canvasLocation" x="839.13043478260875" y="943.52678571428567"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="yMb-DG-pvu">
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUW-Do-D9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628.98550724637687" y="943.52678571428567"/>
+            <point key="canvasLocation" x="1539.1304347826087" y="943.52678571428567"/>
         </scene>
         <!--Custom Tab Bar-->
         <scene sceneID="G71-2r-S0T">
@@ -196,7 +196,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="aCP-cL-3Mg" kind="relationship" relationship="viewControllers" id="KFs-Ij-yi5"/>
-                        <segue destination="G2P-gI-fkO" kind="relationship" relationship="viewControllers" id="Ee4-Cp-H2B"/>
+                        <segue destination="ydH-d3-qhC" kind="relationship" relationship="viewControllers" id="Ee4-Cp-H2B"/>
                         <segue destination="b8i-Cj-13G" kind="relationship" relationship="viewControllers" id="LuQ-cE-i1o"/>
                     </connections>
                 </tabBarController>
@@ -362,6 +362,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4px-Ci-1Cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-762.31884057971024" y="943.52678571428567"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Klw-Yx-JfK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ydH-d3-qhC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="x1e-FM-rOo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5W-Jo-9g6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G2P-gI-fkO" kind="relationship" relationship="rootViewController" id="KWs-nv-fXI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huV-lk-pmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="943.52678571428567"/>
         </scene>
     </scenes>
     <resources>

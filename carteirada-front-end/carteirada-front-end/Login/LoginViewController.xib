@@ -70,7 +70,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-wM-on4">
-                    <rect key="frame" x="20" y="419" width="374" height="32"/>
+                    <rect key="frame" x="140" y="419" width="134" height="32"/>
                     <color key="tintColor" systemColor="systemGray2Color"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Registre-se">
@@ -106,12 +106,12 @@
                 <constraint firstItem="jYK-yd-kKa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MVf-U6-46K"/>
                 <constraint firstItem="jdO-a1-vZO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="PFx-aa-FzC"/>
                 <constraint firstItem="LTf-Qt-G90" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VE0-Q5-aBN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c7c-wM-on4" secondAttribute="trailing" constant="20" id="ZgI-Tk-E6D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c7c-wM-on4" secondAttribute="trailing" constant="140" id="ZgI-Tk-E6D"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TRt-mn-hlL" secondAttribute="trailing" constant="20" id="akh-1o-flX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jYK-yd-kKa" secondAttribute="trailing" constant="20" id="bbk-dd-IPc"/>
                 <constraint firstItem="O9d-vV-2nJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="108" id="bsP-0N-AdY"/>
                 <constraint firstItem="jdO-a1-vZO" firstAttribute="top" secondItem="1D5-5B-EOv" secondAttribute="bottom" constant="20" id="cmE-h7-hhd"/>
-                <constraint firstItem="c7c-wM-on4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="euI-MS-QOm"/>
+                <constraint firstItem="c7c-wM-on4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="140" id="euI-MS-QOm"/>
                 <constraint firstItem="UnR-BJ-RJY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fzl-aF-7la"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LTf-Qt-G90" secondAttribute="bottom" constant="50" id="g1I-HA-3Ep"/>
                 <constraint firstItem="O9d-vV-2nJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="hC1-GZ-csY"/>

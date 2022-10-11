@@ -10,20 +10,22 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        isItUser()
+        //isItUser()
     }
     
     func isItUser() {
         if !UserDefaults.standard.bool(forKey: "logado") {
             let myViewController = Register2ViewController()
             myViewController.modalPresentationStyle = .fullScreen
-            self.present(myViewController, animated: true, completion: nil)
+            navigationController?.pushViewController(myViewController, animated: true)
         }
     }
 
@@ -41,7 +43,10 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+        if indexPath.row == 0 {
+            return 500
+        }
+        return 400
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2

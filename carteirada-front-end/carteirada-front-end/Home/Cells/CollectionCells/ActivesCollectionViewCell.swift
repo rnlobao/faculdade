@@ -23,8 +23,12 @@ class ActivesCollectionViewCell: UICollectionViewCell {
         backgroundActives.layer.shadowRadius = 1.0
         backgroundActives.layer.shadowOpacity = 0.5
         backgroundActives.layer.masksToBounds = false
-        imageActives.image = UIImage(named: symbolImage)
+        
+        imageActives.image = UIImage(systemName: symbolImage)
         imageActives.contentMode = .scaleAspectFit
+        
+        labelActives.textColor = UIColor.black
+        labelActives.font = UIFont(name: "Poppins-Medium", size: 15)
         labelActives.text = typeOfActives
     }
     

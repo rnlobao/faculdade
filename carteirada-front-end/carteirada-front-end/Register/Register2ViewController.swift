@@ -25,8 +25,7 @@ class Register2ViewController: UIViewController {
     
     @IBAction func AlreadyHasAccount(_ sender: Any) {
         let myViewController = LoginViewController()
-        myViewController.modalPresentationStyle = .fullScreen
-        self.present(myViewController, animated: false, completion: nil)
+        navigationController?.pushViewController(myViewController, animated: false)
     }
     
     private var viewModel: Register2ViewModel!
@@ -38,7 +37,12 @@ class Register2ViewController: UIViewController {
         setupToolBar()
         registerButtonEdit.isEnabled = true
         registerButtonEdit.configure(whatsInside: "Registrar")
-        
+        navigationHiddens()
+    }
+    
+    private func navigationHiddens() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +57,9 @@ class Register2ViewController: UIViewController {
     }
     
     @IBAction func sendUser(_ sender: Any) {
-        viewModel.postDataUser(login: userTF.text ?? "", email: emailTF.text ?? "", password: pwTF.text ?? "")
+        self.navigationController?.popToRootViewController(animated: true)
+
+        //viewModel.postDataUser(login: userTF.text ?? "", email: emailTF.text ?? "", password: pwTF.text ?? "")
     }
     
     func setupToolBar() {
@@ -146,7 +152,7 @@ extension Register2ViewController: ServiceDelegate {
     func dataSucess() {
         let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
         }))
         self.present(alert, animated: true)
         UserDefaults.standard.set(true, forKey: "logado")
