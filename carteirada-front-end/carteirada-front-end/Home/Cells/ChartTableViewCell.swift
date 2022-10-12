@@ -20,7 +20,7 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
     @IBOutlet weak var posicaoAtualLabel: UILabel!
     @IBOutlet weak var rendimentoLabel: UILabel!
     
-    var hisTotalMoney = 0
+    var hisTotalMoney: Double = 0.0
         
     @IBAction func showPercent(_ sender: Any) {
         var keyToPercent: Bool
@@ -38,19 +38,18 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         
         percentButton.layer.cornerRadius = 5
         pieChart.delegate = self
-        setupChart()
         setupHisTotalMoney()
+        setupChart()
     }
     
     func setupHisTotalMoney() {
         let ref = Database.database().reference()
         let uid = Auth.auth().currentUser?.uid
         
-//        ref.child("users").child(uid!).child("assets").observe(.value) { snapshot in
-//            for child in snapshot.children {
-//                //print(child)
-//            }
-//        }
+        ref.child("users").child(uid!).child("assets").child("totalCarteira").observe(.value) { data in
+            self.hisTotalMoney = data.value as! Double
+        }
+        
     }
     
     func setupChart() {
@@ -69,7 +68,7 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         let data = PieChartData(dataSet: set)
         pieChart.data = data
         
-        let myMoney = "33.000,00"
+        let myMoney = String(hisTotalMoney)
         
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
                            NSAttributedString.Key.font: UIFont(name: "Poppins-ExtraBold", size: 15)]
@@ -81,6 +80,10 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         
         pieChart.transparentCircleColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0)
         
+        
+    }
+    
+    func setupCentralText(total: Double) {
         
     }
 }
