@@ -17,11 +17,6 @@ class Register2ViewController: UIViewController {
     @IBOutlet weak var alreadyHasAccountEdit: UIButton!
     
     var auth: Auth?
-    
-    @IBAction func AlreadyHasAccount(_ sender: Any) {
-        let myViewController = LoginViewController()
-        navigationController?.pushViewController(myViewController, animated: false)
-    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +28,15 @@ class Register2ViewController: UIViewController {
         self.auth = Auth.auth()
     }
     
-    private func navigationHiddens() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.tabBarController?.tabBar.isHidden = true
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         if UserDefaults.standard.bool(forKey: "logado") {
             self.dismiss(animated: false)
         }
+    }
+    
+    private func navigationHiddens() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     private func setupPWTextFields() {
@@ -74,6 +69,11 @@ class Register2ViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         })
+    }
+    
+    @IBAction func AlreadyHasAccount(_ sender: Any) {
+        let myViewController = LoginViewController()
+        navigationController?.pushViewController(myViewController, animated: false)
     }
     
     func printToDatabase() {

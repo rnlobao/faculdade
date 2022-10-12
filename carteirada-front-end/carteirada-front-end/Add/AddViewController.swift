@@ -8,6 +8,16 @@
 import Foundation
 import UIKit
 import FirebaseFirestore
+import FirebaseDatabase
+import FirebaseAuth
+
+struct Asets {
+    let kind: Int
+    let date: String
+    let ticker: String
+    let quantity: Int
+    let price: Float
+}
 
 class AddViewController: UIViewController {
     
@@ -29,38 +39,30 @@ class AddViewController: UIViewController {
         theActives = ["Fii's", "Ações", "Criptoativos"]
         setupDateTF()
         registerButton.configure(whatsInside: "Adicionar")
-        
-        //let docRef = dataBase.document("carteirada/assets")
     }
     
     private func writeData(active: Int, date: String, ticker: String, quantity: Int, price: Float) {
         
-        let docRef = dataBase.document("carteirada/assets")
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
         
-        var whatKindOfActive: String = ""
         if active == 0 {
-            whatKindOfActive = "Fii"
+            ref.child("users").child(uid!).child("assets").child("fii").childByAutoId().setValue(["asset": active, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
         } else if active == 1 {
-            whatKindOfActive = "Ação"
+            ref.child("users").child(uid!).child("assets").child("acoes").childByAutoId().setValue(["asset": active, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
         } else if active == 2 {
-            whatKindOfActive = "Criptoativo"
+            ref.child("users").child(uid!).child("assets").child("cripto").childByAutoId().setValue(["asset": active, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
         }
         
-         docRef.setData(["asset": whatKindOfActive, "data": date, "ticker": ticker, "quantity": quantity, "price": price]) { error in
-            if error != nil {
-                let alert = UIAlertController(title: "Erro", message: error.debugDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-                self.present(alert, animated: true)
-            } else {
-                let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-                    self.dateTF.text = ""
-                    self.tickerTF.text = ""
-                    self.priceTF.text = ""
-                    self.qtdTF.text = ""
-                }))
-                self.present(alert, animated: true)
-            }
+        ref.observe(.childAdded) { data in
+            let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
+                self.dateTF.text = ""
+                self.tickerTF.text = ""
+                self.priceTF.text = ""
+                self.qtdTF.text = ""
+            }))
+            self.present(alert, animated: true)
         }
     }
     
