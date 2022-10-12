@@ -11,17 +11,13 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButtonEddit: DefaultButton!
-    
     @IBOutlet weak var emailTF: DefaultTextField!
     @IBOutlet weak var pwTF: DefaultTextField!
-    
-    var viewModel: LoginViewModel!
     
     var auth: Auth?
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = LoginViewModel(delegate: self)
         pwField()
         loginButtonEddit.configure(whatsInside: "Logar")
         setupToolBarEmail()
@@ -86,31 +82,5 @@ class LoginViewController: UIViewController {
     @objc func nextTextFieldEmail() {
         emailTF.resignFirstResponder()
         pwTF.becomeFirstResponder()
-    }
-}
-
-extension LoginViewController: ServiceDelegate {
-    func dataSucess() {
-        let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-            self.navigationController?.popToRootViewController(animated: false)
-        }))
-        self.present(alert, animated: true)
-        UserDefaults.standard.set(true, forKey: "logado")
-        UserDefaults.standard.set(emailTF.text, forKey: "email")
-    }
-        
-    func dataFail(error: Error) {
-        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-        self.present(alert, animated: true)
-    }
-        
-    func showLoad() {
-        showSpinner(onView: view)
-    }
-        
-    func removeLoad() {
-        removeSpinner()
     }
 }

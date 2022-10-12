@@ -7,13 +7,7 @@
 
 import UIKit
 import FirebaseAuth
-
-protocol ServiceDelegate {
-    func dataSucess()
-    func dataFail(error: Error)
-    func showLoad()
-    func removeLoad()
-}
+import FirebaseDatabase
 
 class Register2ViewController: UIViewController {
 
@@ -28,9 +22,7 @@ class Register2ViewController: UIViewController {
         let myViewController = LoginViewController()
         navigationController?.pushViewController(myViewController, animated: false)
     }
-    
-    private var viewModel: Register2ViewModel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPWTextFields()
@@ -55,6 +47,14 @@ class Register2ViewController: UIViewController {
     private func setupPWTextFields() {
         pwTF.isSecureTextEntry = true
     }
+    
+    func uploadToDataBase(email: String, onSuccess: @escaping () -> Void) {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        
+        ref.child("users").child(uid!).setValue(["email": email])
+        onSuccess()
+    }
         
     @IBAction func sendUser(_ sender: Any) {
         let email: String = self.emailTF.text ?? ""
@@ -66,6 +66,7 @@ class Register2ViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
                 self.present(alert, animated: true)
             } else {
+                self.uploadToDataBase(email: email, onSuccess: self.printToDatabase)
                 let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
                     self.navigationController?.popToRootViewController(animated: true)
@@ -73,6 +74,10 @@ class Register2ViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         })
+    }
+    
+    func printToDatabase() {
+        print("In database!\n")
     }
     
     func setupToolBar() {

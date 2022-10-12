@@ -18,7 +18,6 @@ class AddViewController: UIViewController {
     @IBOutlet weak var priceTF: DefaultTextField!
     @IBOutlet weak var dateTF: DefaultTextField!
     
-    private var viewModel: AddViewModel!
     
     var theActives: [String] = []
     
@@ -26,15 +25,18 @@ class AddViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        viewModel = AddViewModel(delegate: self)
         setupPicker()
         theActives = ["Fii's", "Ações", "Criptoativos"]
         setupDateTF()
         registerButton.configure(whatsInside: "Adicionar")
+        
+        //let docRef = dataBase.document("carteirada/assets")
     }
     
     private func writeData(active: Int, date: String, ticker: String, quantity: Int, price: Float) {
-        let docRef = dataBase.collection("cadeirada/assets")
+        
+        let docRef = dataBase.document("carteirada/assets")
+        
         var whatKindOfActive: String = ""
         if active == 0 {
             whatKindOfActive = "Fii"
@@ -43,7 +45,23 @@ class AddViewController: UIViewController {
         } else if active == 2 {
             whatKindOfActive = "Criptoativo"
         }
-        docRef.parent?.setData(["asset": whatKindOfActive, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
+        
+         docRef.setData(["asset": whatKindOfActive, "data": date, "ticker": ticker, "quantity": quantity, "price": price]) { error in
+            if error != nil {
+                let alert = UIAlertController(title: "Erro", message: error.debugDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
+                self.present(alert, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
+                    self.dateTF.text = ""
+                    self.tickerTF.text = ""
+                    self.priceTF.text = ""
+                    self.qtdTF.text = ""
+                }))
+                self.present(alert, animated: true)
+            }
+        }
     }
     
     @IBAction func addButton(_ sender: Any) {
@@ -180,28 +198,5 @@ extension AddViewController: UITextFieldDelegate {
         else {
             return true
         }
-    }
-}
-
-extension AddViewController: ServiceDelegate {
-    func dataSucess() {
-        let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
-        }))
-        self.present(alert, animated: true)
-    }
-        
-    func dataFail(error: Error) {
-        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-        self.present(alert, animated: true)
-    }
-        
-    func showLoad() {
-        showSpinner(onView: view)
-    }
-        
-    func removeLoad() {
-        removeSpinner()
     }
 }

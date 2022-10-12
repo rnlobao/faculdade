@@ -12,6 +12,7 @@ pod 'Charts'
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'FirebaseDatabase'
 
   target 'carteirada-front-endTests' do
     inherit! :search_paths

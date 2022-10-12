@@ -14,24 +14,14 @@
 		9100B9BF28D9E43B00ED0BD4 /* ClassesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100B9BD28D9E43B00ED0BD4 /* ClassesTableViewCell.xib */; };
 		9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100B9C128D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift */; };
 		9100B9C428D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100B9C228D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib */; };
-		911437FC28E1B908005AE919 /* LoginUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911437FB28E1B908005AE919 /* LoginUserService.swift */; };
-		911437FF28E1BBCC005AE919 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911437FE28E1BBCC005AE919 /* LoginModel.swift */; };
 		916CE4DB28DE6221004DCBF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916CE4D928DE6221004DCBF4 /* LoginViewController.swift */; };
 		916CE4DC28DE6221004DCBF4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916CE4DA28DE6221004DCBF4 /* LoginViewController.xib */; };
-		916CE4DE28DE6553004DCBF4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916CE4DD28DE6553004DCBF4 /* LoginViewModel.swift */; };
 		9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172228DCB817004FF59E /* Register2ViewController.swift */; };
 		9171172528DCB817004FF59E /* Register2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9171172328DCB817004FF59E /* Register2ViewController.xib */; };
-		9171172728DCBE00004FF59E /* Register2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172628DCBE00004FF59E /* Register2ViewModel.swift */; };
-		9171172A28DCBF1C004FF59E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172928DCBF1C004FF59E /* NetworkService.swift */; };
-		9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172B28DCBF4F004FF59E /* RegisterUserService.swift */; };
-		9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172D28DCBFA2004FF59E /* UserModel.swift */; };
-		9180C05328E0DA750054423F /* AddActiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180C05228E0DA750054423F /* AddActiveService.swift */; };
-		9180C05528E0DBC80054423F /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180C05428E0DBC80054423F /* AddViewModel.swift */; };
 		919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B028E7ADFE0016AE76 /* DefaultButton.swift */; };
 		919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B228E7B7D40016AE76 /* DefaultTextField.swift */; };
 		919E42B528E7B8B30016AE76 /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B428E7B8B30016AE76 /* ProjectColors.swift */; };
 		91CF07CF28F62FE10022891A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91CF07CE28F62FE10022891A /* GoogleService-Info.plist */; };
-		91DB34CC28DE2AA50064B811 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB34CB28DE2AA50064B811 /* SpinnerView.swift */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
 		91F3D98328D906FD00DD62CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D98228D906FD00DD62CB /* Assets.xcassets */; };
@@ -96,24 +86,14 @@
 		9100B9BD28D9E43B00ED0BD4 /* ClassesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassesTableViewCell.xib; sourceTree = "<group>"; };
 		9100B9C128D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9100B9C228D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivesCollectionViewCell.xib; sourceTree = "<group>"; };
-		911437FB28E1B908005AE919 /* LoginUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserService.swift; sourceTree = "<group>"; };
-		911437FE28E1BBCC005AE919 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		916CE4D928DE6221004DCBF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		916CE4DA28DE6221004DCBF4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		916CE4DD28DE6553004DCBF4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9171172228DCB817004FF59E /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		9171172328DCB817004FF59E /* Register2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Register2ViewController.xib; sourceTree = "<group>"; };
-		9171172628DCBE00004FF59E /* Register2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewModel.swift; sourceTree = "<group>"; };
-		9171172928DCBF1C004FF59E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		9171172B28DCBF4F004FF59E /* RegisterUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserService.swift; sourceTree = "<group>"; };
-		9171172D28DCBFA2004FF59E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		9180C05228E0DA750054423F /* AddActiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActiveService.swift; sourceTree = "<group>"; };
-		9180C05428E0DBC80054423F /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		919E42B028E7ADFE0016AE76 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		919E42B228E7B7D40016AE76 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		919E42B428E7B8B30016AE76 /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
 		91CF07CE28F62FE10022891A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		91DB34CB28DE2AA50064B811 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,27 +205,13 @@
 			children = (
 				916CE4D928DE6221004DCBF4 /* LoginViewController.swift */,
 				916CE4DA28DE6221004DCBF4 /* LoginViewController.xib */,
-				916CE4DD28DE6553004DCBF4 /* LoginViewModel.swift */,
-				911437FE28E1BBCC005AE919 /* LoginModel.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		9171172828DCBF10004FF59E /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				9171172928DCBF1C004FF59E /* NetworkService.swift */,
-				9171172B28DCBF4F004FF59E /* RegisterUserService.swift */,
-				9180C05228E0DA750054423F /* AddActiveService.swift */,
-				911437FB28E1B908005AE919 /* LoginUserService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		91DB34CA28DE2A800064B811 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				91DB34CB28DE2AA50064B811 /* SpinnerView.swift */,
 				919E42B028E7ADFE0016AE76 /* DefaultButton.swift */,
 				919E42B228E7B7D40016AE76 /* DefaultTextField.swift */,
 				919E42B428E7B8B30016AE76 /* ProjectColors.swift */,
@@ -278,10 +244,9 @@
 		91F3D97828D906FC00DD62CB /* carteirada-front-end */ = {
 			isa = PBXGroup;
 			children = (
-				916CE4D828DE6212004DCBF4 /* Login */,
 				91DB34CA28DE2A800064B811 /* Utils */,
-				9171172828DCBF10004FF59E /* Service */,
 				91F3D9CE28D9355E00DD62CB /* Assets */,
+				916CE4D828DE6212004DCBF4 /* Login */,
 				91F3D9DC28D9423A00DD62CB /* Register */,
 				91F3D9E428D948EA00DD62CB /* Add */,
 				91F3D9A928D90E4000DD62CB /* Home */,
@@ -362,8 +327,6 @@
 			children = (
 				9171172228DCB817004FF59E /* Register2ViewController.swift */,
 				9171172328DCB817004FF59E /* Register2ViewController.xib */,
-				9171172628DCBE00004FF59E /* Register2ViewModel.swift */,
-				9171172D28DCBFA2004FF59E /* UserModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -380,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				91F3D9E528D9491E00DD62CB /* AddViewController.swift */,
-				9180C05428E0DBC80054423F /* AddViewModel.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -662,18 +624,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9100B9BA28D9DF2600ED0BD4 /* ChartTableViewCell.swift in Sources */,
-				911437FF28E1BBCC005AE919 /* LoginModel.swift in Sources */,
-				9171172728DCBE00004FF59E /* Register2ViewModel.swift in Sources */,
-				911437FC28E1B908005AE919 /* LoginUserService.swift in Sources */,
 				91F3D9E828D9494100DD62CB /* ProfileViewController.swift in Sources */,
 				9100B9BE28D9E43B00ED0BD4 /* ClassesTableViewCell.swift in Sources */,
 				91F3D9E628D9491E00DD62CB /* AddViewController.swift in Sources */,
-				9180C05528E0DBC80054423F /* AddViewModel.swift in Sources */,
-				91DB34CC28DE2AA50064B811 /* SpinnerView.swift in Sources */,
 				91F3D9EA28D94AF100DD62CB /* CustomTabBar.swift in Sources */,
-				9180C05328E0DA750054423F /* AddActiveService.swift in Sources */,
-				916CE4DE28DE6553004DCBF4 /* LoginViewModel.swift in Sources */,
-				9171172C28DCBF4F004FF59E /* RegisterUserService.swift in Sources */,
 				91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */,
 				9100B9C328D9E8C100ED0BD4 /* ActivesCollectionViewCell.swift in Sources */,
 				919E42B528E7B8B30016AE76 /* ProjectColors.swift in Sources */,
@@ -681,9 +635,7 @@
 				9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */,
 				919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */,
 				916CE4DB28DE6221004DCBF4 /* LoginViewController.swift in Sources */,
-				9171172A28DCBF1C004FF59E /* NetworkService.swift in Sources */,
 				919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */,
-				9171172E28DCBFA2004FF59E /* UserModel.swift in Sources */,
 				91F3D9E128D945D200DD62CB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
