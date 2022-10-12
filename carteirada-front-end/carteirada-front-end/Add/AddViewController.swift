@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
 
 class AddViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class AddViewController: UIViewController {
     private var viewModel: AddViewModel!
     
     var theActives: [String] = []
+    
+    let dataBase = Firestore.firestore()
 
     
     override func viewDidLoad() {
@@ -30,8 +33,27 @@ class AddViewController: UIViewController {
         registerButton.configure(whatsInside: "Adicionar")
     }
     
+    private func writeData(active: Int, date: String, ticker: String, quantity: Int, price: Float) {
+        let docRef = dataBase.collection("cadeirada/assets")
+        var whatKindOfActive: String = ""
+        if active == 0 {
+            whatKindOfActive = "Fii"
+        } else if active == 1 {
+            whatKindOfActive = "Ação"
+        } else if active == 2 {
+            whatKindOfActive = "Criptoativo"
+        }
+        docRef.parent?.setData(["asset": whatKindOfActive, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
+    }
+    
     @IBAction func addButton(_ sender: Any) {
-        viewModel.postAsset(email: UserDefaults.standard.string(forKey: "email") ?? "", active: pickerView.selectedRow(inComponent: 0) , date: dateTF.text ?? "", ticker: tickerTF.text ?? "", quantity: Int(qtdTF.text!) ?? 1, price: Float(priceTF.text!) ?? 1.0)
+        let active: Int = pickerView.selectedRow(inComponent: 0)
+        let date: String = self.dateTF.text ?? ""
+        let ticker: String = self.tickerTF.text ?? ""
+        let quantity: Int = Int(qtdTF.text ?? "") ?? 0
+        let price: Float = Float(priceTF.text ?? "") ?? 0.0
+
+        writeData(active: active, date: date, ticker: ticker, quantity: quantity, price: price)
     }
     
     func setupPicker() {

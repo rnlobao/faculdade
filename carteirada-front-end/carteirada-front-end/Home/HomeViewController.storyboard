@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpf-4e-AVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839.13043478260875" y="943.52678571428567"/>
+            <point key="canvasLocation" x="628" y="944"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="yMb-DG-pvu">
@@ -102,44 +102,6 @@
                                     <constraint firstAttribute="bottom" secondItem="ece-N6-Ijo" secondAttribute="bottom" constant="10" id="zOq-E5-PcS"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIX-C1-kuC">
-                                <rect key="frame" x="20" y="209.5" width="374" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-BM-rUx">
-                                        <rect key="frame" x="10" y="10" width="53" height="30"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35o-PF-7f0">
-                                        <rect key="frame" x="73" y="0.0" width="1" height="50"/>
-                                        <color key="backgroundColor" red="0.89019607840000003" green="0.90588235289999997" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="ZI3-bF-caV"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALt-cL-aNL">
-                                        <rect key="frame" x="94" y="10" width="260" height="30"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.92941176469999998" green="0.98039215690000003" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="i4F-BM-rUx" secondAttribute="bottom" constant="10" id="1Fi-NC-W00"/>
-                                    <constraint firstAttribute="height" constant="50" id="6oo-6h-y7d"/>
-                                    <constraint firstItem="ALt-cL-aNL" firstAttribute="top" secondItem="rIX-C1-kuC" secondAttribute="top" constant="10" id="OgP-Xt-RgJ"/>
-                                    <constraint firstItem="ALt-cL-aNL" firstAttribute="leading" secondItem="35o-PF-7f0" secondAttribute="trailing" constant="20" id="XKK-lZ-lFg"/>
-                                    <constraint firstAttribute="trailing" secondItem="ALt-cL-aNL" secondAttribute="trailing" constant="20" id="YO8-mq-OPM"/>
-                                    <constraint firstItem="35o-PF-7f0" firstAttribute="leading" secondItem="i4F-BM-rUx" secondAttribute="trailing" constant="10" id="bpS-nR-yS0"/>
-                                    <constraint firstItem="i4F-BM-rUx" firstAttribute="top" secondItem="rIX-C1-kuC" secondAttribute="top" constant="10" id="fbN-kL-hol"/>
-                                    <constraint firstItem="i4F-BM-rUx" firstAttribute="leading" secondItem="rIX-C1-kuC" secondAttribute="leading" constant="10" id="gCi-jf-VUd"/>
-                                    <constraint firstItem="35o-PF-7f0" firstAttribute="top" secondItem="rIX-C1-kuC" secondAttribute="top" id="kWP-mH-KEN"/>
-                                    <constraint firstAttribute="bottom" secondItem="ALt-cL-aNL" secondAttribute="bottom" constant="10" id="uxz-Ft-dyj"/>
-                                    <constraint firstAttribute="bottom" secondItem="35o-PF-7f0" secondAttribute="bottom" id="y0I-3P-399"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8T-ka-jFM" customClass="DefaultButton" customModule="carteirada_front_end" customModuleProvider="target">
                                 <rect key="frame" x="20" y="713" width="374" height="50"/>
                                 <constraints>
@@ -155,13 +117,10 @@
                         <viewLayoutGuide key="safeArea" id="iYJ-VN-61F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rIX-C1-kuC" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="01y-Bo-Pq0"/>
                             <constraint firstItem="tNW-cr-u9h" firstAttribute="top" secondItem="iYJ-VN-61F" secondAttribute="top" constant="33" id="Avt-yl-XAA"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="tNW-cr-u9h" secondAttribute="trailing" constant="20" id="AwQ-p5-stk"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="YOc-KY-eWG" secondAttribute="trailing" constant="20" id="Co0-W4-qbV"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="L8T-ka-jFM" secondAttribute="trailing" constant="20" id="LcF-zA-XjP"/>
-                            <constraint firstItem="iYJ-VN-61F" firstAttribute="trailing" secondItem="rIX-C1-kuC" secondAttribute="trailing" constant="20" id="ODN-Z4-5oN"/>
-                            <constraint firstItem="rIX-C1-kuC" firstAttribute="top" secondItem="YOc-KY-eWG" secondAttribute="bottom" constant="20" id="Tj8-If-t1w"/>
                             <constraint firstItem="YOc-KY-eWG" firstAttribute="top" secondItem="tNW-cr-u9h" secondAttribute="bottom" constant="30" id="kll-c4-7Sr"/>
                             <constraint firstItem="iYJ-VN-61F" firstAttribute="bottom" secondItem="L8T-ka-jFM" secondAttribute="bottom" constant="50" id="ktU-hf-qnF"/>
                             <constraint firstItem="tNW-cr-u9h" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="l87-L5-QGw"/>
@@ -169,18 +128,17 @@
                             <constraint firstItem="L8T-ka-jFM" firstAttribute="leading" secondItem="iYJ-VN-61F" secondAttribute="leading" constant="20" id="zjL-7w-Ytw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="bQG-JL-iQj"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" selectedImage="person.fill" id="TWY-nT-CAZ"/>
+                    <navigationItem key="navigationItem" id="A6e-M4-40M"/>
                     <connections>
                         <outlet property="email" destination="ece-N6-Ijo" id="Ch5-Rc-lRO"/>
                         <outlet property="emailField" destination="YOc-KY-eWG" id="HXM-ad-eJA"/>
                         <outlet property="exitButtonEdit" destination="L8T-ka-jFM" id="zBr-Ed-J5f"/>
-                        <outlet property="user" destination="ALt-cL-aNL" id="yf9-zz-dYs"/>
-                        <outlet property="userField" destination="rIX-C1-kuC" id="9y2-Mw-Ek3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUW-Do-D9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1539.1304347826087" y="943.52678571428567"/>
+            <point key="canvasLocation" x="1343" y="944"/>
         </scene>
         <!--Custom Tab Bar-->
         <scene sceneID="G71-2r-S0T">
@@ -197,12 +155,12 @@
                     <connections>
                         <segue destination="aCP-cL-3Mg" kind="relationship" relationship="viewControllers" id="KFs-Ij-yi5"/>
                         <segue destination="ydH-d3-qhC" kind="relationship" relationship="viewControllers" id="Ee4-Cp-H2B"/>
-                        <segue destination="b8i-Cj-13G" kind="relationship" relationship="viewControllers" id="LuQ-cE-i1o"/>
+                        <segue destination="b8i-Cj-13G" kind="relationship" relationship="viewControllers" id="k02-gY-HfL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4g-p1-PBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="193"/>
+            <point key="canvasLocation" x="409" y="93"/>
         </scene>
         <!--Adicionar-->
         <scene sceneID="KBl-EO-Lab">

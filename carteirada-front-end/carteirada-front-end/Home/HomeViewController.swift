@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
@@ -14,21 +15,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //isItUser()
+        isItUser()
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func isItUser() {
-        if !UserDefaults.standard.bool(forKey: "logado") {
+        if Auth.auth().currentUser == nil {
             let myViewController = Register2ViewController()
             myViewController.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(myViewController, animated: true)
+        } else {
+          return
         }
     }
-
 
     func setupTableView() {
         tableView.delegate = self

@@ -9,6 +9,9 @@ target 'carteirada-front-end' do
 pod 'Alamofire'
 pod 'IQKeyboardManagerSwift'
 pod 'Charts'
+pod 'FirebaseAnalytics'
+pod 'FirebaseAuth'
+pod 'FirebaseFirestore'
 
   target 'carteirada-front-endTests' do
     inherit! :search_paths

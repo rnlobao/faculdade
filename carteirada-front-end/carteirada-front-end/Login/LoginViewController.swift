@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pwTF: DefaultTextField!
     
     var viewModel: LoginViewModel!
+    
+    var auth: Auth?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,7 @@ class LoginViewController: UIViewController {
         loginButtonEddit.configure(whatsInside: "Logar")
         setupToolBarEmail()
         setupToolBarPW()
+        self.auth = Auth.auth()
     }
     @IBAction func registerButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
@@ -33,9 +37,22 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
-
-        //viewModel.postLogUser(email: emailTF.text ?? "", password: pwTF.text ?? "")
+        let email: String = self.emailTF.text ?? ""
+        let pw: String = self.pwTF.text ?? ""
+        
+        self.auth?.signIn(withEmail: email, password: pw, completion: { usuario, error in
+            if error != nil {
+                let alert = UIAlertController(title: "Erro", message: error.debugDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
+                self.present(alert, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Sucesso", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Continuar", style: .destructive, handler: {(action:UIAlertAction!) in
+                    self.navigationController?.popToRootViewController(animated: true)
+                }))
+                self.present(alert, animated: true)
+            }
+        })
     }
     
     private func setupToolBarEmail() {

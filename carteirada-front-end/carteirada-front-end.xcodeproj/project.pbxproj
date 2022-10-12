@@ -30,6 +30,7 @@
 		919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B028E7ADFE0016AE76 /* DefaultButton.swift */; };
 		919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B228E7B7D40016AE76 /* DefaultTextField.swift */; };
 		919E42B528E7B8B30016AE76 /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B428E7B8B30016AE76 /* ProjectColors.swift */; };
+		91CF07CF28F62FE10022891A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91CF07CE28F62FE10022891A /* GoogleService-Info.plist */; };
 		91DB34CC28DE2AA50064B811 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB34CB28DE2AA50064B811 /* SpinnerView.swift */; };
 		91F3D97A28D906FC00DD62CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97928D906FC00DD62CB /* AppDelegate.swift */; };
 		91F3D97C28D906FC00DD62CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */; };
@@ -111,6 +112,7 @@
 		919E42B028E7ADFE0016AE76 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		919E42B228E7B7D40016AE76 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		919E42B428E7B8B30016AE76 /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
+		91CF07CE28F62FE10022891A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91DB34CB28DE2AA50064B811 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		91F3D97628D906FC00DD62CB /* carteirada-front-end.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carteirada-front-end.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3D97928D906FC00DD62CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				91F3D97B28D906FC00DD62CB /* SceneDelegate.swift */,
 				91F3D97928D906FC00DD62CB /* AppDelegate.swift */,
 				91F3D98428D906FD00DD62CB /* LaunchScreen.storyboard */,
+				91CF07CE28F62FE10022891A /* GoogleService-Info.plist */,
 				91F3D98728D906FD00DD62CB /* Info.plist */,
 			);
 			path = "carteirada-front-end";
@@ -515,6 +518,7 @@
 				91F3D9C528D9355700DD62CB /* Poppins-BoldItalic.ttf in Resources */,
 				9100B9BB28D9DF2600ED0BD4 /* ChartTableViewCell.xib in Resources */,
 				9100B9C428D9E8C100ED0BD4 /* ActivesCollectionViewCell.xib in Resources */,
+				91CF07CF28F62FE10022891A /* GoogleService-Info.plist in Resources */,
 				91F3D9BF28D9355700DD62CB /* Poppins-SemiBold.ttf in Resources */,
 				91F3D9CA28D9355700DD62CB /* Poppins-MediumItalic.ttf in Resources */,
 				91F3D9BE28D9355700DD62CB /* Poppins-LightItalic.ttf in Resources */,
