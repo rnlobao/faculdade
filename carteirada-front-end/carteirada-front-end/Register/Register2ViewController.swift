@@ -48,6 +48,12 @@ class Register2ViewController: UIViewController {
         let uid = Auth.auth().currentUser?.uid
         
         ref.child("users").child(uid!).setValue(["email": email])
+        
+        ref.child("users").child(uid!).child("assets").child("fii").child("inTotal").setValue(0)
+        ref.child("users").child(uid!).child("assets").child("acoes").child("inTotal").setValue(0)
+        ref.child("users").child(uid!).child("assets").child("cripto").child("inTotal").setValue(0)
+        ref.child("users").child(uid!).child("assets").child("totalCarteira").setValue(0)
+        
         onSuccess()
     }
         

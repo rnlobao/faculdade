@@ -11,12 +11,12 @@ import FirebaseFirestore
 import FirebaseDatabase
 import FirebaseAuth
 
-struct Asets {
+struct Assets {
     let kind: Int
     let date: String
     let ticker: String
-    let quantity: Int
-    let price: Float
+    let quantity: Double
+    let price: Double
 }
 
 class AddViewController: UIViewController {
@@ -31,7 +31,8 @@ class AddViewController: UIViewController {
     
     var theActives: [String] = []
     
-    let dataBase = Firestore.firestore()
+    let ref = Database.database().reference()
+    let uid = Auth.auth().currentUser?.uid
 
     
     override func viewDidLoad() {
@@ -41,17 +42,14 @@ class AddViewController: UIViewController {
         registerButton.configure(whatsInside: "Adicionar")
     }
     
-    private func writeData(active: Int, date: String, ticker: String, quantity: Int, price: Float) {
+    private func writeData(active: Assets) {
         
-        let ref = Database.database().reference()
-        let uid = Auth.auth().currentUser?.uid
-        
-        if active == 0 {
-            ref.child("users").child(uid!).child("assets").child("fii").childByAutoId().setValue(["asset": active, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
-        } else if active == 1 {
-            ref.child("users").child(uid!).child("assets").child("acoes").childByAutoId().setValue(["asset": active, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
-        } else if active == 2 {
-            ref.child("users").child(uid!).child("assets").child("cripto").childByAutoId().setValue(["asset": active, "data": date, "ticker": ticker, "quantity": quantity, "price": price])
+        if active.kind == 0 {
+            addingAssetsToDB(asset: active, kind: "fii")
+        } else if active.kind == 1 {
+            addingAssetsToDB(asset: active, kind: "acoes")
+        } else if active.kind == 2 {
+            addingAssetsToDB(asset: active, kind: "cripto")
         }
         
         ref.observe(.childAdded) { data in
@@ -66,14 +64,27 @@ class AddViewController: UIViewController {
         }
     }
     
+    private func addingAssetsToDB(asset: Assets, kind: String) {
+        var total = 0.0
+        ref.child("users").child(uid!).child("assets").child(kind).childByAutoId().setValue(["data": asset.date, "ticker": asset.ticker, "quantity": asset.quantity, "price": asset.price])
+        
+        total += asset.quantity * asset.price
+        
+        ref.child("users").child(uid!).child("assets").child(kind).child("inTotal").observeSingleEvent(of: .value) { data in
+            total += data.value as! Double
+            self.ref.child("users").child(self.uid!).child("assets").child(kind).child("inTotal").setValue(total)
+        }
+    }
+    
     @IBAction func addButton(_ sender: Any) {
         let active: Int = pickerView.selectedRow(inComponent: 0)
         let date: String = self.dateTF.text ?? ""
         let ticker: String = self.tickerTF.text ?? ""
-        let quantity: Int = Int(qtdTF.text ?? "") ?? 0
-        let price: Float = Float(priceTF.text ?? "") ?? 0.0
-
-        writeData(active: active, date: date, ticker: ticker, quantity: quantity, price: price)
+        let quantity: Double = Double(qtdTF.text ?? "") ?? 0
+        let price: Double = Double(priceTF.text ?? "") ?? 0.0
+        
+        let myAsset = Assets(kind: active, date: date, ticker: ticker, quantity: quantity, price: price)
+        writeData(active: myAsset)
     }
     
     func setupPicker() {

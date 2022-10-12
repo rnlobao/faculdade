@@ -7,6 +7,8 @@
 
 import Charts
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
     
@@ -18,11 +20,14 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
     @IBOutlet weak var posicaoAtualLabel: UILabel!
     @IBOutlet weak var rendimentoLabel: UILabel!
     
+    var hisTotalMoney = 0
+        
     @IBAction func showPercent(_ sender: Any) {
         var keyToPercent: Bool
         keyToPercent = pieChart.isUsePercentValuesEnabled == true ? true : false
         pieChart.usePercentValuesEnabled = !keyToPercent
     }
+    
     func setupView() {
         chartBackground.layer.cornerRadius = 20
         chartBackground.layer.shadowColor = UIColor.black.cgColor
@@ -34,6 +39,18 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         percentButton.layer.cornerRadius = 5
         pieChart.delegate = self
         setupChart()
+        setupHisTotalMoney()
+    }
+    
+    func setupHisTotalMoney() {
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        
+        ref.child("users").child(uid!).child("assets").observe(.value) { snapshot in
+            for child in snapshot.children {
+                //print(child)
+            }
+        }
     }
     
     func setupChart() {
@@ -52,10 +69,10 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         let data = PieChartData(dataSet: set)
         pieChart.data = data
         
-        let myMoney = "R$ 33.000,00"
+        let myMoney = "33.000,00"
         
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
-                           NSAttributedString.Key.font: UIFont(name: "Poppins-ExtraBold", size: 23)]
+                           NSAttributedString.Key.font: UIFont(name: "Poppins-ExtraBold", size: 15)]
         let myAttrString = NSAttributedString(string: myMoney, attributes: attributes as [NSAttributedString.Key : Any])
         pieChart.centerAttributedText = myAttrString
         pieChart.drawCenterTextEnabled = true

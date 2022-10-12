@@ -7,20 +7,29 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let ref = Database.database().reference()
+    let uid = Auth.auth().currentUser?.uid
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         navigationController?.navigationBar.isHidden = true
+        setupUser()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         isItUser()
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    private func setupUser() {
+        
     }
     
     func isItUser() {
