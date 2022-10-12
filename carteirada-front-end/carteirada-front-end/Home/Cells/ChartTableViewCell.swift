@@ -46,11 +46,11 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         let ref = Database.database().reference()
         let uid = Auth.auth().currentUser?.uid
         
-        ref.child("users").child(uid!).child("assets").observe(.value) { snapshot in
-            for child in snapshot.children {
-                //print(child)
-            }
-        }
+//        ref.child("users").child(uid!).child("assets").observe(.value) { snapshot in
+//            for child in snapshot.children {
+//                //print(child)
+//            }
+//        }
     }
     
     func setupChart() {

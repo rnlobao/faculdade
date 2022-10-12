@@ -32,7 +32,7 @@ class AddViewController: UIViewController {
     var theActives: [String] = []
     
     let ref = Database.database().reference()
-    let uid = Auth.auth().currentUser?.uid
+    var uid: String = ""
 
     
     override func viewDidLoad() {
@@ -40,6 +40,7 @@ class AddViewController: UIViewController {
         theActives = ["Fii's", "Ações", "Criptoativos"]
         setupDateTF()
         registerButton.configure(whatsInside: "Adicionar")
+        uid = Auth.auth().currentUser!.uid
     }
     
     private func writeData(active: Assets) {
@@ -50,6 +51,15 @@ class AddViewController: UIViewController {
             addingAssetsToDB(asset: active, kind: "acoes")
         } else if active.kind == 2 {
             addingAssetsToDB(asset: active, kind: "cripto")
+        }
+        
+        var total = 0.0
+        
+        total += active.quantity * active.price
+        
+        ref.child("users").child(uid).child("assets").child("totalCarteira").observeSingleEvent(of: .value) { data in
+            total += data.value as! Double
+            self.ref.child("users").child(self.uid).child("assets").child("totalCarteira").setValue(total)
         }
         
         ref.observe(.childAdded) { data in
@@ -66,13 +76,13 @@ class AddViewController: UIViewController {
     
     private func addingAssetsToDB(asset: Assets, kind: String) {
         var total = 0.0
-        ref.child("users").child(uid!).child("assets").child(kind).childByAutoId().setValue(["data": asset.date, "ticker": asset.ticker, "quantity": asset.quantity, "price": asset.price])
+        ref.child("users").child(uid).child("assets").child(kind).childByAutoId().setValue(["data": asset.date, "ticker": asset.ticker, "quantity": asset.quantity, "price": asset.price])
         
         total += asset.quantity * asset.price
         
-        ref.child("users").child(uid!).child("assets").child(kind).child("inTotal").observeSingleEvent(of: .value) { data in
+        ref.child("users").child(uid).child("assets").child(kind).child("inTotal").observeSingleEvent(of: .value) { data in
             total += data.value as! Double
-            self.ref.child("users").child(self.uid!).child("assets").child(kind).child("inTotal").setValue(total)
+            self.ref.child("users").child(self.uid).child("assets").child(kind).child("inTotal").setValue(total)
         }
     }
     
