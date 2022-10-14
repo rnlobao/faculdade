@@ -41,6 +41,7 @@ class AddViewController: UIViewController {
         setupDateTF()
         registerButton.configure(whatsInside: "Adicionar")
         uid = Auth.auth().currentUser!.uid
+        setupToolBar()
     }
     
     private func writeData(active: Assets) {

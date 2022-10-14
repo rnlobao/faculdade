@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -33,7 +32,8 @@ class HomeViewController: UIViewController {
             myViewController.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(myViewController, animated: true)
         } else {
-          return
+            setupTableView()
+            return
         }
     }
 

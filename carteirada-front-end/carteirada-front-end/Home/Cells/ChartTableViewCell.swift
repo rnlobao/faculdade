@@ -83,6 +83,8 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         set.colors = ChartColorTemplates.pastel()
         let data = PieChartData(dataSet: set)
         pieChart.data = data
+        pieChart.drawEntryLabelsEnabled = false
+        pieChart.entryLabelColor = NSUIColor.black
         
         
         pieChart.legend.enabled = false
