@@ -73,8 +73,8 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
             for children in data.children {
                 print(children)
             }
-            entries.append(ChartDataEntry(x: totalMoney/2, y: totalMoney/2))
-            entries.append(ChartDataEntry(x: totalMoney/2, y: totalMoney/2))
+            entries.append(ChartDataEntry(x: totalMoney, y: totalMoney))
+            entries.append(ChartDataEntry(x: totalMoney, y: totalMoney))
             self.setupChart(entries: entries)
         }
     }
