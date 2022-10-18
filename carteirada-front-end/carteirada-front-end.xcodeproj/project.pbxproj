@@ -18,6 +18,8 @@
 		916CE4DC28DE6221004DCBF4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916CE4DA28DE6221004DCBF4 /* LoginViewController.xib */; };
 		9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171172228DCB817004FF59E /* Register2ViewController.swift */; };
 		9171172528DCB817004FF59E /* Register2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9171172328DCB817004FF59E /* Register2ViewController.xib */; };
+		917B2A9A28FE08BB00D65DF7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917B2A9828FE08BB00D65DF7 /* DetailViewController.swift */; };
+		917B2A9B28FE08BB00D65DF7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 917B2A9928FE08BB00D65DF7 /* DetailViewController.xib */; };
 		919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B028E7ADFE0016AE76 /* DefaultButton.swift */; };
 		919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B228E7B7D40016AE76 /* DefaultTextField.swift */; };
 		919E42B528E7B8B30016AE76 /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E42B428E7B8B30016AE76 /* ProjectColors.swift */; };
@@ -90,6 +92,8 @@
 		916CE4DA28DE6221004DCBF4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		9171172228DCB817004FF59E /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		9171172328DCB817004FF59E /* Register2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Register2ViewController.xib; sourceTree = "<group>"; };
+		917B2A9828FE08BB00D65DF7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		917B2A9928FE08BB00D65DF7 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		919E42B028E7ADFE0016AE76 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		919E42B228E7B7D40016AE76 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		919E42B428E7B8B30016AE76 /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
@@ -209,6 +213,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		917B2A9728FE08A400D65DF7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				917B2A9828FE08BB00D65DF7 /* DetailViewController.swift */,
+				917B2A9928FE08BB00D65DF7 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		91DB34CA28DE2A800064B811 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +293,7 @@
 		91F3D9A928D90E4000DD62CB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				917B2A9728FE08A400D65DF7 /* Detail */,
 				9100B9B728D9DF0A00ED0BD4 /* Cells */,
 				9100B9B628D9D8CE00ED0BD4 /* TabBar */,
 				91F3D9DF28D945D200DD62CB /* HomeViewController.swift */,
@@ -492,6 +506,7 @@
 				9100B9BF28D9E43B00ED0BD4 /* ClassesTableViewCell.xib in Resources */,
 				91F3D9BD28D9355700DD62CB /* Poppins-Bold.ttf in Resources */,
 				91F3D9CB28D9355700DD62CB /* Poppins-Medium.ttf in Resources */,
+				917B2A9B28FE08BB00D65DF7 /* DetailViewController.xib in Resources */,
 				916CE4DC28DE6221004DCBF4 /* LoginViewController.xib in Resources */,
 				91F3D9C828D9355700DD62CB /* Poppins-ExtraBold.ttf in Resources */,
 				91F3D9C128D9355700DD62CB /* Poppins-BlackItalic.ttf in Resources */,
@@ -635,6 +650,7 @@
 				9171172428DCB817004FF59E /* Register2ViewController.swift in Sources */,
 				919E42B328E7B7D40016AE76 /* DefaultTextField.swift in Sources */,
 				916CE4DB28DE6221004DCBF4 /* LoginViewController.swift in Sources */,
+				917B2A9A28FE08BB00D65DF7 /* DetailViewController.swift in Sources */,
 				919E42B128E7ADFE0016AE76 /* DefaultButton.swift in Sources */,
 				91F3D9E128D945D200DD62CB /* HomeViewController.swift in Sources */,
 			);

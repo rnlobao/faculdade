@@ -19,6 +19,11 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
     @IBOutlet weak var percentButton: UIButton!
     @IBOutlet weak var posicaoAtualLabel: UILabel!
     @IBOutlet weak var rendimentoLabel: UILabel!
+    
+    @IBOutlet weak var myWallet: UILabel!
+    
+    var nameOfTickets: [String] = []
+
             
     @IBAction func showPercent(_ sender: Any) {
         var keyToPercent: Bool
@@ -26,7 +31,7 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         pieChart.usePercentValuesEnabled = !keyToPercent
     }
     
-    func setupView() {
+    func setupView(acoes: Bool, fii: Bool, cripto: Bool) {
         chartBackground.layer.cornerRadius = 20
         chartBackground.layer.shadowColor = UIColor.black.cgColor
         chartBackground.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
@@ -36,7 +41,42 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         
         percentButton.layer.cornerRadius = 5
         pieChart.delegate = self
-        setupHisTotalMoney()
+        if acoes {
+            myWallet.text = "Minhas ações"
+            setupAssets(whichAsset: "acoes")
+        } else if fii {
+            myWallet.text = "Meus Fii's"
+            setupAssets(whichAsset: "fii")
+        } else if cripto {
+            myWallet.text = "Meus Criptoativos"
+            setupAssets(whichAsset: "cripto")
+        } else {
+            myWallet.text = "Minha carteira"
+            setupHisTotalMoney()
+        }
+    }
+    
+    func setupAssets(whichAsset: String) {
+        var totalMoney: Double = 1.0
+        var entries = [ChartDataEntry]()
+
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        
+        ref.child("users").child(uid!).child("assets").child(whichAsset).child("inTotal").observe(.value) { data in
+            totalMoney = data.value as! Double
+            self.setupCentralText(total: totalMoney)
+            self.investidoLabel.text = "R$ \(totalMoney)".replacingOccurrences(of: ".", with: ",")
+        }
+        
+        ref.child("users").child(uid!).child("assets").child(whichAsset).observe(.value) { data in
+            for children in data.children {
+                print(children)
+            }
+            entries.append(ChartDataEntry(x: totalMoney/2, y: totalMoney/2))
+            entries.append(ChartDataEntry(x: totalMoney/2, y: totalMoney/2))
+            self.setupChart(entries: entries)
+        }
     }
     
     func setupHisTotalMoney() {
@@ -52,6 +92,7 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         ref.child("users").child(uid!).child("assets").child("totalCarteira").observe(.value) { data in
             totalMoney = data.value as! Double
             self.setupCentralText(total: totalMoney)
+            self.investidoLabel.text = "R$ \(totalMoney)".replacingOccurrences(of: ".", with: ",")
         }
         
         ref.child("users").child(uid!).child("assets").child("acoes").child("inTotal").observe(.value) { data in
@@ -79,12 +120,14 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         self.addSubview(pieChart)
         
         let set = PieChartDataSet(entries: entries)
-        set.valueFont = UIFont(name: "Poppins-SemiBold", size: 12)!
+        
+        set.valueFont = UIFont(name: "Poppins-SemiBold", size: 14)!
+        set.valueTextColor = NSUIColor.black
         set.colors = ChartColorTemplates.pastel()
+        
         let data = PieChartData(dataSet: set)
+    
         pieChart.data = data
-        pieChart.drawEntryLabelsEnabled = false
-        pieChart.entryLabelColor = NSUIColor.black
         
         
         pieChart.legend.enabled = false
@@ -98,7 +141,7 @@ class ChartTableViewCell: UITableViewCell, ChartViewDelegate {
         
         let attributes = [ NSAttributedString.Key.foregroundColor: UIColor.black,
                            NSAttributedString.Key.font: UIFont(name: "Poppins-ExtraBold", size: 15)]
-        let myAttrString = NSAttributedString(string: "R$ \(myMoney)", attributes: attributes as [NSAttributedString.Key : Any])
+        let myAttrString = NSAttributedString(string: "R$ \(myMoney)".replacingOccurrences(of: ".", with: ","), attributes: attributes as [NSAttributedString.Key : Any])
         pieChart.centerAttributedText = myAttrString
         pieChart.drawCenterTextEnabled = true
     }

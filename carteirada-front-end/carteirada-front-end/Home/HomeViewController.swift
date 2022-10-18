@@ -62,14 +62,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "chart", for: indexPath) as! ChartTableViewCell
-            cell.setupView()
+            cell.setupView(acoes: false, fii: false, cripto: false)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "classes", for: indexPath) as! ClassesTableViewCell
+            cell.delegate = self
             cell.setup()
             return cell
         }
     }
     
     
+}
+
+extension HomeViewController: goToDetailScreen {
+    func goToAcaoScreen() {
+        let vc = DetailViewController(fii: false, stock: true, cripto: false)
+        self.present(vc, animated: true)
+    }
+    
+    func goToFiiScreen() {
+        let vc = DetailViewController(fii: true, stock: false, cripto: false)
+        self.present(vc, animated: true)
+    }
+    
+    func goToCriptoScreen() {
+        let vc = DetailViewController(fii: false, stock: false, cripto: true)
+        self.present(vc, animated: true)
+    }
 }
