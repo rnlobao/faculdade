@@ -63,8 +63,21 @@ Veja como ficou os desenvolvimentos das sprints:
     <img width="400" alt="image" src="https://user-images.githubusercontent.com/66230142/193374333-b0b71e80-43b0-473e-9866-991ea35aea23.png">
   </p>
   
-  
+  Alem disso fiz a utilizacao da autenticacao do firebase e seu realtime database
+  Outras coisas que fiz nessa sprint:
+  - Reutilizacao dos charts
+  - Utilizacao de graficos com o pod Charts no cocoapods
+  - Session manager com Firebase
 </details>
+
+Resultado final:
+<p float="left">
+    <img width="200" alt="image"  src="https://user-images.githubusercontent.com/66230142/196527721-aa41cedf-f9a7-49b2-87af-8cbd3154dcad.gif">
+    <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/196527727-aa261d73-cd69-47f8-a0d0-670446aee67e.gif">
+    <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/196527733-9808862e-f5fc-4ae2-927a-e53c893569bd.gif">
+    <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/196527737-2d90f973-1b68-403d-aae4-0b905d6fb425.gif">
+  </p>
+
 
 
 
