@@ -21,17 +21,12 @@ As classes de ativos são detidas pelas bolsas de valores, que, por sua vez, pos
 
 <details>
   <summary>Modelo conceitual ERE</summary>
-       <img alt="image" src="https://user-images.githubusercontent.com/66230142/188343654-5ed65bfd-c719-4de5-b914-e6a2be80fa36.jpeg"> 
- </details>
- 
- <details>
-  <summary>Mapeamento relacional</summary>
-    
+    <img width="1051" alt="image" src="https://user-images.githubusercontent.com/66230142/196529407-755da5d1-135e-431e-b889-e6ea251b941a.png">
  </details>
  
   <details>
   <summary>Esquema físico</summary>
-    
+    Se encontra no arquivo tp2.sql
  </details>
 
 
