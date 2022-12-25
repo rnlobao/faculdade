@@ -22,3 +22,14 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
     <img width="343" alt="image" src="https://user-images.githubusercontent.com/66230142/209480390-2dff8040-3976-4da1-afcf-70106ffdaf0b.png">
 
 </details>
+
+<details>
+  <summary>Classificacao de agentes</summary>
+    Utilizamos o PEAS para classificar o agente, ex:
+<img width="711" alt="image" src="https://user-images.githubusercontent.com/66230142/209480762-5f55a5a7-ca4f-4bfa-9a0b-5b7401b6c63f.png">
+(Performance, Environment, Actuators e Sensors)
+</details>
+
+<details>
+  <summary>Classificacao de ambientes de tarefa</summary>
+</details>
