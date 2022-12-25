@@ -26,10 +26,20 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
 <details>
   <summary>Classificacao de agentes</summary>
     Utilizamos o PEAS para classificar o agente, ex:
-<img width="711" alt="image" src="https://user-images.githubusercontent.com/66230142/209480762-5f55a5a7-ca4f-4bfa-9a0b-5b7401b6c63f.png">
+<img width="711" alt="image" src="https://user-images.githubusercontent.com/66230142/209480762-5f55a5a7-ca4f-4bfa-9a0b-5b7401b6c63f.png">\
 (Performance, Environment, Actuators e Sensors)
 </details>
 
 <details>
   <summary>Classificacao de ambientes de tarefa</summary>
+  As definicoes sao bem intuitivas, basicamente:
+
+  Obervavel: Parcialmente ou completamente de acordo com se ele pode ser totalmente averiguado ou nao\
+  Agentes: Quantidade de agentes envolvidos no ambiente, seja único ou multi\
+  Determinístico: se for é porque de acordo com o passo x certamente y vai acontecer, estocático é classificado quando nao podemos afirmar com certeza\
+  Episodico: se ele é episodico quer dizer que acoes passadas nao interferiram para oq ocorreu atualmente no ambiente enquanto os sequenciais sao causais, por exemplo uma partida de xadrez é sequencial, cada tomada de decisao influencia no que acontece na proxima rodada da partida.\
+  Estatico: ambiente pode alterar? Sim? Entao é dinamico, caso contrário, estático.
+  Discreto versus contínuo: normalmente diz respeito ao estado e ao tempo do ambiente, discreto quando é finito e continuo quando é infinito.
+  <img width="710" alt="image" src="https://user-images.githubusercontent.com/66230142/209480964-64eef4fc-0219-454f-b044-bfd5bf5a21bb.png">
+
 </details>
