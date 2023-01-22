@@ -43,3 +43,10 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
   <img width="710" alt="image" src="https://user-images.githubusercontent.com/66230142/209480964-64eef4fc-0219-454f-b044-bfd5bf5a21bb.png">
 
 </details>
+
+<h2>Busca em grafos</h2>
+No primeiro trabalho da disciplina foi dado um código e deveriamos colocar 4 algoritmos de busca para encontrar o fim de um labirinto
+
+A primeira busca é a DFS:
+
+
