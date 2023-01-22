@@ -18,7 +18,7 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
 
 <details>
   <summary>O que sao agentes</summary>
-    Alguma coisa que atua em um ambiente e recebe seus estímulos, ele possui um corpo com sensores e atuadores (recebem estímulos e fornecem ações respectivamente
+    Alguma coisa que atua em um ambiente e recebe seus estímulos, ele possui um corpo com sensores e atuadores (recebem estímulos e fornecem ações respectivamente<br>
     <img width="343" alt="image" src="https://user-images.githubusercontent.com/66230142/209480390-2dff8040-3976-4da1-afcf-70106ffdaf0b.png">
 
 </details>
@@ -26,7 +26,7 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
 <details>
   <summary>Classificacao de agentes</summary>
     Utilizamos o PEAS para classificar o agente, ex:
-<img width="711" alt="image" src="https://user-images.githubusercontent.com/66230142/209480762-5f55a5a7-ca4f-4bfa-9a0b-5b7401b6c63f.png">\
+<img width="711" alt="image" src="https://user-images.githubusercontent.com/66230142/209480762-5f55a5a7-ca4f-4bfa-9a0b-5b7401b6c63f.png"><br>
 (Performance, Environment, Actuators e Sensors)
 </details>
 
