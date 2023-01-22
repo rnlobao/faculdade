@@ -44,24 +44,19 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
 
 </details>
 
-<h2>Busca em grafos</h2>
-No primeiro trabalho da disciplina foi dado um código e deveriamos colocar 4 algoritmos de busca para encontrar o fim de um labirinto
+<details>
+  <summary>Trabalho de busca em grafos</summary>
+  <h2>Busca em grafos</h2>
 
-A primeira busca é a BFS:
+  No primeiro trabalho da disciplina foi dado um código e deveriamos colocar 4 algoritmos de busca para encontrar o fim de um labirinto
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/213942254-5447c9d7-f245-45c8-8972-add9b90bc195.gif">
 
-Depois a DFS:
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/213942437-7deb180e-8b6d-4966-b86d-cf6cdc105615.gif">
+  BFS | DFS | Best First | A*
+  :---------: | :---------: | :---------: | :---------:
+  <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942254-5447c9d7-f245-45c8-8972-add9b90bc195.gif"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942437-7deb180e-8b6d-4966-b86d-cf6cdc105615.gif"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942532-9406362f-3251-416e-98c4-f7cf88f162fb.gif"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942636-2700bc28-ecfb-43f7-8e96-fa511197fad8.gif">
+</details>
 
-Best First:
-
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/213942532-9406362f-3251-416e-98c4-f7cf88f162fb.gif">
-
-A*:
-
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/66230142/213942636-2700bc28-ecfb-43f7-8e96-fa511197fad8.gif">
 
 
 
