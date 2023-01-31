@@ -7,5 +7,5 @@ Durante a aplicacao da disciplina sera mostrado como um compilador transforma o 
 
 <details>
   <summary>Analisador lexico</summary>
-  
+  Basicamente pega os caracteres inseridos no codigo texto e agrupa em tokens de acordo com suas particularidades.
 </details>
