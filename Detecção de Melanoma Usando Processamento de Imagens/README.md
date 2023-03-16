@@ -60,3 +60,6 @@ Com os modelos de treinamento gerados, com e sem segmentaçao chegamos nos segui
   ![image](https://user-images.githubusercontent.com/66230142/225485931-d469bf09-cc03-4d61-90eb-7e4e379177f2.png) | ![image](https://user-images.githubusercontent.com/66230142/225485962-f7194938-7387-477a-9d19-66c93a1b1c5f.png)
 
 Mostrando ligeira vantagem para o modelo de treinamento sem segmentacao, onde foram treinados com 35 epochs e 8000 imagens do Dataset.
+
+Além disso, mais detalhes sobre o código podem ser encontrados no vídeo: https://youtu.be/18UqTLnRVeQ
+
