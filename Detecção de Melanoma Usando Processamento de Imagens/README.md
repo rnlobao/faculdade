@@ -53,6 +53,11 @@ Com isso pudemos fazer o treinamento utilizando imagens segmentadas e nao segmen
 
 ![image](https://user-images.githubusercontent.com/66230142/225485619-00a87c14-35af-49ad-a2d2-998a0f491f8e.png)
 
+Dado o modelo treinado, qualquer imagem que seja upada usando um modelo como base acusa a chance daquela imagem de lesão ser benigna ou maligna
+
+![image](https://user-images.githubusercontent.com/66230142/225486881-f7c1b512-b0a8-4924-bc9e-5631bae815da.png)
+
+
 Com os modelos de treinamento gerados, com e sem segmentaçao chegamos nos seguintes resultados: 
 
  Sem segmentaçao | Com segmentaçao 
