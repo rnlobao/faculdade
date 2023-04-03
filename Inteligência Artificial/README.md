@@ -57,6 +57,11 @@ https://www.cin.ufpe.br/~gtsa/Periodo/PDF/4P/SI.pdf
   <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942254-5447c9d7-f245-45c8-8972-add9b90bc195.gif"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942437-7deb180e-8b6d-4966-b86d-cf6cdc105615.gif"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942532-9406362f-3251-416e-98c4-f7cf88f162fb.gif"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/66230142/213942636-2700bc28-ecfb-43f7-8e96-fa511197fad8.gif">
 </details>
 
+<details>
+  <summary> Previsao de falencia de uma empresa </summary>
+    Com um csv disponibilizado pelo professor, e com o intuito de avaliacao final da disciplina, foi feito o desafio de identificacao e previsao da falencia ou nao de 100 empresas usando 3 metodos diferentes de treinamento, sendo eles Regressao Logistica, Arvores de Decisao e Floresta Aleatoria.<br><br> Maiores detalhes podem ser encontrados nas explicacoes do video com Pedro Lucas, Guilherme Augusto, Rafael Augusto e Gabriel Catizani: https://www.youtube.com/watch?v=UL9gmVBZiIo
+</details>
+
 
 
 
