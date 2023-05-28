@@ -18,11 +18,3 @@ Esses mesmos projetos foram separados em pastas que estao nomeados de acordo com
 * Otimizaçao linear e inteira (BCC464)
 
 Também necessário para conseguir o diploma, 360 horas de atividades extra curriculares são exigidas, essas que foram cumpridas utilizando meu tempo de estágio na empresa Zup Innovation e posteriormente meu tempo de serviço na mesma empresa como desenvolvedor iOS.
-
-Mais relevantes da minha faculdade de ciência da computação na UFOP
-
-Apresentação do trabalho em C do 1P sobre o jogo resta um: https://www.youtube.com/watch?v=6CIyd4Kkpu8&t=413s
-
-Apresentação do trabalho do 2P sobre a importância do letramento nos cursos de ciencia da computacao: https://www.youtube.com/watch?v=xI7i8u9yFnk
-
-Começo de pesquisa sobre diferença de desempenho entre plataformas hibridas e nativas com foco em desenvolver habilidades de escrita academica, metodologia cientifica e aprender um pouco sobre Latex, alem de um possivel começo de pesquisa para TCC iniciado no 5P: [AplicacoesHibridasVsNativas.pdf](https://github.com/rnlobao/Faculdade/files/9881430/AplicacoesHibridasVsNativas.pdf)
