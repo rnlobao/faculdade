@@ -1,20 +1,38 @@
-# Faculdade
+# Geoprocessamento
 
-Graduaçao no curso de Ciência da Computação iniciada em Março de 2020 se estendendo até março de 2024, seguindo a seguinte grade curricular de matérias:
+Geoprocessamento é uma disciplina que envolve a coleta, armazenamento, análise e visualização de dados geográficos utilizando técnicas de processamento de informações espaciais. Esses dados geográficos podem incluir informações sobre a superfície da Terra, como imagens de satélite, mapas, coordenadas geográficas, dados topográficos, entre outros.
 
-<div align="center">
+O geoprocessamento é amplamente utilizado em diversas áreas, como geografia, cartografia, planejamento urbano, gestão ambiental, agricultura, geologia, engenharia civil, entre outras. Ele desempenha um papel crucial na análise espacial, permitindo a compreensão de padrões, relações e tendências no contexto geográfico.
 
-  <img width="500" alt="image" src="https://github.com/rnlobao/Faculdade/assets/66230142/6fdb52e3-32ba-4f3a-a134-ecbe30e50e95">
+## Primeira parte, software Spring
 
-</div>
+O que foi aprendido:
+* Referenciamento de imagem
+* Tratamento de nitidez da imagem
+* Contraste de imagens de satélite
+* Leitura de painel de pixels
+* Operações aritméticas entre imagens
+* Eliminação de ruído
+* Restauração de imagem
+* Classificação por pixel e região
+* Correção de imagem por distorção de satélite
 
-Nesses 4 anos de curso, alguns projetos se destacaram por sua dificuldade, meu grau de interesse no assunto e relevância tanto para a sociedade quanto para o mercado de trabalho como um todo.
+Referenciamento de uma imagem:
 
-Esses mesmos projetos foram separados em pastas que estao nomeados de acordo com o que ele irá apresentar e a matéria relacionada a ela pelo código que pode ser consultado na grade curricular do curso disponibilizada acima, além disso, algumas eletivas foram fornecidas durante a graduaçao e as que escolhi para serem cursadas foram:
+<img width="300" alt="image" src="https://github.com/rnlobao/Faculdade/assets/66230142/94d9d6fa-eac5-4b99-835e-142d8e454148">
 
-* Computaçao Móvel (BCC421)
-* Geoprocessamento (BCC443)
-* Mineraçao de dados (BCC444)
-* Otimizaçao linear e inteira (BCC464)
+Acertando constrate da imagem:
 
-Também necessário para conseguir o diploma, 360 horas de atividades extra curriculares são exigidas, essas que foram cumpridas utilizando meu tempo de estágio na empresa Zup Innovation e posteriormente meu tempo de serviço na mesma empresa como desenvolvedor iOS.
+<img width="300" alt="image" src="https://github.com/rnlobao/Faculdade/assets/66230142/9a458822-0ce4-4a26-bf1d-8c02230d118c">
+
+classificando a imagem:
+
+<img width="300" alt="image" src="https://github.com/rnlobao/Faculdade/assets/66230142/7e89676c-9d91-416f-8901-0c2d45fecbd4">
+
+Imagem classificada:
+
+<img width="300" alt="image" src="https://github.com/rnlobao/Faculdade/assets/66230142/882e2a12-e5db-4363-a1cc-f59806d3c7ce">
+
+correcao de imagem:
+
+<img width="300" alt="image" src="https://github.com/rnlobao/Faculdade/assets/66230142/89c2c7f3-51b3-437a-a976-7516447ac412">
