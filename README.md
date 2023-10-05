@@ -16,5 +16,7 @@ Esses mesmos projetos foram separados em pastas que estao nomeados de acordo com
 * Geoprocessamento (BCC443)
 * Mineraçao de dados (BCC444)
 * Otimizaçao linear e inteira (BCC464)
+* Sistemas de Recomendação (BCC409)
+* Programação Web (BCC481)
 
 Também necessário para conseguir o diploma, 360 horas de atividades extra curriculares são exigidas, essas que foram cumpridas utilizando meu tempo de estágio na empresa Zup Innovation e posteriormente meu tempo de serviço na mesma empresa como desenvolvedor iOS.
