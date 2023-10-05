@@ -8,7 +8,7 @@ Graduaçao no curso de Ciência da Computação iniciada em Março de 2020 se es
 
 </div>
 
-Nesses 4 anos de curso, alguns projetos se destacaram por sua dificuldade, meu grau de interesse no assunto e relevância tanto para a sociedade quanto para o mercado de trabalho como um todo.
+Nesses 4 anos de curso, alguns projetos se destacaram por sua dificuldade, meu grau de interesse no assunto e relevância tanto para a sociedade quanto para o mercado de trabalho como um todo. **EM CADA UMA DAS PASTAS É POSSÍVEL ENCONTRAR UM README DETALHANDO O QUE FOI FEITO E TECNOLOGIAS USADAS**
 
 Esses mesmos projetos foram separados em pastas que estao nomeados de acordo com o que ele irá apresentar e a matéria relacionada a ela pelo código que pode ser consultado na grade curricular do curso disponibilizada acima, além disso, algumas eletivas foram fornecidas durante a graduaçao e as que escolhi para serem cursadas foram:
 
